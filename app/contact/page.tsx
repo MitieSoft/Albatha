@@ -45,7 +45,7 @@ export default function ContactPage() {
                 Get In Touch
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We're here to help you find your perfect property. Reach out to us through any of the following channels.
+                We&apos;re here to help you find your perfect property. Reach out to us through any of the following channels.
               </p>
             </div>
 
@@ -232,7 +232,7 @@ export default function ContactPage() {
                   How can I schedule a property viewing?
                 </h3>
                 <p className="text-gray-600">
-                  You can schedule a viewing by calling us at +971 4 123 4567 or filling out the contact form above. We'll arrange a convenient time for you.
+                  You can schedule a viewing by calling us at +971 4 123 4567 or filling out the contact form above. We&apos;ll arrange a convenient time for you.
                 </p>
               </div>
 
@@ -250,7 +250,7 @@ export default function ContactPage() {
                   What are your office hours?
                 </h3>
                 <p className="text-gray-600">
-                  Our office is open Monday to Friday from 9:00 AM to 6:00 PM, and Saturday from 10:00 AM to 4:00 PM. We're closed on Sundays.
+                  Our office is open Monday to Friday from 9:00 AM to 6:00 PM, and Saturday from 10:00 AM to 4:00 PM. We&apos;re closed on Sundays.
                 </p>
               </div>
             </div>

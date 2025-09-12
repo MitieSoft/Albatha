@@ -29,7 +29,7 @@ export default function MissionValuesPage() {
               Albatha Real Estate
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed max-w-3xl mx-auto px-4">
-              Our guiding principles and commitment to excellence in Dubai's dynamic real estate landscape
+              Our guiding principles and commitment to excellence in Dubai&apos;s dynamic real estate landscape
             </p>
           </div>
         </div>
@@ -155,14 +155,14 @@ export default function MissionValuesPage() {
                 </h2>
                 <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed text-center lg:text-end">
                   <p>
-                    Albatha Real Estate's mission is to serve the full spectrum of consumers in the property market, 
+                    Albatha Real Estate&apos;s mission is to serve the full spectrum of consumers in the property market, 
                     from luxury, premium, and high-quality residential properties to commercial, industrial, and 
                     public service structures. From first-time investors to repeat buyers, we are committed to 
                     playing a vital role in fulfilling their aspirations and requirements by building and managing 
                     properties through our trusted services, exceptional quality, and long-term market viability.
                   </p>
                   <p>
-                    Albatha Real Estate's mission is founded on integrity and transparency, a steadfast focus on 
+                    Albatha Real Estate&apos;s mission is founded on integrity and transparency, a steadfast focus on 
                     expertise and quality, and a commitment to sustainability.These core values, along with respect
                     for people and sensitivity to their concerns, have earned us a reputation for excellence, fariness and trust 
                     across the industry.

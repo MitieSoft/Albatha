@@ -105,7 +105,7 @@ export default function ResidentialPropertiesPage() {
               Residential Properties
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-12 animate-fade-in-up animation-delay-200">
-              Our guiding principles and commitment to excellence in Dubai's dynamic real estate landscape.
+              Our guiding principles and commitment to excellence in Dubai&apos;s dynamic real estate landscape.
             </p>
             
             {/* Search Bar */}

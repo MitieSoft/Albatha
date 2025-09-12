@@ -41,7 +41,7 @@ Tawazan Construction was established in 2008, with a primary focus on Civil Cons
             <div>
               <h2 className="text-4xl font-bold text-[#661244] mb-8">Our Business</h2>
               <p className="text-gray-700 mb-6 text-lg leading-relaxed">
-              Driven by excellence and dynamism, Tawazun aims to be the preferred choice for quality projects, timely delivery and value-added services. We focus on innovation and using state-of-the-art methods and materials to enhance productivity and cost eefectiveness. This is complemented by the continual development of staff competencies and the pursuit of the industry's leading safety record.
+              Driven by excellence and dynamism, Tawazun aims to be the preferred choice for quality projects, timely delivery and value-added services. We focus on innovation and using state-of-the-art methods and materials to enhance productivity and cost eefectiveness. This is complemented by the continual development of staff competencies and the pursuit of the industry&apos;s leading safety record.
               </p>
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
               Tawazun is also committed to its environmental responsibilities and to mitigating the impacts arising from its activities. This includes the use of the latest eco-friendly concrete technology and compliance with environmental standards.

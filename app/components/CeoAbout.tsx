@@ -88,7 +88,7 @@ const CeoAbout = () => {
                 }`}>
                   {/* Large Opening Quote */}
                   <div className={`absolute -top-14 text-8xl lg:text-9xl font-bold text-black z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 ${isRTL ? 'right-0' : 'left-0'}`} style={{ fontFamily: 'Poppins, sans-serif' }}>
-                    "
+                    &apos;&apos;
                   </div>
                   
                   {/* Main Text Content */}
@@ -101,7 +101,7 @@ const CeoAbout = () => {
                   
                   {/* Large Closing Quote */}
                   <div className={`absolute -bottom-18 text-8xl lg:text-9xl font-bold text-black z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 ${isRTL ? 'left-4' : 'right-4'}`} style={{ fontFamily: 'Poppins, sans-serif' }}>
-                    "
+                    &apos;&apos;
                   </div>
                 </div>
               </div>

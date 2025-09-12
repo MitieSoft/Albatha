@@ -262,7 +262,7 @@ const Navigation = () => {
                     href="/about/ceo-message" 
                     className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
                   >
-                    Ceo's Message
+                    Ceo&apos;s Message
                   </Link>
                   <Link 
                     href="/about/mission-values" 
@@ -611,7 +611,7 @@ const Navigation = () => {
                   </h3>
                   <div className="space-y-2 pl-4">
                     <Link href="/about/ceo-message" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Ceo's Message
+                      Ceo&apos;s Message
                     </Link>
                     <Link 
                     href="/about/mission-values" 

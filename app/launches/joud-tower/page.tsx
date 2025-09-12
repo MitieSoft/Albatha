@@ -381,7 +381,7 @@ export default function JoudTowerPage() {
 
             <div className="text-center">
               <p className="text-white text-base sm:text-lg leading-relaxed max-w-4xl mx-auto px-4">
-                Joud Tower, with its unrivalled location, ultra-premium interiors, and luxurious amenities and facilities, is a lasting asset that will provide you with the steady capital growth. Enjoy the best of both worlds: a beautiful, luxurious home that's also a longlife investment.
+                Joud Tower, with its unrivalled location, ultra-premium interiors, and luxurious amenities and facilities, is a lasting asset that will provide you with the steady capital growth. Enjoy the best of both worlds: a beautiful, luxurious home that&apos;s also a longlife investment.
               </p>
                 </div>
               </div>
@@ -502,7 +502,7 @@ export default function JoudTowerPage() {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   The heart of every home deserves the finest attention. Our state-of-the-art
                   kitchens feature premium appliances, elegant countertops, and intelligent
-                  design that makes cooking a pleasure. Whether you're preparing a simple
+                  design that makes cooking a pleasure. Whether you&apos;re preparing a simple
                   breakfast or hosting a dinner party, every culinary experience is elevated
                   to perfection.
                 </p>
@@ -528,7 +528,7 @@ export default function JoudTowerPage() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 The heart of every home deserves the finest attention. Our state-of-the-art
                 kitchens feature premium appliances, elegant countertops, and intelligent
-                design that makes cooking a pleasure. Whether you're preparing a simple
+                design that makes cooking a pleasure. Whether you&apos;re preparing a simple
                 breakfast or hosting a dinner party, every culinary experience is elevated
                 to perfection.
               </p>
