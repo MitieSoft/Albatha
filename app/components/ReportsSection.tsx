@@ -38,7 +38,7 @@ const ReportsSection = () => {
               towards a more sustainable future.
             </p>
             <div className="flex items-center justify-between">
-                             <Button variant="albatha" className="bg-albatha-teal text-albatha-navy hover:bg-albatha-teal-dark hover:shadow-xl hover:scale-105 font-medium transition-all duration-300">
+                             <Button className="bg-albatha-teal text-albatha-navy hover:bg-albatha-teal-dark hover:shadow-xl hover:scale-105 font-medium transition-all duration-300">
                  <Download className={`h-4 w-4 ${isRTL ? 'ml-2' : 'mr-2'}`} />
                  Download Report
                </Button>
