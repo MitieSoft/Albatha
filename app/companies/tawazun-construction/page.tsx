@@ -16,7 +16,7 @@ export default function TawazunConstructionPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/19.jfif"
+            src="/images/19.jpeg"
             alt="Office background"
             fill
             className="object-cover opacity-30 object-top"
@@ -53,7 +53,7 @@ export default function TawazunConstructionPage() {
             </div>
             <div className={`relative w-full h-96 lg:h-[450px] ${isRTL ? 'lg:col-start-1' : ''}`}>
               <Image
-                src="/images/20.jfif"
+                src="/images/20.jpeg"
                 alt="Construction project"
                 fill
                 className="object-cover shadow-2xl"
@@ -81,7 +81,7 @@ export default function TawazunConstructionPage() {
             <div className="relative">
               <div className="relative w-full h-80 overflow-hidden">
                 <Image
-                  src="/images/18.jfif"
+                  src="/images/18.jpeg"
                   alt="Project 1"
                   fill
                   className="object-cover"
@@ -92,7 +92,7 @@ export default function TawazunConstructionPage() {
             <div className="relative">
               <div className="relative w-full h-80 overflow-hidden">
                 <Image
-                  src="/images/17.jfif"
+                  src="/images/17.jpeg"
                   alt="Project 2"
                   fill
                   className="object-cover"
@@ -103,7 +103,7 @@ export default function TawazunConstructionPage() {
             <div className="relative">
               <div className="relative w-full h-80 overflow-hidden">
                 <Image
-                  src="/images/16.jfif"
+                  src="/images/16.jpeg"
                   alt="Project 3"
                   fill
                   className="object-cover"
