@@ -69,16 +69,16 @@ const Footer = () => {
             
             <div className="space-y-3 sm:space-y-4">
               <div className={`flex items-center gap-3 text-gray-300 text-sm sm:text-base ${isRTL ? 'justify-start' : 'justify-center md:justify-start'}`}>
-                <span className={`${isRTL ? 'text-left font-arabic' : 'text-center md:text-left font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('footer.contact.address')}</span>
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-aldar-teal flex-shrink-0" />
+                <span className={`${isRTL ? 'text-left font-arabic' : 'text-center md:text-left font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('footer.contact.address')}</span>
               </div>
               <div className={`flex items-center gap-3 text-gray-300 text-sm sm:text-base ${isRTL ? 'justify-start' : 'justify-center md:justify-start'}`}>
-                <span className={`${isRTL ? 'text-left' : ''} font-mono`} style={{ fontFamily: 'Poppins, Arial, sans-serif !important' }}>{t('footer.contact.phone')}</span>
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-aldar-teal flex-shrink-0" />
+                <span className={`${isRTL ? 'text-left' : ''} font-mono`} style={{ fontFamily: 'Poppins, Arial, sans-serif !important' }}>{t('footer.contact.phone')}</span>
               </div>
               <div className={`flex items-center gap-3 text-gray-300 text-sm sm:text-base ${isRTL ? 'justify-start' : 'justify-center md:justify-start'}`}>
-                <span className={`${isRTL ? 'text-left' : ''} font-mono`}>{t('footer.contact.email')}</span>
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-aldar-teal flex-shrink-0" />
+                <span className={`${isRTL ? 'text-left' : ''} font-mono`}>{t('footer.contact.email')}</span>
               </div>
               
             </div>
