@@ -31,6 +31,21 @@ const translations = {
     'nav.rent': 'Rent',
     'nav.callButton': 'Call 800Albatha ',
     
+    // Navigation Dropdowns
+    'nav.dropdown.ceoMessage': 'CEO Message',
+    'nav.dropdown.albathaRealEstate': 'Mission & Values',
+    'nav.dropdown.commercial': 'Commercial',
+    'nav.dropdown.residential': 'Residential',
+    'nav.dropdown.industrial': 'Industrial',
+    'nav.dropdown.specialProjects': 'Special Projects',
+    'nav.dropdown.joudTower': 'Joud Tower',
+    'nav.dropdown.tawazunConstruction': 'Tawazun Construction',
+    'nav.dropdown.alAbir': 'Al Abir',
+    'nav.dropdown.whatLookingToBuy': 'What are you looking to buy?',
+    'nav.dropdown.whatLookingToRent': 'What are you looking to rent?',
+    'nav.dropdown.property': 'Property',
+    'nav.dropdown.buildingPlots': 'Building Plots',
+    
     // Hero Section
     'hero.title': 'In Focus',
     'hero.subtitle': 'Albatha  explores the scale, strategic thinking, and collaboration behind Albatha \'s purpose-led infrastructure and government housing partnerships.',
@@ -440,6 +455,21 @@ const translations = {
     'nav.buy': 'شراء',
     'nav.rent': 'إيجار',
     'nav.callButton': 'اتصل 800البثنة',
+    
+    // Navigation Dropdowns
+    'nav.dropdown.ceoMessage': 'رسالة الرئيس التنفيذي',
+    'nav.dropdown.albathaRealEstate': 'المهمة والقيم',
+    'nav.dropdown.commercial': 'تجاري',
+    'nav.dropdown.residential': 'سكني',
+    'nav.dropdown.industrial': 'صناعي',
+    'nav.dropdown.specialProjects': 'مشاريع خاصة',
+    'nav.dropdown.joudTower': 'برج جود',
+    'nav.dropdown.tawazunConstruction': 'تاوازن للإنشاءات',
+    'nav.dropdown.alAbir': 'الأبر للاستشارات الهندسية',
+    'nav.dropdown.whatLookingToBuy': 'ماذا تبحث عن للشراء؟',
+    'nav.dropdown.whatLookingToRent': 'ماذا تبحث عن للإيجار؟',
+    'nav.dropdown.property': 'العقارات',
+    'nav.dropdown.buildingPlots': 'قطع الأراضي',
     
     // Hero Section
     'hero.title': 'في المقدمة',
