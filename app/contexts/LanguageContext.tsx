@@ -619,7 +619,34 @@ const translations = {
     'about.mission.title': 'Our Mission',
     'about.mission.description': 'We are committed to delivering exceptional real estate solutions that exceed expectations, foster community connections, and create lasting value for our clients, partners, and the communities we serve. Through innovative design, sustainable practices, and unwavering dedication to quality, we build more than just properties – we build futures.',
     
+    // Al-Abir Page
+    'alAbir.hero.title': 'Al Abir Engineering Consulting',
+    'alAbir.hero.description': 'Al Abir Consulting and Engineering was established in 1983 as a comprehensive service design and engineering firm, providing civil, architectural, and mechanical solutions to meet the diverse needs of Albatha Holding and delivering a wide range of world-class projects.',
+    'alAbir.business.title': 'Our Business',
+    'alAbir.business.description': 'Over the years, Al Abir has grown into a full-fledged civil, architectural, and MEPF design and engineering consultancy firm capable of delivering excellent projects. With years of experience in local by-laws and authority regulations, Al Abir follows international construction standards and best engineering practices, ensuring delivery of projects on time within budget.',
+    'alAbir.services.title': 'Our Services',
+    'alAbir.services.list': [
+      'Preparation of preliminary designs and drawings in coordination with end-users, manufacturers and suppliers.',
+      'Ensuring that the designs are economical, green and energy saving and keeping in line with the latest technologies.',
+      'Submission of final drawings to local authorities and interactive liaison for approvals.',
+      'Preparation of Tenders Packages which includes project specifications in accordance with local bye-laws, international standards and BOQ.',
+      'Preparation of Cost Analysis of the submitted tenders.',
+      'Project Management in line with FIDIC and contract agreements.',
+      'Supervising the Testing and Commissioning of the equipment installed.',
+      'Ensuring that the as-fitted drawings, operation and maintenance manuals are prepared.',
+      'Ensuring the local authority NOCS and building completion certificates are received.',
+      'Handover of the completed project.',
+      'Ongoing technical assistance will be provided wherever required once the projects are handed over.'
+    ],
     
+    // Tawazun Construction Page
+    'tawazun.hero.title': 'Tawazan Construction',
+    'tawazun.hero.description': 'Tawazan Construction was established in 2008, with a primary focus on Civil Construction. Its team comprises highly qualified civil engineers with a full-fledged back-office support',
+    'tawazun.about.title': 'Our Business',
+    'tawazun.about.description1': 'Driven by excellence and dynamism, Tawazun aims to be the preferred choice for quality projects, timely delivery and value-added services. We focus on innovation and using state-of-the-art methods and materials to enhance productivity and cost effectiveness. This is complemented by the continual development of staff competencies and the pursuit of the industry\'s leading safety record.',
+    'tawazun.about.description2': 'Tawazun is also committed to its environmental responsibilities and to mitigating the impacts arising from its activities. This includes the use of the latest eco-friendly concrete technology and compliance with environmental standards.',
+    'tawazun.expertise.title': 'Tawazan Expertise',
+    'tawazun.expertise.description': 'Tawazan is executing major projects, including villas, mosques, and car showrooms at various locations in the Emirates',
     
   },
   ar: {
@@ -1223,6 +1250,38 @@ const translations = {
     'about.mission.title': 'مهمتنا',
     'about.mission.description': 'نحن ملتزمون بتقديم حلول عقارية استثنائية تتجاوز التوقعات، وتعزز الروابط المجتمعية، وتخلق قيمة دائمة لعملائنا وشركائنا والمجتمعات التي نخدمها. من خلال التصميم المبتكر والممارسات المستدامة والتفاني الثابت في الجودة، نبني أكثر من مجرد عقارات – نبني المستقبل.',
     
+    // Al-Abir Page
+    'alAbir.hero.title': 'الأبر',
+    'alAbir.hero.description': 'نقود الطريق في التميز الهندسي والحلول المبتكرة في جميع أنحاء دولة الإمارات العربية المتحدة.',
+    
+    'alAbir.business.title': 'أعمالنا',
+    'alAbir.business.description': 'الأبر هي شركة هندسية رائدة متخصصة في الحلول الهندسية الشاملة وإدارة المشاريع وخدمات الاستشارات التقنية. مع عقود من الخبرة في السوق الإماراتي، أثبتنا أنفسنا كشريك موثوق لمشاريع القطاعين العام والخاص.',
+    
+    'alAbir.services.title': 'خدماتنا',
+    'alAbir.services.list': [
+      'تصميم الهندسة الإنشائية',
+      'حلول الهندسة المدنية',
+      'تصميم MEP (ميكانيكي، كهربائي، سباكة)',
+      'إدارة المشاريع والإشراف',
+      'خدمات الاستشارات التقنية',
+      'إدارة البناء',
+      'ضمان الجودة والتحكم',
+      'هندسة السلامة',
+      'الهندسة البيئية',
+      'إدارة المرافق',
+      'التجديد والتحديث'
+    ],
+    
+    // Tawazun Construction Page
+    'tawazun.hero.title': 'توازن للإنشاءات',
+    'tawazun.hero.description': 'نبني المستقبل بدقة وجودة وابتكار في كل مشروع نقوم به.',
+    
+    'tawazun.about.title': 'حول توازن للإنشاءات',
+    'tawazun.about.description1': 'توازن للإنشاءات هي شركة إنشاءات رائدة في دولة الإمارات العربية المتحدة، متخصصة في المشاريع السكنية والتجارية والبنية التحتية عالية الجودة. مع التزام قوي بالتميز والابتكار، نجحنا في تسليم العديد من المشاريع البارزة في جميع أنحاء الإمارات.',
+    'tawazun.about.description2': 'فريقنا من المحترفين ذوي الخبرة يجمع بين الخبرة التقليدية في البناء والتكنولوجيا الحديثة والممارسات المستدامة لضمان أن كل مشروع يلبي أعلى معايير الجودة والسلامة والمسؤولية البيئية.',
+    
+    'tawazun.expertise.title': 'خبرتنا',
+    'tawazun.expertise.description': 'من المجمعات السكنية إلى الأبراج التجارية، نحن نجلب عقود من الخبرة في البناء إلى كل مشروع، مما يضمن نتائج استثنائية تصمد أمام اختبار الزمن.',
   
   },
 };
