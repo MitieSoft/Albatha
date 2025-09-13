@@ -130,6 +130,6 @@ export interface SecurityEvent {
   timestamp: string;
   ip?: string;
   userAgent?: string;
-  details: Record<string, any>;
+  details: Record<string, unknown>;
   severity: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
 }
