@@ -343,12 +343,7 @@ const translations = {
     'joudTower.description': 'Joud Tower by Albatha Real Estate offers luxurious homes where everything you desire for you and your family comes together - a stunning location in the heart of vibrant communities, equipped with top-class amenities, characterised by family-friendly features and attention to detail. Experience a life filled with joy, happiness, comfort and convenience in exclusive spaces designed for you.',
     'joudTower.discover': 'Discover',
     
-    // Contact Us Section
-    'contactUs.title': 'Contact Us',
-    'contactUs.description': 'Get in touch with us for any inquiries or support.',
-    'contactUs.contactButton': 'Contact Us',
-    'contactUs.email': 'Email',
-    'contactUs.phone': 'Phone',
+    
   },
   ar: {
     // Navigation
@@ -680,13 +675,7 @@ const translations = {
     'joudTower.subtitle': 'مرحباً بكم في الفخامة المُعاد تعريفها',
     'joudTower.description': 'يقدم برج جود من عقارات البطحاء منازل فاخرة حيث يجتمع كل ما ترغب فيه أنت وعائلتك - موقع مذهل في قلب المجتمعات النابضة بالحياة، مجهز بأفضل المرافق، يتميز بميزات صديقة للعائلة والاهتمام بالتفاصيل. اختبر حياة مليئة بالفرح والسعادة والراحة والراحة في مساحات حصرية مصممة خصيصاً لك.',
     'joudTower.discover': 'اكتشف',
-    
-    // Contact Us Section
-    'contactUs.title': 'اتصل بنا',
-    'contactUs.description': 'تواصل معنا لأي استفسارات أو دعم.',
-    'contactUs.contactButton': 'اتصل بنا',
-    'contactUs.email': 'البريد الإلكتروني',
-    'contactUs.phone': 'الهاتف',
+  
   },
 };
 
