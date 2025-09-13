@@ -5,11 +5,11 @@ import Footer from '../../components/Footer';
 import Image from 'next/image';
 
 export default function AlAbirPage() {
-  const { t, isRTL } = useLanguage();
+  const { t, tArray, isRTL } = useLanguage();
   
   // Helper function to get services list safely
   const getServicesList = (): string[] => {
-    const services = t('alAbir.services.list');
+    const services = tArray('alAbir.services.list');
     return Array.isArray(services) ? services : [];
   };
 
