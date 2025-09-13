@@ -158,7 +158,7 @@ export default function CommercialPropertiesPage() {
                       {/* Starting Price - Right Side */}
                       <div className={`${isRTL ? 'text-right ml-4' : 'text-right ml-4'}`}>
                         <div className={`text-xs text-white/80 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('commercial.property.startingFrom')}</div>
-                        <div className={`text-lg font-bold ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'Poppins, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t(property.priceKey)}</div>
+                        <div className={`text-lg font-bold ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'Poppins, Arial, sans-serif !important' : 'Univers, Arial, sans-serif' }}>{t(property.priceKey)}</div>
                       </div>
                     </div>
                   </div>
