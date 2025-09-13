@@ -1,5 +1,6 @@
 'use client';
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+
+import { createContext, useContext, useState, type ReactNode, useEffect } from 'react';
 
 export type Language = 'en' | 'ar';
 
@@ -8,7 +9,9 @@ type TranslationValue = string | string[] | Array<{question: string, answer: str
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => TranslationValue;
+  t: (key: string) => string;
+  tArray: (key: string) => string[];
+  tFAQ: (key: string) => Array<{question: string, answer: string}>;
   isRTL: boolean;
   fontFamily: string;
 }
@@ -402,6 +405,26 @@ const translations = {
     'joudTower.description': 'Joud Tower by Albatha Real Estate offers luxurious homes where everything you desire for you and your family comes together - a stunning location in the heart of vibrant communities, equipped with top-class amenities, characterised by family-friendly features and attention to detail. Experience a life filled with joy, happiness, comfort and convenience in exclusive spaces designed for you.',
     'joudTower.discover': 'Discover',
     
+    // Mission Values Section
+    'missionValues.hero.title': 'Our Mission & Values',
+    'missionValues.hero.subtitle': 'Building communities that inspire and endure through excellence, integrity, and innovation.',
+    'missionValues.about.title': 'About Albatha Real Estate',
+    'missionValues.about.description1': 'Established in 1986, Albatha Real Estate has been a cornerstone of the UAE real estate industry for over 35 years.',
+    'missionValues.about.description2': 'We specialize in developing and managing diverse property portfolios including residential, commercial, industrial, and retail spaces.',
+    'missionValues.about.description3': 'Our commitment to quality and customer satisfaction has made us a trusted name in the region.',
+    'missionValues.about.description4': 'We continue to innovate and adapt to meet the evolving needs of our clients and communities.',
+    'missionValues.operations.title': 'Our Key Operations',
+    'missionValues.operations.item1': 'Property Development',
+    'missionValues.operations.item2': 'Asset Management',
+    'missionValues.operations.item3': 'Investment Solutions',
+    'missionValues.operations.item4': 'Commercial Leasing',
+    'missionValues.operations.item5': 'Residential Sales',
+    'missionValues.operations.item6': 'Property Maintenance',
+    'missionValues.operations.description': 'Through our comprehensive range of services, we create value for our clients while contributing to the growth and development of the UAE real estate market.',
+    'missionValues.mission.title': 'Our Mission',
+    'missionValues.mission.description1': 'To create exceptional real estate solutions that enhance the quality of life for our communities while delivering sustainable value to our stakeholders.',
+    'missionValues.mission.description2': 'We are committed to innovation, excellence, and integrity in everything we do, building lasting relationships and contributing to the prosperity of the UAE.',
+    
     
   },
   ar: {
@@ -791,6 +814,26 @@ const translations = {
     'joudTower.subtitle': 'مرحباً بكم في الفخامة المُعاد تعريفها',
     'joudTower.description': 'يقدم برج جود من عقارات البطحاء منازل فاخرة حيث يجتمع كل ما ترغب فيه أنت وعائلتك - موقع مذهل في قلب المجتمعات النابضة بالحياة، مجهز بأفضل المرافق، يتميز بميزات صديقة للعائلة والاهتمام بالتفاصيل. اختبر حياة مليئة بالفرح والسعادة والراحة والراحة في مساحات حصرية مصممة خصيصاً لك.',
     'joudTower.discover': 'اكتشف',
+    
+    // Mission Values Section
+    'missionValues.hero.title': 'مهمتنا وقيمنا',
+    'missionValues.hero.subtitle': 'بناء مجتمعات تلهم وتدوم من خلال التميز والنزاهة والابتكار.',
+    'missionValues.about.title': 'حول البطحاء العقارية',
+    'missionValues.about.description1': 'تأسست البطحاء العقارية في عام 1986، وقد كانت حجر الزاوية في صناعة العقارات الإماراتية لأكثر من 35 عاماً.',
+    'missionValues.about.description2': 'نختص في تطوير وإدارة محافظ عقارية متنوعة تشمل المساحات السكنية والتجارية والصناعية والتجزئة.',
+    'missionValues.about.description3': 'التزامنا بالجودة ورضا العملاء جعلنا اسماً موثوقاً في المنطقة.',
+    'missionValues.about.description4': 'نواصل الابتكار والتكيف لتلبية الاحتياجات المتطورة لعملائنا ومجتمعاتنا.',
+    'missionValues.operations.title': 'عملياتنا الرئيسية',
+    'missionValues.operations.item1': 'تطوير العقارات',
+    'missionValues.operations.item2': 'إدارة الأصول',
+    'missionValues.operations.item3': 'حلول الاستثمار',
+    'missionValues.operations.item4': 'التأجير التجاري',
+    'missionValues.operations.item5': 'مبيعات سكنية',
+    'missionValues.operations.item6': 'صيانة العقارات',
+    'missionValues.operations.description': 'من خلال مجموعة خدماتنا الشاملة، نخلق قيمة لعملائنا مع المساهمة في نمو وتطوير سوق العقارات الإماراتي.',
+    'missionValues.mission.title': 'مهمتنا',
+    'missionValues.mission.description1': 'إنشاء حلول عقارية استثنائية تعزز جودة الحياة لمجتمعاتنا مع تقديم قيمة مستدامة لأصحاب المصلحة.',
+    'missionValues.mission.description2': 'نلتزم بالابتكار والتميز والنزاهة في كل ما نقوم به، وبناء علاقات دائمة والمساهمة في ازدهار دولة الإمارات.',
   
   },
 };
@@ -801,10 +844,24 @@ const translations = {
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('en');
 
-  const t = (key: string): TranslationValue => {
+  const t = (key: string): string => {
     // @ts-expect-error - Complex type inference issue with dynamic key access
     const translation = translations[language][key];
-    return translation || key;
+    return (typeof translation === 'string' ? translation : key);
+  };
+
+  const tArray = (key: string): string[] => {
+    // @ts-expect-error - Complex type inference issue with dynamic key access
+    const translation = translations[language][key];
+    return Array.isArray(translation) ? translation : [];
+  };
+
+  const tFAQ = (key: string): Array<{question: string, answer: string}> => {
+    // @ts-expect-error - Complex type inference issue with dynamic key access
+    const translation = translations[language][key];
+    return Array.isArray(translation) && translation.length > 0 && typeof translation[0] === 'object' && 'question' in translation[0] 
+      ? translation as Array<{question: string, answer: string}> 
+      : [];
   };
 
   const isRTL = language === 'ar';
@@ -816,7 +873,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   }, [isRTL, language]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL, fontFamily }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, tArray, tFAQ, isRTL, fontFamily }}>
       {children}
     </LanguageContext.Provider>
   );
