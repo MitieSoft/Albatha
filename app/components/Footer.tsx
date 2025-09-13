@@ -3,12 +3,17 @@ import { Button } from "./ui/button";
 import { ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import Image from "next/image";
+import { useState } from "react";
+import { sanitizeInput } from "../lib/security";
 // Logo paths for public folder
 const logo = "/images/final-logo.png";
 const arabicLogo = "/images/final-logo-arabic.png";
 
 const Footer = () => {
   const { t, isRTL } = useLanguage();
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   
   const footerLinks = {
     company: [
@@ -44,6 +49,44 @@ const Footer = () => {
     { icon: Linkedin, href: "#", label: t('footer.social.linkedin') },
     { icon: Youtube, href: "#", label: t('footer.social.youtube') }
   ];
+
+  // Handle newsletter subscription
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const sanitizedEmail = sanitizeInput(email);
+      
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: sanitizedEmail }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setEmail('');
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const sanitizedValue = sanitizeInput(e.target.value);
+    setEmail(sanitizedValue);
+  };
 
   return (
     <footer className="bg-[#661244] text-aldar-light">
@@ -145,17 +188,42 @@ const Footer = () => {
             <p className={`text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base ${isRTL ? 'text-right font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
               {t('footer.newsletterDescription')}
             </p>
-            <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
+            <form onSubmit={handleNewsletterSubmit} className={`flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
               <input
                 type="email"
+                value={email}
+                onChange={handleEmailChange}
                 placeholder={isRTL ? "أدخل عنوان بريدك الإلكتروني" : "Enter your email address"}
                 className={`flex-1 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-white/10 border border-white/20 text-aldar-light placeholder-aldar-muted focus:outline-none focus:border-aldar-teal transition-colors text-sm sm:text-base ${isRTL ? 'text-right' : ''}`}
+                required
               />
-              <Button variant="default" className="bg-white text-[#661244] hover:bg-gray-100 hover:shadow-xl hover:scale-105 font-medium transition-all duration-300 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
-                {t('footer.subscribe')}
+              <Button 
+                type="submit"
+                disabled={isSubmitting}
+                variant="default" 
+                className={`${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-white text-[#661244] hover:bg-gray-100 hover:shadow-xl hover:scale-105'} font-medium transition-all duration-300 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}
+              >
+                {isSubmitting ? 'Subscribing...' : t('footer.subscribe')}
                 <ArrowRight className={`h-3 w-3 sm:h-4 sm:w-4 ${isRTL ? 'mr-1 sm:mr-2 rotate-180' : 'ml-1 sm:ml-2'}`} />
               </Button>
-            </div>
+            </form>
+            
+            {/* Newsletter Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center">
+                <p className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  Thank you for subscribing!
+                </p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg text-center">
+                <p className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  Subscription failed. Please try again.
+                </p>
+              </div>
+            )}
           </div>
         </div>
 

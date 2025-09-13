@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { AccessibilityProvider } from "./contexts/AccessibilityContext";
+import SecurityMonitor from "./components/SecurityMonitor";
 
 export const metadata: Metadata = {
   title: "Albatha  Real Estate - Premium Properties in Dubai",
@@ -21,11 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <LanguageProvider>
-          <AccessibilityProvider>
-            {children}
-          </AccessibilityProvider>
-        </LanguageProvider>
+        <SecurityMonitor>
+          <LanguageProvider>
+            <AccessibilityProvider>
+              {children}
+            </AccessibilityProvider>
+          </LanguageProvider>
+        </SecurityMonitor>
       </body>
     </html>
   );

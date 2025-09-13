@@ -3,9 +3,24 @@ import { useLanguage } from '../contexts/LanguageContext';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Image from 'next/image';
+import { useState } from 'react';
+import { contactFormSchema, sanitizeInput } from '../lib/security';
 
 export default function ContactPage() {
   const { t, isRTL } = useLanguage();
+  
+  // Form state
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   
   // Helper functions to get data safely
   const getSubjectOptions = (): string[] => {
@@ -16,6 +31,85 @@ export default function ContactPage() {
   const getFAQQuestions = (): Array<{question: string, answer: string}> => {
     const questions = t('contact.faq.questions') as unknown;
     return Array.isArray(questions) ? (questions as Array<{question: string, answer: string}>) : [];
+  };
+
+  // Handle input change with sanitization
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    const sanitizedValue = sanitizeInput(value);
+    
+    setFormData(prev => ({
+      ...prev,
+      [name]: sanitizedValue
+    }));
+    
+    // Clear error for this field
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrors({});
+    setSubmitStatus('idle');
+
+    try {
+      // Validate form data
+      const validation = contactFormSchema.safeParse(formData);
+      if (!validation.success) {
+        const newErrors: Record<string, string> = {};
+        validation.error.errors.forEach(error => {
+          const field = error.path[0] as string;
+          newErrors[field] = error.message;
+        });
+        setErrors(newErrors);
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Submit to API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        if (result.details) {
+          const newErrors: Record<string, string> = {};
+          result.details.forEach((detail: { field: string; message: string }) => {
+            newErrors[detail.field] = detail.message;
+          });
+          setErrors(newErrors);
+        }
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -107,7 +201,8 @@ export default function ContactPage() {
                 <h3 className={`text-xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                   {t('contact.address.title')}
                 </h3>
-                <p className={`text-gray-600 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('contact.address.text') }}>
+                <p className={`text-gray-600 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('contact.address.text')}
                 </p>
               </div>
             </div>
@@ -119,7 +214,26 @@ export default function ContactPage() {
                 <h3 className={`text-2xl font-bold text-[#661244] mb-6 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                   {t('contact.form.title')}
                 </h3>
-                <form className="space-y-6">
+                
+                {/* Success Message */}
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                    <p className={`${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      Thank you for your message! We will get back to you soon.
+                    </p>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                    <p className={`${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      There was an error submitting your message. Please try again.
+                    </p>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
@@ -127,10 +241,17 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
-                        className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
                         placeholder={t('contact.form.firstNamePlaceholder')}
                         dir={isRTL ? 'rtl' : 'ltr'}
+                        required
                       />
+                      {errors.firstName && (
+                        <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
+                      )}
                     </div>
                     <div>
                       <label className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
@@ -138,10 +259,17 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
-                        className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
                         placeholder={t('contact.form.lastNamePlaceholder')}
                         dir={isRTL ? 'rtl' : 'ltr'}
+                        required
                       />
+                      {errors.lastName && (
+                        <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>
+                      )}
                     </div>
                   </div>
                   
@@ -151,10 +279,17 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="email"
-                      className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
                       placeholder={t('contact.form.emailPlaceholder')}
                       dir={isRTL ? 'rtl' : 'ltr'}
+                      required
                     />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                    )}
                   </div>
                   
                   <div>
@@ -163,22 +298,39 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="tel"
-                      className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
                       placeholder={t('contact.form.phonePlaceholder')}
                       dir={isRTL ? 'rtl' : 'ltr'}
+                      required
                     />
+                    {errors.phone && (
+                      <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                    )}
                   </div>
                   
                   <div>
                     <label className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                       {t('contact.form.subject')}
                     </label>
-                    <select className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} text-gray-700`} dir={isRTL ? 'rtl' : 'ltr'}>
-                      <option className="text-gray-700">{t('contact.form.subjectPlaceholder')}</option>
+                    <select 
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} text-gray-700`} 
+                      dir={isRTL ? 'rtl' : 'ltr'}
+                      required
+                    >
+                      <option value="" className="text-gray-700">{t('contact.form.subjectPlaceholder')}</option>
                       {getSubjectOptions().map((option, index) => (
-                        <option key={index} className="text-gray-700">{option}</option>
+                        <option key={index} value={option} className="text-gray-700">{option}</option>
                       ))}
                     </select>
+                    {errors.subject && (
+                      <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
+                    )}
                   </div>
                   
                   <div>
@@ -186,19 +338,27 @@ export default function ContactPage() {
                       {t('contact.form.message')}
                     </label>
                     <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       rows={5}
-                      className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition resize-none ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
+                      className={`w-full px-4 py-3 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition resize-none ${isRTL ? 'text-right' : 'text-left'} placeholder:text-gray-700`}
                       placeholder={t('contact.form.messagePlaceholder')}
                       dir={isRTL ? 'rtl' : 'ltr'}
+                      required
                     ></textarea>
+                    {errors.message && (
+                      <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                    )}
                   </div>
                   
                   <button
                     type="submit"
-                    className={`w-full bg-[#661244] hover:bg-[#551133] text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300 hover-scale text-lg ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    disabled={isSubmitting}
+                    className={`w-full ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#661244] hover:bg-[#551133]'} text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300 hover-scale text-lg ${isRTL ? 'font-arabic' : 'font-english'}`}
                     style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    {t('contact.form.submit')}
+                    {isSubmitting ? 'Submitting...' : t('contact.form.submit')}
                   </button>
                 </form>
               </div>
