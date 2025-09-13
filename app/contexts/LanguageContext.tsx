@@ -553,6 +553,67 @@ const translations = {
     'commercial.properties.abreMpcHealthcare.location': 'Sharjah',
     'commercial.properties.abreMpcHealthcare.price': 'AED 2,800,000',
     
+    // Joud Tower Page
+    'joudTower.hero.title': 'Joud Tower',
+    'joudTower.hero.subtitle': 'Welcome To Luxury Redefined',
+    'joudTower.hero.description': 'Joud Tower by Albatha Real Estate offers luxurious homes where everything you desire for you and your family comes together - a stunning location in the heart of vibrant communities, equipped with top-class amenities, characterised by family-friendly features and attention to detail. Experience a life filled with joy, happiness, comfort and convenience in exclusive spaces designed for you.',
+    
+    'joudTower.lavish.title': 'LAVISH.<br/>DELUXE.<br/>OPULENT.',
+    'joudTower.lavish.description': 'Step into a world where luxury meets functionality, where every detail has been carefully crafted to provide an unparalleled living experience.',
+    
+    'joudTower.specification.title': 'Joud Tower Specification',
+    'joudTower.specification.storeys': 'Storeys',
+    'joudTower.specification.basement': '1 Basement',
+    'joudTower.specification.residential': '25 Residential Floors',
+    'joudTower.specification.apartmentTypes': 'Apartment Types',
+    'joudTower.specification.apartments.2bed': '2 Bedroom Apartments',
+    'joudTower.specification.apartments.3bed': '3 Bedroom Apartments',
+    'joudTower.specification.apartments.3bedGarden': '3 Bedroom Garden Apartments',
+    'joudTower.specification.apartments.4bed': '4 Bedroom Apartments',
+    'joudTower.specification.apartments.4bedGarden': '4 Bedroom Garden Apartments',
+    'joudTower.specification.apartments.4bedDuplex': '4 Bedroom Duplex Apartments',
+    'joudTower.specification.apartments.penthouse': 'Penthouse Apartments',
+    
+    'joudTower.amenities.title': 'Amenities',
+    'joudTower.amenities.gym': 'Gym',
+    'joudTower.amenities.sauna': 'Sauna',
+    'joudTower.amenities.pool': 'Swimming Pool',
+    'joudTower.amenities.padel': 'Padel Court',
+    'joudTower.amenities.running': 'Running Track',
+    'joudTower.amenities.bbq': 'BBQ Area',
+    'joudTower.amenities.kids': 'Kids Play Area',
+    'joudTower.amenities.hall': 'Multipurpose Hall',
+    'joudTower.amenities.cafe': 'Cafe',
+    'joudTower.amenities.prayer': 'Prayer Room',
+    'joudTower.amenities.kindergarten': 'Kindergarten',
+    'joudTower.amenities.retail': 'Retail Shops',
+    
+    'joudTower.features.title': 'Other Features',
+    'joudTower.features.delivery': 'Package Delivery Service',
+    'joudTower.features.concierge': '24/7 Concierge Service',
+    'joudTower.features.access': 'Smart Access Control',
+    'joudTower.features.booking': 'Facility Booking System',
+    'joudTower.features.maintenance': 'Maintenance Services',
+    'joudTower.features.description': 'Experience the perfect blend of luxury, comfort, and convenience with our comprehensive range of services and amenities designed to enhance your lifestyle.',
+    
+    'joudTower.views.title': 'Enjoy<br/>Unparalleled<br/>Views',
+    'joudTower.views.description': 'Wake up to breathtaking panoramic views of the city skyline and enjoy the beauty of your surroundings from the comfort of your home.',
+    
+    'joudTower.sanctuary.title': 'Your Sanctuary',
+    'joudTower.sanctuary.description': 'Create lasting memories in your private sanctuary, where every moment is designed to bring you peace, comfort, and joy.',
+    
+    'joudTower.feast.title': 'A Feast<br/>For The<br/>Senses',
+    'joudTower.feast.description': 'Indulge in culinary excellence with state-of-the-art kitchen facilities and dining spaces designed for memorable experiences.',
+    
+    'joudTower.perspective.title': 'Priceless<br/>Perspective',
+    'joudTower.perspective.description': 'Gain a new perspective on life with stunning views and thoughtfully designed spaces that inspire and rejuvenate.',
+    
+    'joudTower.aesthetic.title': 'AESTHETIC.<br/>EXQUISITE.<br/>IDYLLIC.',
+    'joudTower.aesthetic.description': 'Discover the perfect harmony of aesthetics and functionality in every corner of your home, where beauty meets purpose.',
+    
+    'joudTower.elegance.title': 'ELEGANCE.<br/>STYLE.<br/>REFINEMENT.',
+    'joudTower.elegance.description': 'Experience the epitome of refined living with elegant finishes, sophisticated design, and timeless style that defines luxury.',
+    
     
   },
   ar: {
@@ -1090,6 +1151,67 @@ const translations = {
     'commercial.properties.abreMpcHealthcare.type': 'مركز طبي',
     'commercial.properties.abreMpcHealthcare.location': 'الشارقة',
     'commercial.properties.abreMpcHealthcare.price': '2,800,000 درهم',
+    
+    // Joud Tower Page
+    'joudTower.hero.title': 'برج جود',
+    'joudTower.hero.subtitle': 'مرحباً بكم في الفخامة المُعاد تعريفها',
+    'joudTower.hero.description': 'يقدم برج جود من عقارات البطحاء منازل فاخرة حيث يجتمع كل ما ترغب فيه أنت وعائلتك - موقع مذهل في قلب المجتمعات النابضة بالحياة، مجهز بأفضل المرافق، يتميز بميزات صديقة للعائلة والاهتمام بالتفاصيل. اختبر حياة مليئة بالفرح والسعادة والراحة والراحة في مساحات حصرية مصممة خصيصاً لك.',
+    
+    'joudTower.lavish.title': 'فاخر.<br/>مميز.<br/>باذخ.',
+    'joudTower.lavish.description': 'ادخل إلى عالم حيث تلتقي الفخامة بالوظائف، حيث تم تصميم كل تفصيل بعناية لتوفير تجربة معيشة لا مثيل لها.',
+    
+    'joudTower.specification.title': 'مواصفات برج جود',
+    'joudTower.specification.storeys': 'الطوابق',
+    'joudTower.specification.basement': 'طابق تحت أرضي واحد',
+    'joudTower.specification.residential': '25 طابق سكني',
+    'joudTower.specification.apartmentTypes': 'أنواع الشقق',
+    'joudTower.specification.apartments.2bed': 'شقق غرفتين',
+    'joudTower.specification.apartments.3bed': 'شقق ثلاث غرف',
+    'joudTower.specification.apartments.3bedGarden': 'شقق ثلاث غرف مع حديقة',
+    'joudTower.specification.apartments.4bed': 'شقق أربع غرف',
+    'joudTower.specification.apartments.4bedGarden': 'شقق أربع غرف مع حديقة',
+    'joudTower.specification.apartments.4bedDuplex': 'شقق دوبلكس أربع غرف',
+    'joudTower.specification.apartments.penthouse': 'شقق بنتهاوس',
+    
+    'joudTower.amenities.title': 'المرافق',
+    'joudTower.amenities.gym': 'صالة رياضية',
+    'joudTower.amenities.sauna': 'ساونا',
+    'joudTower.amenities.pool': 'مسبح',
+    'joudTower.amenities.padel': 'ملعب بادل',
+    'joudTower.amenities.running': 'مضمار جري',
+    'joudTower.amenities.bbq': 'منطقة شواء',
+    'joudTower.amenities.kids': 'منطقة ألعاب الأطفال',
+    'joudTower.amenities.hall': 'قاعة متعددة الأغراض',
+    'joudTower.amenities.cafe': 'مقهى',
+    'joudTower.amenities.prayer': 'مصلى',
+    'joudTower.amenities.kindergarten': 'روضة أطفال',
+    'joudTower.amenities.retail': 'محلات تجارية',
+    
+    'joudTower.features.title': 'ميزات أخرى',
+    'joudTower.features.delivery': 'خدمة توصيل الطرود',
+    'joudTower.features.concierge': 'خدمة الكونسيرج 24/7',
+    'joudTower.features.access': 'نظام التحكم في الوصول الذكي',
+    'joudTower.features.booking': 'نظام حجز المرافق',
+    'joudTower.features.maintenance': 'خدمات الصيانة',
+    'joudTower.features.description': 'اختبر المزيج المثالي من الفخامة والراحة والراحة مع مجموعة شاملة من الخدمات والمرافق المصممة لتعزيز نمط حياتك.',
+    
+    'joudTower.views.title': 'استمتع<br/>بإطلالات<br/>لا مثيل لها',
+    'joudTower.views.description': 'استيقظ على إطلالات بانورامية خلابة لخط الأفق الحضري واستمتع بجمال محيطك من راحة منزلك.',
+    
+    'joudTower.sanctuary.title': 'ملاذك الخاص',
+    'joudTower.sanctuary.description': 'اصنع ذكريات دائمة في ملاذك الخاص، حيث كل لحظة مصممة لتجلب لك السلام والراحة والفرح.',
+    
+    'joudTower.feast.title': 'وليمة<br/>للحواس',
+    'joudTower.feast.description': 'استمتع بالتميز الطهوي مع مرافق مطبخ متطورة ومساحات طعام مصممة لتجارب لا تُنسى.',
+    
+    'joudTower.perspective.title': 'منظور<br/>ثمين',
+    'joudTower.perspective.description': 'اكتسب منظوراً جديداً للحياة مع إطلالات خلابة ومساحات مصممة بعناية تلهم وتنعش.',
+    
+    'joudTower.aesthetic.title': 'جمالي.<br/>رائع.<br/>ساحر.',
+    'joudTower.aesthetic.description': 'اكتشف التناغم المثالي بين الجمال والوظائف في كل ركن من منزلك، حيث يلتقي الجمال بالغرض.',
+    
+    'joudTower.elegance.title': 'أناقة.<br/>أسلوب.<br/>رقي.',
+    'joudTower.elegance.description': 'اختبر ذروة العيش الراقي مع التشطيبات الأنيقة والتصميم المتطور والأسلوب الخالد الذي يعرف الفخامة.',
   
   },
 };
