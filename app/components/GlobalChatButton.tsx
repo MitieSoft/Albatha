@@ -23,7 +23,7 @@ const GlobalChatButton = () => {
           className="bg-white/20 hover:bg-white/30 text-white hover:scale-105 transition-all duration-300 rounded-full p-3 shadow-lg border border-white/30 hover:shadow-xl"
         >
                   <img
-          src="/assets/chat.png"
+          src="/images/chat.png"
           alt="Chat"
           className="w-6 h-6"
         />
