@@ -5,85 +5,85 @@ import Footer from '../../components/Footer';
 import Image from 'next/image';
 
 export default function ResidentialPropertiesPage() {
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
 
   // Property data matching the image
   const properties = [
     {
       id: 1,
-      title: "Al Arooba Building, Sharjah",
-      bedrooms: "2-3 bedrooms",
-      location: "Al Mareija Street, Sharjah. Close to Al Hisn Avenue",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.alArooba.title",
+      bedroomsKey: "residential.properties.alArooba.bedrooms",
+      locationKey: "residential.properties.alArooba.location",
+      priceKey: "residential.properties.alArooba.price"
     },
     {
       id: 2,
-      title: "Albatha Al Khan Beach Villa, Sharjah",
-      bedrooms: "2-3 bedrooms",
-      location: "Al Khalidiya Villa, Sharjah. Located Directly on Al Khan Beach.",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.albathaAlKhan.title",
+      bedroomsKey: "residential.properties.albathaAlKhan.bedrooms",
+      locationKey: "residential.properties.albathaAlKhan.location",
+      priceKey: "residential.properties.albathaAlKhan.price"
     },
     {
       id: 3,
-      title: "Albatha Residence Business Bay",
-      bedrooms: "2-4 bedroom",
-      location: "216, Sheikh Zayed Road, Business Bay, Dubai",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.albathaResidence.title",
+      bedroomsKey: "residential.properties.albathaResidence.bedrooms",
+      locationKey: "residential.properties.albathaResidence.location",
+      priceKey: "residential.properties.albathaResidence.price"
     },
     {
       id: 4,
-      title: "Al Waha Residence, Sharjah",
-      bedrooms: "1-4 bedroom",
-      location: "Al Khan Area, Sharjah, 897F+HCQ",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.alWaha.title",
+      bedroomsKey: "residential.properties.alWaha.bedrooms",
+      locationKey: "residential.properties.alWaha.location",
+      priceKey: "residential.properties.alWaha.price"
     },
     {
       id: 5,
-      title: "4 Villas Al Muafja, Sharjah",
-      bedrooms: "3bedroom",
-      location: "Al Muwafja Villas, Al Wasit Suburb Sharjah",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.fourVillas.title",
+      bedroomsKey: "residential.properties.fourVillas.bedrooms",
+      locationKey: "residential.properties.fourVillas.location",
+      priceKey: "residential.properties.fourVillas.price"
     },
     {
       id: 6,
-      title: "Sheikha Fatma Villa 204, Barashi",
-      bedrooms: "6 bedrooms",
-      location: "Barashi, Al Bedea Suburb Street 82. Close to Emirates Road",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.sheikhaFatma.title",
+      bedroomsKey: "residential.properties.sheikhaFatma.bedrooms",
+      locationKey: "residential.properties.sheikhaFatma.location",
+      priceKey: "residential.properties.sheikhaFatma.price"
     },
     {
       id: 7,
-      title: "Rolla Building, Sharjah",
-      bedrooms: "1 bedroom",
-      location: "Al Sheyoug Street, Sharjah, Near Al Hisn Square/Sharjah Fort",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.rollaBuilding.title",
+      bedroomsKey: "residential.properties.rollaBuilding.bedrooms",
+      locationKey: "residential.properties.rollaBuilding.location",
+      priceKey: "residential.properties.rollaBuilding.price"
     },
     {
       id: 8,
-      title: "Villa 274 - Shargan, Sharjah",
-      bedrooms: "5 bedrooms",
-      location: "Al Mirgab Street 105. Close to Sheikh Mohd Bin Sultan Street",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.villa274.title",
+      bedroomsKey: "residential.properties.villa274.bedrooms",
+      locationKey: "residential.properties.villa274.location",
+      priceKey: "residential.properties.villa274.price"
     },
     {
       id: 9,
-      title: "03 Shargan Villas, Sharjah",
-      bedrooms: "4 bedrooms",
-      location: "Shargan Villas Sharjah, Street 90 and access to Mohammed Bin Sultan Al Qasimi street, opposite Al Mirgab Residence, Shargan.",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.threeShargan.title",
+      bedroomsKey: "residential.properties.threeShargan.bedrooms",
+      locationKey: "residential.properties.threeShargan.location",
+      priceKey: "residential.properties.threeShargan.price"
     },
     {
       id: 10,
-      title: "Villa 276 (GECO) - Shargan, Sharjah",
-      bedrooms: "5 bedroom",
-      location: "Al Mirgab Street 105. Close to Sheikh Mohd Bin Sultan Al Qasimi Street.",
-      price: "AED 2.8M"
+      titleKey: "residential.properties.villa276.title",
+      bedroomsKey: "residential.properties.villa276.bedrooms",
+      locationKey: "residential.properties.villa276.location",
+      priceKey: "residential.properties.villa276.price"
     },
     
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isRTL ? 'rtl' : 'ltr'}>
       <Navigation />
       
       {/* Hero Section with Blurred Background */}
@@ -101,33 +101,36 @@ export default function ResidentialPropertiesPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up">
-              Residential Properties
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('residential.hero.title')}
             </h1>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-12 animate-fade-in-up animation-delay-200">
-              Our guiding principles and commitment to excellence in Dubai&apos;s dynamic real estate landscape.
+            <p className={`text-lg md:text-xl text-white/90 leading-relaxed mb-12 animate-fade-in-up animation-delay-200 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('residential.hero.subtitle')}
             </p>
             
             {/* Search Bar */}
             <div className="bg-gray-100 border border-gray-200 rounded-lg p-4 max-w-4xl mx-auto animate-scale-in animation-delay-400">
-              <div className="flex flex-col sm:flex-row gap-3 items-center">
+              <div className={`flex flex-col sm:flex-row gap-3 items-center ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
                 <input
                   type="text"
-                  placeholder="Location"
-                  className="flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition"
+                  placeholder={t('residential.search.location')}
+                  className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                 />
                 <input
                   type="text"
-                  placeholder="Bedroom"
-                  className="flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition"
+                  placeholder={t('residential.search.bedroom')}
+                  className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                 />
                 <input
                   type="text"
-                  placeholder="Size (Sq. Ft.)"
-                  className="flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition"
+                  placeholder={t('residential.search.size')}
+                  className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                 />
-                <button className="w-full sm:w-auto bg-[#661244] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#551133] transition-colors duration-200 hover-scale">
-                  Search
+                <button className={`w-full sm:w-auto bg-[#661244] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#551133] transition-colors duration-200 hover-scale ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('residential.search.button')}
                 </button>
               </div>
             </div>
@@ -146,7 +149,7 @@ export default function ResidentialPropertiesPage() {
                   <div className="relative h-80 w-full overflow-hidden border border-gray-300 rounded-3xl hover-scale">
                     <Image
                       src="/images/workspace-image.jpg"
-                      alt={property.title}
+                      alt={t(property.titleKey)}
                       fill
                       className="object-cover smooth-transition"
                     />
@@ -154,36 +157,36 @@ export default function ResidentialPropertiesPage() {
                   
                   {/* Property Title */}
                   <div className="p-2 bg-white">
-                    <h3 className="text-2xl text-center font-semibold text-[#661244] mb-2 line-clamp-2">
-                      {property.title}
+                    <h3 className={`text-2xl text-center font-semibold text-[#661244] mb-2 line-clamp-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t(property.titleKey)}
                     </h3>
                   </div>
                   
                   {/* Purple Details Bar */}
                   <div className="bg-[#661244] text-white p-3 border border-[#661244] rounded-3xl hover-glow">
-                    <div className="flex justify-between items-start">
-                      <div className="flex flex-col space-y-2 flex-1">
+                    <div className={`flex justify-between items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                      <div className={`flex flex-col space-y-2 flex-1 ${isRTL ? 'text-right' : 'text-left'}`}>
                         {/* Bedrooms */}
-                        <div className="flex items-center">
-                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
+                          <svg className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                           </svg>
-                          <span className="text-sm">{property.bedrooms}</span>
+                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.bedroomsKey)}</span>
                         </div>
                         
                         {/* Location */}
-                        <div className="flex items-center">
-                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
+                          <svg className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-sm">{property.location}</span>
+                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.locationKey)}</span>
                         </div>
                       </div>
                       
                       {/* Starting Price - Right Side */}
-                      <div className="text-right ml-4">
-                        <div className="text-xs text-white/80">Starting From</div>
-                        <div className="text-lg font-bold">{property.price}</div>
+                      <div className={`${isRTL ? 'text-right ml-4' : 'text-right ml-4'}`}>
+                        <div className={`text-xs text-white/80 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('residential.property.startingFrom')}</div>
+                        <div className={`text-lg font-bold ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.priceKey)}</div>
                       </div>
                     </div>
                   </div>

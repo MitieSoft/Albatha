@@ -194,7 +194,7 @@ const HeroSection = () => {
           
         >
           <Phone className={`h-3 w-3 sm:h-4 sm:w-4 ${isRTL ? "ml-1 sm:ml-1" : "mr-0 sm:mr-1"}`} />
-          <span className="hidden sm:inline text-base sm:text-lg">Call <span className="font-mono" style={{ fontVariantNumeric: 'lining-nums' }}>{t('hero.number')}</span></span>
+          <span className="hidden sm:inline text-base sm:text-lg">Call <span className="font-mono" style={{ fontVariantNumeric: 'lining-nums', direction: 'ltr', unicodeBidi: 'bidi-override', fontFeatureSettings: '"lnum"', lang: 'en' }} dir="ltr"><span style={{ unicodeBidi: 'bidi-override', fontVariantNumeric: 'lining-nums', fontFeatureSettings: '"lnum"', lang: 'en' }}>800 1 8888</span></span></span>
         </Button>
 
         <Button

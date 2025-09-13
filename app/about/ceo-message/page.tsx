@@ -13,7 +13,9 @@ export default function CeoMessagePage() {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <CeoAbout />
+      <div className="pt-16">
+        <CeoAbout />
+      </div>
       <ContactUsSection />
       <Footer />
     </div>

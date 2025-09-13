@@ -5,10 +5,10 @@ import Footer from '../../components/Footer';
 import Image from 'next/image';
 
 export default function JoudTowerPage() {
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white overflow-x-hidden" dir={isRTL ? 'rtl' : 'ltr'}>
       <Navigation />
       
       {/* Hero Section */}
@@ -24,15 +24,17 @@ export default function JoudTowerPage() {
         </div>
 
         <div className="container mx-auto px-4 sm:px-12 md:px-16 xl:px-24 relative z-10">
-          <div className="flex justify-end">
-            <div className="text-white text-right max-w-4xl">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
-                JOUD TOWER
+          <div className={`flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
+            <div className={`text-white ${isRTL ? 'text-right' : 'text-right'} max-w-4xl`}>
+              <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.hero.title')}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-5xl text-white mb-8">
-                A Dream Designed For You
+              <p className={`text-lg sm:text-xl md:text-2xl lg:text-5xl text-white mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.hero.subtitle')}
               </p>
-              <p className='text-lg text-white text-end leading-relaxed pl-8'>Joud Tower by Albatha Real Estate offers luxurious homes where everything you desire for you and your family comes together - a stunning location in the heart of vibrant communities, equipped with top-class amenities, characterised by family-friendly features and attention to detail. Experience a life filled with joy, happiness, comfort and convenience in exclusive spaces designed for you.</p>
+              <p className={`text-lg text-white ${isRTL ? 'text-right' : 'text-end'} leading-relaxed ${isRTL ? 'pr-8' : 'pl-8'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.hero.description')}
+              </p>
             </div>
           </div>
         </div>
@@ -41,15 +43,12 @@ export default function JoudTowerPage() {
       {/* LAVISH.DELUXE.OPULENT Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <h2 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-[#661244] leading-tight">
-                LAVISH.<br />
-                DELUXE.<br />
-                OPULENT.
+          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12 ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
+            <div className={`${isRTL ? 'lg:col-start-2' : ''}`}>
+              <h2 className={`text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-[#661244] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.lavish.title') }}>
               </h2>
             </div>
-            <div className="flex justify-center lg:justify-end">
+            <div className={`flex justify-center ${isRTL ? 'lg:justify-start' : 'lg:justify-end'}`}>
               <div className="relative w-full max-w-3xl h-98">
                 <Image
                   src="/images/6.png"
@@ -61,12 +60,8 @@ export default function JoudTowerPage() {
             </div>
           </div>
           <div className="text-center">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Joud Tower represents the pinnacle of luxury living in the heart of the city.
-              This stunning residential tower offers unparalleled comfort, modern amenities,
-              and breathtaking views of the skyline. Designed with meticulous attention to
-              detail, Joud Tower combines contemporary architecture with premium finishes
-              to create an exceptional living experience for discerning residents.
+            <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('joudTower.lavish.description')}
             </p>
           </div>
         </div>
@@ -76,36 +71,36 @@ export default function JoudTowerPage() {
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8">
-              Joud Tower Specification
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('joudTower.specification.title')}
             </h2>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-8 text-lg text-gray-700">
+          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
+            <div className={`${isRTL ? 'lg:col-start-2' : ''}`}>
+              <div className={`space-y-8 text-lg text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                 <div>
-                  <h3 className="text-4xl font-bold text-[#661244] mb-4">No. of storeys: 55</h3>
+                  <h3 className={`text-4xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.specification.storeys')}</h3>
 
-                  <p>1 Basement + Ground Floor + 5 Podium Levels for parking and services</p>
-                  <p><strong>48 floors residential</strong> at its highest point</p>
+                  <p>{t('joudTower.specification.basement')}</p>
+                  <p><strong>{t('joudTower.specification.residential')}</strong></p>
                 </div>
 
               <div>
-                  <h3 className="text-3xl font-bold text-[#661244] mb-4">Apartment Types:</h3>
+                  <h3 className={`text-3xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.specification.apartmentTypes')}</h3>
                   <div className="space-y-3">
-                    <p>• 2-bedroom</p>
-                    <p>• 3-bedroom </p>
-                    <p>• 3-bedroom + private garden at the podium level.</p>
-                    <p>• 4-bedroom</p>
-                    <p>• 4-bedroom + private garden at the podium level.</p>
-                    <p>• 4-bedroom duplex on the floor from 45 upwards(skyvilla).</p>
+                    <p>• {t('joudTower.specification.apartments.2bed')}</p>
+                    <p>• {t('joudTower.specification.apartments.3bed')}</p>
+                    <p>• {t('joudTower.specification.apartments.3bedGarden')}</p>
+                    <p>• {t('joudTower.specification.apartments.4bed')}</p>
+                    <p>• {t('joudTower.specification.apartments.4bedGarden')}</p>
+                    <p>• {t('joudTower.specification.apartments.4bedDuplex')}</p>
 
-                    <p>• Penthouse: 5 bedrooms, bespoke with private pool.</p>
+                    <p>• {t('joudTower.specification.apartments.penthouse')}</p>
                   </div>
                 </div>
                   </div>
                   </div>
-            <div className="flex justify-center lg:justify-end">
+            <div className={`flex justify-center ${isRTL ? 'lg:justify-start' : 'lg:justify-end'}`}>
               <div className="relative w-full max-w-6xl h-[600px]">
                 <div className="absolute inset-4">
                   <Image
@@ -125,8 +120,8 @@ export default function JoudTowerPage() {
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8">
-              Amenities
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('joudTower.amenities.title')}
             </h2>
           </div>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:px-[15%]">
@@ -144,7 +139,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Functional Gym</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.gym')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -159,7 +154,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Sauna</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.sauna')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -174,7 +169,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Swimming Pool</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.pool')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -189,7 +184,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Padel Court</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.padel')}</p>
             </div>
 
             {/* Row 2 */}
@@ -206,7 +201,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Running Track</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.running')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -221,7 +216,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">BBQ Area</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.bbq')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -236,7 +231,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Kids Play Area</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.kids')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -251,7 +246,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Multipurpose Hall</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.hall')}</p>
             </div>
 
             {/* Row 3 */}
@@ -268,7 +263,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Cafe</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.cafe')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -283,7 +278,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Prayer Room</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.prayer')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -298,7 +293,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Kindergarten</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.kindergarten')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -313,7 +308,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className="text-sm text-gray-700">Retail Shop</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.retail')}</p>
             </div>
               </div>
             </div>
@@ -334,8 +329,8 @@ export default function JoudTowerPage() {
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24 relative z-10">
           <div>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 px-4">
-                Other Features
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 px-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.features.title')}
               </h2>
                   </div>
 
@@ -343,16 +338,16 @@ export default function JoudTowerPage() {
               {/* Top row - 3 boxes */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {[
-                  "Controlled Delivery Circulation separate from the tenant's circulation.",
-                  "24/7 Concierge Service.",
-                  "Restricted Smart Access Entry and exit for tenants.",
+                  t('joudTower.features.delivery'),
+                  t('joudTower.features.concierge'),
+                  t('joudTower.features.access'),
                 ].map((operation, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-white border border-white/20 h-24 sm:h-28 flex items-center">
                     <div className="flex items-center space-x-3 sm:space-x-4 w-full">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white text-[#661244] rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xs sm:text-lg">
                         {index + 1}
                   </div>
-                      <p className="text-xs sm:text-sm leading-relaxed flex-1">{operation}</p>
+                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{operation}</p>
                 </div>
                   </div>
                 ))}
@@ -365,7 +360,7 @@ export default function JoudTowerPage() {
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white text-[#661244] rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xs sm:text-lg">
                         4
                       </div>
-                      <p className="text-xs sm:text-sm leading-relaxed flex-1">Smart Amenities Booking.</p>
+                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.features.booking')}</p>
                     </div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-white border border-white/20 h-24 sm:h-28 flex items-center">
@@ -373,15 +368,15 @@ export default function JoudTowerPage() {
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white text-[#661244] rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xs sm:text-lg">
                         5
                       </div>
-                      <p className="text-xs sm:text-sm leading-relaxed flex-1">Full Maintenance team onsite.</p>
+                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.features.maintenance')}</p>
                     </div>
                   </div>
               </div>
             </div>
 
             <div className="text-center">
-              <p className="text-white text-base sm:text-lg leading-relaxed max-w-4xl mx-auto px-4">
-                Joud Tower, with its unrivalled location, ultra-premium interiors, and luxurious amenities and facilities, is a lasting asset that will provide you with the steady capital growth. Enjoy the best of both worlds: a beautiful, luxurious home that&apos;s also a longlife investment.
+              <p className={`text-white text-base sm:text-lg leading-relaxed max-w-4xl mx-auto px-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.features.description')}
               </p>
                 </div>
               </div>
@@ -395,15 +390,10 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then images */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className="text-4xl font-bold text-[#661244] mb-8 leading-tight">
-                  Enjoy Unparalleled<br />
-                  Views 24/7
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.views.title') }}>
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Wake up to breathtaking panoramic views of the city skyline and coastline.
-                  Every apartment in Joud Tower is designed to maximize natural light and
-                  provide stunning vistas that change throughout the day. From sunrise to
-                  sunset, experience the beauty of the city from your own private sanctuary.
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('joudTower.views.description')}
                 </p>
               </div>
               <div className="space-y-6">
@@ -448,15 +438,10 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text second */}
             <div className="hidden lg:block">
-              <h2 className="text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight text-end">
-                Enjoy Unparalleled<br />
-                Views 24/7
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.views.title') }}>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed text-end">
-                Wake up to breathtaking panoramic views of the city skyline and coastline.
-                Every apartment in Joud Tower is designed to maximize natural light and
-                provide stunning vistas that change throughout the day. From sunrise to
-                sunset, experience the beauty of the city from your own private sanctuary.
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.views.description')}
               </p>
             </div>
           </div>
@@ -467,14 +452,11 @@ export default function JoudTowerPage() {
       <section className=" bg-white">
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-[#661244] mb-8">
-              Your Sanctuary of Peace & Comfort
+            <h2 className={`text-5xl md:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('joudTower.sanctuary.title')}
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Step into a world of refined luxury where every detail has been carefully
-              crafted to provide the ultimate in comfort and relaxation. Our spacious
-              bedrooms feature premium finishes, floor-to-ceiling windows, and elegant
-              built-in wardrobes that create a serene retreat from the bustling city below.
+            <p className={`text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('joudTower.sanctuary.description')}
             </p>
           </div>
           <div className="relative w-full h-[600px]">
@@ -495,16 +477,10 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className="text-4xl font-bold text-[#661244] mb-8 leading-tight">
-                  A Feast For<br />
-                  The Senses
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.feast.title') }}>
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  The heart of every home deserves the finest attention. Our state-of-the-art
-                  kitchens feature premium appliances, elegant countertops, and intelligent
-                  design that makes cooking a pleasure. Whether you&apos;re preparing a simple
-                  breakfast or hosting a dinner party, every culinary experience is elevated
-                  to perfection.
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('joudTower.feast.description')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -521,16 +497,10 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text first */}
             <div className="hidden lg:block">
-              <h2 className="text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight">
-                A Feast For<br />
-                The Senses
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.feast.title') }}>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                The heart of every home deserves the finest attention. Our state-of-the-art
-                kitchens feature premium appliances, elegant countertops, and intelligent
-                design that makes cooking a pleasure. Whether you&apos;re preparing a simple
-                breakfast or hosting a dinner party, every culinary experience is elevated
-                to perfection.
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.feast.description')}
               </p>
             </div>
             
@@ -556,15 +526,10 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className="text-4xl font-bold text-[#661244] mb-8 leading-tight">
-                  Priceless<br />
-                  Perspective
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.perspective.title') }}>
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Experience the world from a new vantage point. Our thoughtfully designed
-                  living spaces offer more than just accommodation - they provide a unique
-                  perspective on life. With expansive windows, open layouts, and seamless
-                  indoor-outdoor flow, every moment becomes a celebration of sophisticated living.
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('joudTower.perspective.description')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -593,15 +558,10 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text second */}
             <div className="hidden lg:block">
-              <h2 className="text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight text-end">
-                Priceless<br />
-                Perspective
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.perspective.title') }}>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed text-end">
-                Experience the world from a new vantage point. Our thoughtfully designed
-                living spaces offer more than just accommodation - they provide a unique
-                perspective on life. With expansive windows, open layouts, and seamless
-                indoor-outdoor flow, every moment becomes a celebration of sophisticated living.
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.perspective.description')}
               </p>
             </div>
           </div>
@@ -615,16 +575,10 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className="text-4xl font-bold text-[#661244] mb-8 leading-tight">
-                  AESTHETIC.<br />
-                  EXCUISITE.<br />
-                  IDYLLIC.
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.aesthetic.title') }}>
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Step outside to your private terrace and discover a world of tranquility
-                  and beauty. These carefully designed outdoor spaces offer the perfect
-                  blend of privacy and openness, where you can entertain guests, enjoy
-                  quiet moments, or simply bask in the natural beauty that surrounds you.
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('joudTower.aesthetic.description')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -641,16 +595,10 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text first */}
             <div className="hidden lg:block">
-              <h2 className="text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight">
-                AESTHETIC.<br />
-                EXCUISITE.<br />
-                IDYLLIC.
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.aesthetic.title') }}>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Step outside to your private terrace and discover a world of tranquility
-                and beauty. These carefully designed outdoor spaces offer the perfect
-                blend of privacy and openness, where you can entertain guests, enjoy
-                quiet moments, or simply bask in the natural beauty that surrounds you.
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.aesthetic.description')}
               </p>
             </div>
             
@@ -676,16 +624,10 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className="text-4xl font-bold text-[#661244] mb-8 leading-tight">
-                  ELEGANCE.<br />
-                  STYLE.<br />
-                  REFINEMENT.
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.elegance.title') }}>
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Every detail reflects our commitment to excellence. From the carefully
-                  selected materials to the precision of the craftsmanship, each apartment
-                  is a masterpiece of design. Experience the perfect harmony of form and
-                  function, where luxury meets practicality in every corner of your new home.
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('joudTower.elegance.description')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -714,16 +656,10 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text second */}
             <div className="hidden lg:block">
-              <h2 className="text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight text-end">
-                ELEGANCE.<br />
-                STYLE.<br />
-                REFINEMENT.
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.elegance.title') }}>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed text-end">
-                Every detail reflects our commitment to excellence. From the carefully
-                selected materials to the precision of the craftsmanship, each apartment
-                is a masterpiece of design. Experience the perfect harmony of form and
-                function, where luxury meets practicality in every corner of your new home.
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                {t('joudTower.elegance.description')}
               </p>
             </div>
           </div>

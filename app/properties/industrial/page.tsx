@@ -5,57 +5,57 @@ import Footer from '../../components/Footer';
 import Image from 'next/image';
 
 export default function IndustrialPropertiesPage() {
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
 
   // Industrial property data
   const properties = [
     {
       id: 1,
-      title: "ABRE CATERPILLAR COMPOUND, SHARJAH ",
-      type: "Manufacturing Facility",
-      location: "Industrial area 02, Caterpillar Street – 117, Sharjah to Dubai  ",
-      price: "AED 15.5M"
+      titleKey: "industrial.properties.abreCaterpillar.title",
+      typeKey: "industrial.properties.abreCaterpillar.type",
+      locationKey: "industrial.properties.abreCaterpillar.location",
+      priceKey: "industrial.properties.abreCaterpillar.price"
     },
     {
       id: 2,
-      title: "ABRE IBFI STAFF ACCOMMODATION, SHARJAH",
-      type: "Warehouse Complex",
-      location: "Industrial Area 02, Caterpillar Street – 117, Sharjah to Dubai.",
-      price: "AED 12.8M"
+      titleKey: "industrial.properties.abreIbfi.title",
+      typeKey: "industrial.properties.abreIbfi.type",
+      locationKey: "industrial.properties.abreIbfi.location",
+      priceKey: "industrial.properties.abreIbfi.price"
     },
     {
       id: 3,
-      title: "ABRE GECO COMPLEX OFFICE BUILDING, SHARJAH ",
-      type: "Production Facility",
-      location: "Industrial Area 12, GECO Signal Street Sharjah to Dubai ",
-      price: "AED 18.2M"
+      titleKey: "industrial.properties.abreGeco.title",
+      typeKey: "industrial.properties.abreGeco.type",
+      locationKey: "industrial.properties.abreGeco.location",
+      priceKey: "industrial.properties.abreGeco.price"
     },
     {
       id: 4,
-      title: "ABRE SHOWROOMS & WAREHOUSES COMPLEX, INDUSTRIAL AREA 2, SHARJAH ",
-      type: "Storage Facility",
-      location: "Industrial Area#2, Old BMW Street Sharjah. Near ADNOC petrol station",
-      price: "AED 9.5M"
+      titleKey: "industrial.properties.abreShowrooms.title",
+      typeKey: "industrial.properties.abreShowrooms.type",
+      locationKey: "industrial.properties.abreShowrooms.location",
+      priceKey: "industrial.properties.abreShowrooms.price"
     },
     {
       id: 5,
-      title: "ABRE KIZAD AL TAWEELAH WAREHOUSES, ABU DHABI",
-      type: "Mixed Industrial",
-      location: "Khalifa Industrial Zone – Abu Dhabi",
-      price: "AED 11.3M"
+      titleKey: "industrial.properties.abreKizad.title",
+      typeKey: "industrial.properties.abreKizad.type",
+      locationKey: "industrial.properties.abreKizad.location",
+      priceKey: "industrial.properties.abreKizad.price"
     },
     {
       id: 6,
-      title: "ABRE AL SAJAA INDUSTRIAL WAREHOUSES, SHARJAH",
-      type: "Logistics Center",
-      location: "Al Sajaa Industrial Area, Sharjah.",
-      price: "AED 16.7M"
+      titleKey: "industrial.properties.abreSajaa.title",
+      typeKey: "industrial.properties.abreSajaa.type",
+      locationKey: "industrial.properties.abreSajaa.location",
+      priceKey: "industrial.properties.abreSajaa.price"
     },
     
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isRTL ? 'rtl' : 'ltr'}>
       <Navigation />
       
       {/* Hero Section with Blurred Background */}
@@ -73,33 +73,36 @@ export default function IndustrialPropertiesPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up">
-              Industrial Properties
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('industrial.hero.title')}
             </h1>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-12 animate-fade-in-up animation-delay-200">
-              Modern industrial complexes and manufacturing facilities for your business needs.
+            <p className={`text-lg md:text-xl text-white/90 leading-relaxed mb-12 animate-fade-in-up animation-delay-200 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              {t('industrial.hero.subtitle')}
             </p>
             
             {/* Search Bar */}
             <div className="bg-gray-100 border border-gray-200 rounded-lg p-4 max-w-4xl mx-auto animate-scale-in animation-delay-400">
-              <div className="flex flex-col sm:flex-row gap-3 items-center">
+              <div className={`flex flex-col sm:flex-row gap-3 items-center ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
                 <input
                   type="text"
-                  placeholder="Location"
-                  className="flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition"
+                  placeholder={t('industrial.search.location')}
+                  className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                 />
                 <input
                   type="text"
-                  placeholder="Property Type"
-                  className="flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition"
+                  placeholder={t('industrial.search.propertyType')}
+                  className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                 />
                 <input
                   type="text"
-                  placeholder="Size (Sq. Ft.)"
-                  className="flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition"
+                  placeholder={t('industrial.search.size')}
+                  className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] smooth-transition ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                 />
-                <button className="w-full sm:w-auto bg-[#661244] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#551133] transition-colors duration-200 hover-scale">
-                  Search
+                <button className={`w-full sm:w-auto bg-[#661244] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#551133] transition-colors duration-200 hover-scale ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  {t('industrial.search.button')}
                 </button>
               </div>
             </div>
@@ -118,7 +121,7 @@ export default function IndustrialPropertiesPage() {
                   <div className="relative h-80 w-full overflow-hidden border border-gray-300 rounded-3xl hover-scale">
                     <Image
                       src="/images/4.jpg"
-                      alt={property.title}
+                      alt={t(property.titleKey)}
                       fill
                       className="object-cover smooth-transition"
                     />
@@ -126,36 +129,36 @@ export default function IndustrialPropertiesPage() {
                   
                   {/* Property Title */}
                   <div className="p-2 bg-white">
-                    <h3 className="text-2xl text-center font-semibold text-[#661244] mb-2 line-clamp-2">
-                      {property.title}
+                    <h3 className={`text-2xl text-center font-semibold text-[#661244] mb-2 line-clamp-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t(property.titleKey)}
                     </h3>
               </div>
                   
                   {/* Purple Details Bar */}
                   <div className="bg-[#661244] text-white p-3 border border-[#661244] rounded-3xl hover-glow">
-                    <div className="flex justify-between items-start">
-                      <div className="flex flex-col space-y-2 flex-1">
+                    <div className={`flex justify-between items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                      <div className={`flex flex-col space-y-2 flex-1 ${isRTL ? 'text-right' : 'text-left'}`}>
                         {/* Property Type */}
-                        <div className="flex items-center">
-                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
+                          <svg className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-6a1 1 0 00-1-1H9a1 1 0 00-1 1v6a1 1 0 01-1 1H4a1 1 0 110-2V4z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-sm">{property.type}</span>
+                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.typeKey)}</span>
             </div>
 
                         {/* Location */}
-                        <div className="flex items-center">
-                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
+                          <svg className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-sm">{property.location}</span>
+                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.locationKey)}</span>
               </div>
             </div>
 
                       {/* Starting Price - Right Side */}
-                      <div className="text-right ml-4">
-                        <div className="text-xs text-white/80">Starting From</div>
-                        <div className="text-lg font-bold">{property.price}</div>
+                      <div className={`${isRTL ? 'text-right ml-4' : 'text-right ml-4'}`}>
+                        <div className={`text-xs text-white/80 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('industrial.property.startingFrom')}</div>
+                        <div className={`text-lg font-bold ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.priceKey)}</div>
                   </div>
                 </div>
               </div>

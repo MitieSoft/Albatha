@@ -260,15 +260,17 @@ const Navigation = () => {
                 >
                   <Link 
                     href="/about/ceo-message" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Ceo&apos;s Message
+                    {t('nav.dropdown.ceoMessage')}
                   </Link>
                   <Link 
                     href="/about/mission-values" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Albatha Real Estate
+                    {t('nav.dropdown.albathaRealEstate')}
                   </Link>
                  
                 </div>
@@ -297,27 +299,31 @@ const Navigation = () => {
                 >
                   <Link 
                     href="/properties/commercial" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Commercial
+                    {t('nav.dropdown.commercial')}
                   </Link>
                   <Link 
                     href="/properties/residential" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Residential
+                    {t('nav.dropdown.residential')}
                   </Link>
                   <Link 
                     href="/properties/industrial" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Industrial
+                    {t('nav.dropdown.industrial')}
                   </Link>
                   <Link 
                     href="/properties/special-projects" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Special Projects
+                    {t('nav.dropdown.specialProjects')}
                   </Link>
                
                 </div>
@@ -346,9 +352,10 @@ const Navigation = () => {
                 >
                   <Link 
                     href="/launches/joud-tower" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Joud Tower
+                    {t('nav.dropdown.joudTower')}
                   </Link>
               
                 </div>
@@ -377,15 +384,17 @@ const Navigation = () => {
                 >
                   <Link 
                     href="/companies/tawazun-construction" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Tawazun Construction
+                    {t('nav.dropdown.tawazunConstruction')}
                   </Link>
                   <Link 
                     href="/companies/al-abir" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Al Abir
+                    {t('nav.dropdown.alAbir')}
                   </Link>
                 </div>
               )}
@@ -424,8 +433,8 @@ const Navigation = () => {
                     
                     {/* Title */}
                     <div className="text-center mb-6 px-6">
-                      <h3 className="text-white  text-xl whitespace-nowrap">
-                        What are you looking to Buy?
+                      <h3 className={`text-white text-xl whitespace-nowrap ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                        {t('nav.dropdown.whatLookingToBuy')}
                       </h3>
                     </div>
                     
@@ -435,8 +444,8 @@ const Navigation = () => {
                         href="/properties/residential" 
                         className="block px-6 py-4 text-white hover:bg-white/10 transition-colors duration-200 hover:text-white flex items-center justify-between group"
                       >
-                        <span className="text-base font-medium">Residential</span>
-                        <span className="text-white text-lg group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        <span className={`text-base font-medium ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('nav.dropdown.residential')}</span>
+                        <span className={`text-white text-lg group-hover:translate-x-1 transition-transform duration-200 ${isRTL ? 'rotate-180' : ''}`}>{isRTL ? '←' : '→'}</span>
                       </a>
                       
                       {/* Separator */}
@@ -446,8 +455,8 @@ const Navigation = () => {
                         href="/properties/commercial" 
                         className="block px-6 py-4 text-white hover:bg-white/10 transition-colors duration-200 hover:text-white flex items-center justify-between group"
                       >
-                        <span className="text-base font-medium">Commercial</span>
-                        <span className="text-white text-lg group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        <span className={`text-base font-medium ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('nav.dropdown.commercial')}</span>
+                        <span className={`text-white text-lg group-hover:translate-x-1 transition-transform duration-200 ${isRTL ? 'rotate-180' : ''}`}>{isRTL ? '←' : '→'}</span>
                       </a>
                       
                       {/* Separator */}
@@ -457,8 +466,8 @@ const Navigation = () => {
                         href="/properties/industrial" 
                         className="block px-6 py-4 text-white hover:bg-white/10 transition-colors duration-200 hover:text-white flex items-center justify-between group"
                       >
-                        <span className="text-base font-medium">Industrial</span>
-                        <span className="text-white text-lg group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        <span className={`text-base font-medium ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('nav.dropdown.industrial')}</span>
+                        <span className={`text-white text-lg group-hover:translate-x-1 transition-transform duration-200 ${isRTL ? 'rotate-180' : ''}`}>{isRTL ? '←' : '→'}</span>
                       </a>
                     </div>
                   </div>
@@ -497,8 +506,8 @@ const Navigation = () => {
                     
                     {/* Title */}
                     <div className="text-center mb-6 px-6">
-                      <h3 className="text-white  text-xl whitespace-nowrap">
-                        What are you looking to Rent?
+                      <h3 className={`text-white text-xl whitespace-nowrap ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                        {t('nav.dropdown.whatLookingToRent')}
                       </h3>
                     </div>
                     
@@ -508,8 +517,8 @@ const Navigation = () => {
                         href="/rent/residential" 
                         className="block px-6 py-4 text-white hover:bg-white/10 transition-colors duration-200 hover:text-white flex items-center justify-between group"
                       >
-                        <span className="text-base font-medium">Residential</span>
-                        <span className="text-white text-lg group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        <span className={`text-base font-medium ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('nav.dropdown.residential')}</span>
+                        <span className={`text-white text-lg group-hover:translate-x-1 transition-transform duration-200 ${isRTL ? 'rotate-180' : ''}`}>{isRTL ? '←' : '→'}</span>
                       </a>
                       
                       {/* Separator */}
@@ -519,8 +528,8 @@ const Navigation = () => {
                         href="/rent/commercial" 
                         className="block px-6 py-4 text-white hover:bg-white/10 transition-colors duration-200 hover:text-white flex items-center justify-between group"
                       >
-                        <span className="text-base font-medium">Commercial</span>
-                        <span className="text-white text-lg group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        <span className={`text-base font-medium ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('nav.dropdown.commercial')}</span>
+                        <span className={`text-white text-lg group-hover:translate-x-1 transition-transform duration-200 ${isRTL ? 'rotate-180' : ''}`}>{isRTL ? '←' : '→'}</span>
                       </a>
                       
                       {/* Separator */}
@@ -530,8 +539,8 @@ const Navigation = () => {
                         href="/rent/industrial" 
                         className="block px-6 py-4 text-white hover:bg-white/10 transition-colors duration-200 hover:text-white flex items-center justify-between group"
                       >
-                        <span className="text-base font-medium">Industrial</span>
-                        <span className="text-white text-lg group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        <span className={`text-base font-medium ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('nav.dropdown.industrial')}</span>
+                        <span className={`text-white text-lg group-hover:translate-x-1 transition-transform duration-200 ${isRTL ? 'rotate-180' : ''}`}>{isRTL ? '←' : '→'}</span>
                       </a>
                     </div>
                   </div>
@@ -610,14 +619,15 @@ const Navigation = () => {
                     {t('nav.aboutUs')}
                   </h3>
                   <div className="space-y-2 pl-4">
-                    <Link href="/about/ceo-message" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Ceo&apos;s Message
+                    <Link href="/about/ceo-message" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.ceoMessage')}
                     </Link>
                     <Link 
                     href="/about/mission-values" 
-                    className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white"
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
                   >
-                    Albatha Real Estate
+                    {t('nav.dropdown.albathaRealEstate')}
                   </Link>
                 
                  
@@ -630,18 +640,18 @@ const Navigation = () => {
                     {t('nav.ourProperties')}
                   </h3>
                   <div className="space-y-2 pl-4">
-                    <Link href="/properties/commercial" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Commercial
+                    <Link href="/properties/commercial" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.commercial')}
                     </Link>
-                    <Link href="/properties/residential" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Residential
+                    <Link href="/properties/residential" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.residential')}
                     </Link>
-                    <Link href="/properties/industrial" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Industrial
+                    <Link href="/properties/industrial" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.industrial')}
                     </Link>
                  
-                    <Link href="/properties/special-projects" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Special Projects
+                    <Link href="/properties/special-projects" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.specialProjects')}
                     </Link>
                   </div>
                 </div>
@@ -652,8 +662,8 @@ const Navigation = () => {
                     {t('nav.newLaunches')}
                   </h3>
                   <div className="space-y-2 pl-4">
-                    <Link href="/launches/joud-tower" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Joud Tower
+                    <Link href="/launches/joud-tower" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.joudTower')}
                     </Link>
                   </div>
                 </div>
@@ -664,47 +674,47 @@ const Navigation = () => {
                     {t('nav.ourCompanies')}
                   </h3>
                   <div className="space-y-2 pl-4">
-                    <Link href="/companies/tawazun-construction" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Tawazun Construction
+                    <Link href="/companies/tawazun-construction" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.tawazunConstruction')}
                     </Link>
-                    <Link href="/companies/al-abir" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                      Al Abir
+                    <Link href="/companies/al-abir" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.alAbir')}
                     </Link>
                   </div>
                 </div>
 
                 {/* Buy & Rent Section */}
                 <div className="space-y-4 pt-4 border-t border-white/20">
-                  <h3 className="text-white  text-sm text-[#661244]">
-                    Property
+                  <h3 className={`text-white text-sm text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                    {t('nav.dropdown.property')}
                   </h3>
                   
                   {/* Buy */}
                   <div className="space-y-3">
-                    <h4 className="text-white font-medium text-sm">
+                    <h4 className={`text-white font-medium text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                       {t('nav.buy')}
                     </h4>
                     <div className="space-y-2 pl-4">
-                      <Link href="/buy/residential" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                        Residential
+                      <Link href="/buy/residential" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                        {t('nav.dropdown.residential')}
                       </Link>
-                      <Link href="/buy/building-plots" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                        Building Plots
+                      <Link href="/buy/building-plots" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                        {t('nav.dropdown.buildingPlots')}
                       </Link>
                     </div>
                   </div>
 
                   {/* Rent */}
                   <div className="space-y-3">
-                    <h4 className="text-white font-medium text-sm">
+                    <h4 className={`text-white font-medium text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                       {t('nav.rent')}
                     </h4>
                     <div className="space-y-2 pl-4">
-                    <Link href="/rent/commercial" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                        Commercial
+                    <Link href="/rent/commercial" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                        {t('nav.dropdown.commercial')}
                       </Link>
-                      <Link href="/rent/residential" className="block text-white hover:text-white transition-colors duration-200 text-sm py-2">
-                        Residential
+                      <Link href="/rent/residential" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                        {t('nav.dropdown.residential')}
                       </Link>
                    
                     </div>
