@@ -26,13 +26,13 @@ export default function JoudTowerPage() {
         <div className="container mx-auto px-4 sm:px-12 md:px-16 xl:px-24 relative z-10">
           <div className={`flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
             <div className={`text-white ${isRTL ? 'text-right' : 'text-right'} max-w-4xl`}>
-              <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.hero.title')}
               </h1>
-              <p className={`text-lg sm:text-xl md:text-2xl lg:text-5xl text-white mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-lg sm:text-xl md:text-2xl lg:text-5xl text-white mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.hero.subtitle')}
               </p>
-              <p className={`text-lg text-white ${isRTL ? 'text-right' : 'text-end'} leading-relaxed ${isRTL ? 'pr-8' : 'pl-8'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-lg text-white ${isRTL ? 'text-right' : 'text-end'} leading-relaxed ${isRTL ? 'pr-8' : 'pl-8'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.hero.description')}
               </p>
             </div>
@@ -45,7 +45,7 @@ export default function JoudTowerPage() {
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12 ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
             <div className={`${isRTL ? 'lg:col-start-2' : ''}`}>
-              <h2 className={`text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-[#661244] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.lavish.title') }}>
+              <h2 className={`text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-[#661244] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.lavish.title') }}>
               </h2>
             </div>
             <div className={`flex justify-center ${isRTL ? 'lg:justify-start' : 'lg:justify-end'}`}>
@@ -60,7 +60,7 @@ export default function JoudTowerPage() {
             </div>
           </div>
           <div className="text-center">
-            <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+            <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.lavish.description')}
             </p>
           </div>
@@ -71,22 +71,22 @@ export default function JoudTowerPage() {
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="text-center mb-16">
-            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.specification.title')}
             </h2>
           </div>
           <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
             <div className={`${isRTL ? 'lg:col-start-2' : ''}`}>
-              <div className={`space-y-8 text-lg text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <div className={`space-y-8 text-lg text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 <div>
-                  <h3 className={`text-4xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.specification.storeys')}</h3>
+                  <h3 className={`text-4xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.specification.storeys')}</h3>
 
                   <p>{t('joudTower.specification.basement')}</p>
                   <p><strong>{t('joudTower.specification.residential')}</strong></p>
                 </div>
 
               <div>
-                  <h3 className={`text-3xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.specification.apartmentTypes')}</h3>
+                  <h3 className={`text-3xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.specification.apartmentTypes')}</h3>
                   <div className="space-y-3">
                     <p>• {t('joudTower.specification.apartments.2bed')}</p>
                     <p>• {t('joudTower.specification.apartments.3bed')}</p>
@@ -120,7 +120,7 @@ export default function JoudTowerPage() {
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="text-center mb-16">
-            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.amenities.title')}
             </h2>
           </div>
@@ -139,7 +139,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.gym')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.gym')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -154,7 +154,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.sauna')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.sauna')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -169,7 +169,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.pool')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.pool')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -184,7 +184,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.padel')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.padel')}</p>
             </div>
 
             {/* Row 2 */}
@@ -201,7 +201,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.running')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.running')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -216,7 +216,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.bbq')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.bbq')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -231,7 +231,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.kids')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.kids')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -246,7 +246,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.hall')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.hall')}</p>
             </div>
 
             {/* Row 3 */}
@@ -263,7 +263,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.cafe')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.cafe')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -278,7 +278,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.prayer')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.prayer')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -293,7 +293,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.kindergarten')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.kindergarten')}</p>
             </div>
             <div className="text-center">
               <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -308,7 +308,7 @@ export default function JoudTowerPage() {
                   </div>
                   </div>
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.amenities.retail')}</p>
+              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.retail')}</p>
             </div>
               </div>
             </div>
@@ -329,7 +329,7 @@ export default function JoudTowerPage() {
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24 relative z-10">
           <div>
             <div className="text-center mb-16">
-              <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 px-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 px-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.features.title')}
               </h2>
                   </div>
@@ -347,7 +347,7 @@ export default function JoudTowerPage() {
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white text-[#661244] rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xs sm:text-lg">
                         {index + 1}
                   </div>
-                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{operation}</p>
+                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{operation}</p>
                 </div>
                   </div>
                 ))}
@@ -360,7 +360,7 @@ export default function JoudTowerPage() {
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white text-[#661244] rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xs sm:text-lg">
                         4
                       </div>
-                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.features.booking')}</p>
+                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.features.booking')}</p>
                     </div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-white border border-white/20 h-24 sm:h-28 flex items-center">
@@ -368,14 +368,14 @@ export default function JoudTowerPage() {
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white text-[#661244] rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xs sm:text-lg">
                         5
                       </div>
-                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('joudTower.features.maintenance')}</p>
+                      <p className={`text-xs sm:text-sm leading-relaxed flex-1 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.features.maintenance')}</p>
                     </div>
                   </div>
               </div>
             </div>
 
             <div className="text-center">
-              <p className={`text-white text-base sm:text-lg leading-relaxed max-w-4xl mx-auto px-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-white text-base sm:text-lg leading-relaxed max-w-4xl mx-auto px-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.features.description')}
               </p>
                 </div>
@@ -390,9 +390,9 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then images */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.views.title') }}>
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.views.title') }}>
                 </h2>
-                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                   {t('joudTower.views.description')}
                 </p>
               </div>
@@ -438,9 +438,9 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text second */}
             <div className="hidden lg:block">
-              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.views.title') }}>
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.views.title') }}>
               </h2>
-              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.views.description')}
               </p>
             </div>
@@ -452,10 +452,10 @@ export default function JoudTowerPage() {
       <section className=" bg-white">
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="text-center mb-16">
-            <h2 className={`text-5xl md:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+            <h2 className={`text-5xl md:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.sanctuary.title')}
             </h2>
-            <p className={`text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+            <p className={`text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.sanctuary.description')}
             </p>
           </div>
@@ -477,9 +477,9 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.feast.title') }}>
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.feast.title') }}>
                 </h2>
-                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                   {t('joudTower.feast.description')}
                 </p>
               </div>
@@ -497,9 +497,9 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text first */}
             <div className="hidden lg:block">
-              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.feast.title') }}>
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.feast.title') }}>
               </h2>
-              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.feast.description')}
               </p>
             </div>
@@ -526,9 +526,9 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.perspective.title') }}>
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.perspective.title') }}>
                 </h2>
-                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                   {t('joudTower.perspective.description')}
                 </p>
               </div>
@@ -558,9 +558,9 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text second */}
             <div className="hidden lg:block">
-              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.perspective.title') }}>
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.perspective.title') }}>
               </h2>
-              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.perspective.description')}
               </p>
             </div>
@@ -575,9 +575,9 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.aesthetic.title') }}>
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.aesthetic.title') }}>
                 </h2>
-                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                   {t('joudTower.aesthetic.description')}
                 </p>
               </div>
@@ -595,9 +595,9 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text first */}
             <div className="hidden lg:block">
-              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.aesthetic.title') }}>
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.aesthetic.title') }}>
               </h2>
-              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.aesthetic.description')}
               </p>
             </div>
@@ -624,9 +624,9 @@ export default function JoudTowerPage() {
             {/* Mobile: Heading first, then text, then image */}
             <div className="lg:hidden space-y-6">
               <div className="text-center">
-                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.elegance.title') }}>
+                <h2 className={`text-4xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.elegance.title') }}>
                 </h2>
-                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                   {t('joudTower.elegance.description')}
                 </p>
               </div>
@@ -656,9 +656,9 @@ export default function JoudTowerPage() {
             
             {/* Desktop: Text second */}
             <div className="hidden lg:block">
-              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.elegance.title') }}>
+              <h2 className={`text-6xl md:text-7xl font-bold text-[#661244] mb-8 leading-tight ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.elegance.title') }}>
               </h2>
-              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+              <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-end'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.elegance.description')}
               </p>
             </div>

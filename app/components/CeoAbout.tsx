@@ -87,7 +87,7 @@ const CeoAbout = () => {
                       : '-translate-x-32 opacity-0 scale-95 rotate-3'
                 }`}>
                   {/* Large Opening Quote */}
-                  <div className={`absolute -top-14 text-8xl lg:text-9xl font-bold text-black z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 ${isRTL ? 'right-0' : 'left-0'}`} style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <div className={`absolute -top-14 text-8xl lg:text-9xl font-bold text-black z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 ${isRTL ? 'right-0' : 'left-0'}`} style={{ fontFamily: 'Univers, sans-serif' }}>
                     &apos;&apos;
                   </div>
                   
@@ -100,7 +100,7 @@ const CeoAbout = () => {
                   </div>
                   
                   {/* Large Closing Quote */}
-                  <div className={`absolute -bottom-18 text-8xl lg:text-9xl font-bold text-black z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 ${isRTL ? 'left-4' : 'right-4'}`} style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <div className={`absolute -bottom-18 text-8xl lg:text-9xl font-bold text-black z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 ${isRTL ? 'left-4' : 'right-4'}`} style={{ fontFamily: 'Univers, sans-serif' }}>
                     &apos;&apos;
                   </div>
                 </div>
