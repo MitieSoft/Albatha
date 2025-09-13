@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { newsletterSchema, sanitizeInput, logSecurityEvent, getSecurityHeaders } from '@/app/lib/security';
+BiquadFilterNodeimport { newsletterSchema, sanitizeInput, logSecurityEvent, getSecurityHeaders } from '../../lib/security';
 
 // Rate limiter instance
 const rateLimiter = new Map<string, { count: number; resetTime: number }>();

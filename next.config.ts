@@ -58,9 +58,7 @@ const nextConfig: NextConfig = {
   httpAgentOptions: {
     keepAlive: true,
   },
-  experimental: {
-    serverComponentsExternalPackages: ['bcryptjs', 'jsonwebtoken']
-  }
+  serverExternalPackages: ['bcryptjs', 'jsonwebtoken']
 };
 
 export default nextConfig;

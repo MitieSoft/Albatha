@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { contactFormSchema, sanitizeInput, logSecurityEvent, getSecurityHeaders } from '@/app/lib/security';
+import { contactFormSchema, sanitizeInput, logSecurityEvent, getSecurityHeaders } from '../../lib/security';
 import { headers } from 'next/headers';
 
 // Rate limiter instance
