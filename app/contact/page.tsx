@@ -267,17 +267,36 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-6">
-              {getFAQQuestions().map((faq, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6">
-                  <h3 className={`text-lg font-semibold text-[#661244] mb-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
-                    {faq.question}
-                  </h3>
-                  <p className={`text-gray-600 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
+            {getFAQQuestions().map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6">
+                <h3
+                  className={`text-lg font-semibold text-[#661244] mb-2 ${
+                    isRTL ? 'font-arabic' : 'font-english'
+                  }`}
+                  style={{
+                    fontFamily: isRTL
+                      ? 'GESSTwo, Arial, sans-serif'
+                      : 'universal, Arial, sans-serif'
+                  }}
+                >
+                  {faq.question}
+                </h3>
+                <p
+                  className={`text-gray-600 ${
+                    isRTL ? 'font-arabic' : 'font-english'
+                  }`}
+                  style={{
+                    fontFamily: isRTL
+                      ? 'GESSTwo, Arial, sans-serif'
+                      : 'universal, Arial, sans-serif'
+                  }}
+                >
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
           </div>
         </div>
       </section>
