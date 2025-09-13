@@ -276,7 +276,7 @@ export default function ContactPage() {
                   style={{
                     fontFamily: isRTL
                       ? 'GESSTwo, Arial, sans-serif'
-                      : 'universal, Arial, sans-serif'
+                      : 'Poppins, Arial, sans-serif'
                   }}
                 >
                   {faq.question}
@@ -288,7 +288,7 @@ export default function ContactPage() {
                   style={{
                     fontFamily: isRTL
                       ? 'GESSTwo, Arial, sans-serif'
-                      : 'universal, Arial, sans-serif'
+                      : 'Poppins, Arial, sans-serif'
                   }}
                 >
                   {faq.answer}
