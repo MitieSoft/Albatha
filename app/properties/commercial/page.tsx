@@ -73,10 +73,10 @@ export default function CommercialPropertiesPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('commercial.hero.title')}
             </h1>
-            <p className={`text-lg md:text-xl text-white/90 leading-relaxed mb-12 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+            <p className={`text-lg md:text-xl text-white/90 leading-relaxed mb-12 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('commercial.hero.subtitle')}
             </p>
             
@@ -87,21 +87,21 @@ export default function CommercialPropertiesPage() {
                   type="text"
                   placeholder={t('commercial.search.location')}
                   className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
-                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}
                 />
                 <input
                   type="text"
                   placeholder={t('commercial.search.propertyType')}
                   className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
-                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}
                 />
                 <input
                   type="text"
                   placeholder={t('commercial.search.size')}
                   className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
-                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
+                  style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}
                 />
-                <button className={`w-full sm:w-auto bg-[#661244] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#551133] transition-colors duration-200 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                <button className={`w-full sm:w-auto bg-[#661244] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#551133] transition-colors duration-200 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                   {t('commercial.search.button')}
                 </button>
               </div>
@@ -129,7 +129,7 @@ export default function CommercialPropertiesPage() {
                   
                   {/* Property Title */}
                   <div className="p-2 bg-white">
-                    <h3 className={`text-2xl text-center font-semibold text-[#661244] mb-2 line-clamp-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      <h3 className={`text-2xl text-center font-semibold text-[#661244] mb-2 line-clamp-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                       {t(property.titleKey)}
                     </h3>
                   </div>
@@ -143,7 +143,7 @@ export default function CommercialPropertiesPage() {
                           <svg className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-6a1 1 0 00-1-1H9a1 1 0 00-1 1v6a1 1 0 01-1 1H4a1 1 0 110-2V4z" clipRule="evenodd" />
                           </svg>
-                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.typeKey)}</span>
+                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t(property.typeKey)}</span>
                         </div>
                         
                         {/* Location */}
@@ -151,14 +151,14 @@ export default function CommercialPropertiesPage() {
                           <svg className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                           </svg>
-                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.locationKey)}</span>
+                          <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t(property.locationKey)}</span>
                         </div>
                       </div>
                       
                       {/* Starting Price - Right Side */}
                       <div className={`${isRTL ? 'text-right ml-4' : 'text-right ml-4'}`}>
-                        <div className={`text-xs text-white/80 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t('commercial.property.startingFrom')}</div>
-                        <div className={`text-lg font-bold ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>{t(property.priceKey)}</div>
+                        <div className={`text-xs text-white/80 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('commercial.property.startingFrom')}</div>
+                        <div className={`text-lg font-bold ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'Poppins, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t(property.priceKey)}</div>
                       </div>
                     </div>
                   </div>

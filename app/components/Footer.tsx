@@ -73,7 +73,7 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-aldar-teal flex-shrink-0" />
               </div>
               <div className={`flex items-center gap-3 text-gray-300 text-sm sm:text-base ${isRTL ? 'justify-start' : 'justify-center md:justify-start'}`}>
-                <span className={`${isRTL ? 'text-left' : ''} font-mono`}>{t('footer.contact.phone')}</span>
+                <span className={`${isRTL ? 'text-left' : ''} font-mono`} style={{ fontFamily: 'Poppins, Arial, sans-serif !important' }}>{t('footer.contact.phone')}</span>
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-aldar-teal flex-shrink-0" />
               </div>
               <div className={`flex items-center gap-3 text-gray-300 text-sm sm:text-base ${isRTL ? 'justify-start' : 'justify-center md:justify-start'}`}>

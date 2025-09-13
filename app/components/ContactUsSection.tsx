@@ -66,7 +66,7 @@ const ContactUsSection = () => {
                                     <div className={`text-[#661244] font-bold text-lg tracking-wide ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                                         {t('contactUs.phone')}
                                     </div>
-                                    <div className="text-gray-700 text-2xl font-mono">
+                                    <div className="text-gray-700 text-2xl font-mono" style={{ fontFamily: 'Poppins, Arial, sans-serif !important' }}>
                                         800 1 8888
                                     </div>
                                 </div>
