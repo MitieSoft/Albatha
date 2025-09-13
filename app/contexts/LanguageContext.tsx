@@ -648,6 +648,84 @@ const translations = {
     'tawazun.expertise.title': 'Tawazan Expertise',
     'tawazun.expertise.description': 'Tawazan is executing major projects, including villas, mosques, and car showrooms at various locations in the Emirates',
     
+    // Industrial Properties
+    'industrial.hero.title': 'Industrial Properties',
+    'industrial.hero.subtitle': 'Discover our extensive range of advanced industrial properties designed for modern business needs.',
+    'industrial.search.location': 'Enter location',
+    'industrial.search.propertyType': 'Property type',
+    'industrial.search.size': 'Size (sq ft)',
+    'industrial.search.button': 'Search Properties',
+    'industrial.property.startingFrom': 'Starting from',
+    
+    // Industrial Property Listings
+    'industrial.properties.abreCaterpillar.title': 'ABRE Caterpillar Warehouse',
+    'industrial.properties.abreCaterpillar.type': 'Warehouse',
+    'industrial.properties.abreCaterpillar.location': 'Sharjah',
+    'industrial.properties.abreCaterpillar.price': 'AED 2,500,000',
+    
+    'industrial.properties.abreIbfi.title': 'ABRE IBFI Warehouse',
+    'industrial.properties.abreIbfi.type': 'Warehouse',
+    'industrial.properties.abreIbfi.location': 'Dubai',
+    'industrial.properties.abreIbfi.price': 'AED 3,200,000',
+    
+    'industrial.properties.abreGeco.title': 'ABRE GECO Warehouse',
+    'industrial.properties.abreGeco.type': 'Warehouse',
+    'industrial.properties.abreGeco.location': 'Abu Dhabi',
+    'industrial.properties.abreGeco.price': 'AED 2,800,000',
+    
+    'industrial.properties.abreShowrooms.title': 'ABRE Showrooms',
+    'industrial.properties.abreShowrooms.type': 'Showroom',
+    'industrial.properties.abreShowrooms.location': 'Sharjah',
+    'industrial.properties.abreShowrooms.price': 'AED 1,900,000',
+    
+    'industrial.properties.abreKizad.title': 'ABRE KIZAD Warehouse',
+    'industrial.properties.abreKizad.type': 'Warehouse',
+    'industrial.properties.abreKizad.location': 'Abu Dhabi',
+    'industrial.properties.abreKizad.price': 'AED 4,500,000',
+    
+    'industrial.properties.abreSajaa.title': 'ABRE Sajaa Warehouse',
+    'industrial.properties.abreSajaa.type': 'Warehouse',
+    'industrial.properties.abreSajaa.location': 'Sharjah',
+    'industrial.properties.abreSajaa.price': 'AED 2,100,000',
+    
+    // Special Projects
+    'specialProjects.hero.title': 'Special Projects',
+    'specialProjects.hero.subtitle': 'Discover our unique and innovative projects that reflect our vision for the future.',
+    'specialProjects.search.location': 'Location',
+    'specialProjects.search.selectLocation': 'Select Location',
+    'specialProjects.search.projectType': 'Project Type',
+    'specialProjects.search.selectType': 'Select Type',
+    'specialProjects.search.sizeRange': 'Size Range',
+    'specialProjects.search.selectSize': 'Select Size',
+    'specialProjects.search.button': 'Search Projects',
+    'specialProjects.section.title': 'Our Featured Projects',
+    'specialProjects.property.startingFrom': 'Starting from',
+    
+    // Special Project Listings
+    'specialProjects.projects.smartCity.title': 'Smart City',
+    'specialProjects.projects.smartCity.location': 'Dubai',
+    'specialProjects.projects.smartCity.type': 'Mixed Use',
+    'specialProjects.projects.smartCity.size': '5 Million sq ft',
+    'specialProjects.projects.smartCity.price': 'AED 15,000,000',
+    
+    'specialProjects.projects.heritage.title': 'Heritage Project',
+    'specialProjects.projects.heritage.location': 'Sharjah',
+    'specialProjects.projects.heritage.type': 'Cultural',
+    'specialProjects.projects.heritage.size': '2 Million sq ft',
+    'specialProjects.projects.heritage.price': 'AED 8,500,000',
+    
+    'specialProjects.projects.greenEnergy.title': 'Green Energy Project',
+    'specialProjects.projects.greenEnergy.location': 'Abu Dhabi',
+    'specialProjects.projects.greenEnergy.type': 'Innovation',
+    'specialProjects.projects.greenEnergy.size': '3 Million sq ft',
+    'specialProjects.projects.greenEnergy.price': 'AED 12,000,000',
+    
+    'specialProjects.projects.floatingResort.title': 'Floating Resort',
+    'specialProjects.projects.floatingResort.location': 'Dubai',
+    'specialProjects.projects.floatingResort.type': 'Luxury',
+    'specialProjects.projects.floatingResort.size': '1.5 Million sq ft',
+    'specialProjects.projects.floatingResort.price': 'AED 25,000,000',
+    
   },
   ar: {
     // Navigation
@@ -1111,6 +1189,84 @@ const translations = {
     'residential.properties.albathaResidence.price': '1,500,000 درهم',
     
     'residential.properties.alWaha.title': 'فيلا الواحة',
+    
+    // Industrial Properties
+    'industrial.hero.title': 'العقارات الصناعية',
+    'industrial.hero.subtitle': 'اكتشف مجموعة واسعة من العقارات الصناعية المتطورة والمصممة لاحتياجات الأعمال الحديثة.',
+    'industrial.search.location': 'أدخل الموقع',
+    'industrial.search.propertyType': 'نوع العقار',
+    'industrial.search.size': 'المساحة (قدم مربع)',
+    'industrial.search.button': 'البحث في العقارات',
+    'industrial.property.startingFrom': 'تبدأ من',
+    
+    // Industrial Property Listings
+    'industrial.properties.abreCaterpillar.title': 'مستودع كاتربيلر',
+    'industrial.properties.abreCaterpillar.type': 'مستودع',
+    'industrial.properties.abreCaterpillar.location': 'الشارقة',
+    'industrial.properties.abreCaterpillar.price': '2,500,000 درهم',
+    
+    'industrial.properties.abreIbfi.title': 'مستودع IBFI',
+    'industrial.properties.abreIbfi.type': 'مستودع',
+    'industrial.properties.abreIbfi.location': 'دبي',
+    'industrial.properties.abreIbfi.price': '3,200,000 درهم',
+    
+    'industrial.properties.abreGeco.title': 'مستودع جيكو',
+    'industrial.properties.abreGeco.type': 'مستودع',
+    'industrial.properties.abreGeco.location': 'أبوظبي',
+    'industrial.properties.abreGeco.price': '2,800,000 درهم',
+    
+    'industrial.properties.abreShowrooms.title': 'صالات عرض البطحاء',
+    'industrial.properties.abreShowrooms.type': 'صالة عرض',
+    'industrial.properties.abreShowrooms.location': 'الشارقة',
+    'industrial.properties.abreShowrooms.price': '1,900,000 درهم',
+    
+    'industrial.properties.abreKizad.title': 'مستودع كيزاد',
+    'industrial.properties.abreKizad.type': 'مستودع',
+    'industrial.properties.abreKizad.location': 'أبوظبي',
+    'industrial.properties.abreKizad.price': '4,500,000 درهم',
+    
+    'industrial.properties.abreSajaa.title': 'مستودع سجى',
+    'industrial.properties.abreSajaa.type': 'مستودع',
+    'industrial.properties.abreSajaa.location': 'الشارقة',
+    'industrial.properties.abreSajaa.price': '2,100,000 درهم',
+    
+    // Special Projects
+    'specialProjects.hero.title': 'المشاريع الخاصة',
+    'specialProjects.hero.subtitle': 'اكتشف مشاريعنا الفريدة والمبتكرة التي تعكس رؤيتنا للمستقبل.',
+    'specialProjects.search.location': 'الموقع',
+    'specialProjects.search.selectLocation': 'اختر الموقع',
+    'specialProjects.search.projectType': 'نوع المشروع',
+    'specialProjects.search.selectType': 'اختر النوع',
+    'specialProjects.search.sizeRange': 'نطاق المساحة',
+    'specialProjects.search.selectSize': 'اختر المساحة',
+    'specialProjects.search.button': 'البحث في المشاريع',
+    'specialProjects.section.title': 'مشاريعنا المميزة',
+    'specialProjects.property.startingFrom': 'تبدأ من',
+    
+    // Special Project Listings
+    'specialProjects.projects.smartCity.title': 'المدينة الذكية',
+    'specialProjects.projects.smartCity.location': 'دبي',
+    'specialProjects.projects.smartCity.type': 'مختلط الاستخدام',
+    'specialProjects.projects.smartCity.size': '5 مليون قدم مربع',
+    'specialProjects.projects.smartCity.price': '15,000,000 درهم',
+    
+    'specialProjects.projects.heritage.title': 'مشروع التراث',
+    'specialProjects.projects.heritage.location': 'الشارقة',
+    'specialProjects.projects.heritage.type': 'ثقافي',
+    'specialProjects.projects.heritage.size': '2 مليون قدم مربع',
+    'specialProjects.projects.heritage.price': '8,500,000 درهم',
+    
+    'specialProjects.projects.greenEnergy.title': 'مشروع الطاقة الخضراء',
+    'specialProjects.projects.greenEnergy.location': 'أبوظبي',
+    'specialProjects.projects.greenEnergy.type': 'ابتكار',
+    'specialProjects.projects.greenEnergy.size': '3 مليون قدم مربع',
+    'specialProjects.projects.greenEnergy.price': '12,000,000 درهم',
+    
+    'specialProjects.projects.floatingResort.title': 'منتجع عائم',
+    'specialProjects.projects.floatingResort.location': 'دبي',
+    'specialProjects.projects.floatingResort.type': 'فاخر',
+    'specialProjects.projects.floatingResort.size': '1.5 مليون قدم مربع',
+    'specialProjects.projects.floatingResort.price': '25,000,000 درهم',
     'residential.properties.alWaha.bedrooms': '5 غرف نوم',
     'residential.properties.alWaha.location': 'أبو ظبي',
     'residential.properties.alWaha.price': '2,200,000 درهم',
