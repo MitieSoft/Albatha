@@ -802,7 +802,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   const [language, setLanguage] = useState<Language>('en');
 
   const t = (key: string): TranslationValue => {
-    // @ts-ignore - Complex type inference issue with dynamic key access
+    // @ts-expect-error - Complex type inference issue with dynamic key access
     const translation = translations[language][key];
     return translation || key;
   };
