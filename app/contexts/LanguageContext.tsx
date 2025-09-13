@@ -258,6 +258,63 @@ const translations = {
     'contactUs.phoneNumber': '800-Albatha  / 800-2522842',
     'contactUs.contactButton': 'Contact us',
     
+    // Contact Page
+    'contact.hero.title': 'Get in Touch',
+    'contact.hero.subtitle': 'We\'d love to hear from you. Send us a message and we\'ll respond as soon as possible.',
+    'contact.getInTouch.title': 'Get in Touch',
+    'contact.getInTouch.subtitle': 'We\'re here to help and answer any question you might have.',
+    'contact.phone.title': 'Phone',
+    'contact.phone.number1': '+971 4 371 1300',
+    'contact.phone.number2': '+971 4 325 3687',
+    'contact.email.title': 'Email',
+    'contact.email.address1': 'info@albatha.ae',
+    'contact.email.address2': 'support@albatha.ae',
+    'contact.address.title': 'Address',
+    'contact.address.text': 'P.O. Box 7400, Level 22, Boulevard Plaza 1,<br>Downtown Burj Khalifa, Dubai, UAE',
+    'contact.form.title': 'Send us a Message',
+    'contact.form.firstName': 'First Name',
+    'contact.form.firstNamePlaceholder': 'Enter your first name',
+    'contact.form.lastName': 'Last Name',
+    'contact.form.lastNamePlaceholder': 'Enter your last name',
+    'contact.form.email': 'Email',
+    'contact.form.emailPlaceholder': 'Enter your email address',
+    'contact.form.phone': 'Phone',
+    'contact.form.phonePlaceholder': 'Enter your phone number',
+    'contact.form.subject': 'Subject',
+    'contact.form.subjectPlaceholder': 'Select a subject',
+    'contact.form.subjectOptions': ['General Inquiry', 'Property Information', 'Investment Opportunities', 'Customer Support', 'Partnership', 'Other'],
+    'contact.form.message': 'Message',
+    'contact.form.messagePlaceholder': 'Enter your message here',
+    'contact.form.submit': 'Send Message',
+    'contact.location.title': 'Our Location',
+    'contact.hours.monday': 'Monday - Friday: 9:00 AM - 6:00 PM',
+    'contact.hours.saturday': 'Saturday: 9:00 AM - 2:00 PM',
+    'contact.hours.sunday': 'Sunday: Closed',
+    'contact.faq.title': 'Frequently Asked Questions',
+    'contact.faq.subtitle': 'Find answers to common questions about our services and properties.',
+    'contact.faq.questions': [
+      {
+        question: 'What types of properties does Albatha Real Estate offer?',
+        answer: 'We offer a diverse portfolio including residential apartments, villas, commercial offices, retail spaces, industrial units, and hospitality properties across the UAE.'
+      },
+      {
+        question: 'How can I schedule a property viewing?',
+        answer: 'You can schedule a property viewing by calling us at +971 4 371 1300, emailing us at info@albatha.ae, or filling out our contact form above.'
+      },
+      {
+        question: 'What are your office hours?',
+        answer: 'Our office hours are Monday to Friday from 9:00 AM to 6:00 PM, Saturday from 9:00 AM to 2:00 PM, and we are closed on Sundays.'
+      },
+      {
+        question: 'Do you offer property management services?',
+        answer: 'Yes, we provide comprehensive property management services including maintenance, tenant relations, rent collection, and property administration.'
+      },
+      {
+        question: 'What investment opportunities are available?',
+        answer: 'We offer various investment opportunities including direct property investment, REITs, and development partnerships. Contact our investment team for more details.'
+      }
+    ],
+    
     // Footer Section
     'footer.company.about': 'About Us',
     'footer.company.leadership': 'Our Leadership',
@@ -526,6 +583,63 @@ const translations = {
     'contactUs.phone': 'الهاتف',
     'contactUs.phoneNumber': '800-البطحاء / 800-2522842',
     'contactUs.contactButton': 'اتصل بنا',
+    
+    // Contact Page
+    'contact.hero.title': 'تواصل معنا',
+    'contact.hero.subtitle': 'نحب أن نسمع منك. أرسل لنا رسالة وسنرد في أقرب وقت ممكن.',
+    'contact.getInTouch.title': 'تواصل معنا',
+    'contact.getInTouch.subtitle': 'نحن هنا للمساعدة والإجابة على أي سؤال قد يكون لديك.',
+    'contact.phone.title': 'الهاتف',
+    'contact.phone.number1': '+971 4 371 1300',
+    'contact.phone.number2': '+971 4 325 3687',
+    'contact.email.title': 'البريد الإلكتروني',
+    'contact.email.address1': 'info@albatha.ae',
+    'contact.email.address2': 'support@albatha.ae',
+    'contact.address.title': 'العنوان',
+    'contact.address.text': 'صندوق البريد 7400، الطابق 22، بلازا بوليفارد 1،<br>وسط مدينة برج خليفة، دبي، الإمارات',
+    'contact.form.title': 'أرسل لنا رسالة',
+    'contact.form.firstName': 'الاسم الأول',
+    'contact.form.firstNamePlaceholder': 'أدخل اسمك الأول',
+    'contact.form.lastName': 'اسم العائلة',
+    'contact.form.lastNamePlaceholder': 'أدخل اسم عائلتك',
+    'contact.form.email': 'البريد الإلكتروني',
+    'contact.form.emailPlaceholder': 'أدخل عنوان بريدك الإلكتروني',
+    'contact.form.phone': 'الهاتف',
+    'contact.form.phonePlaceholder': 'أدخل رقم هاتفك',
+    'contact.form.subject': 'الموضوع',
+    'contact.form.subjectPlaceholder': 'اختر موضوعاً',
+    'contact.form.subjectOptions': ['استفسار عام', 'معلومات العقار', 'فرص الاستثمار', 'دعم العملاء', 'شراكة', 'أخرى'],
+    'contact.form.message': 'الرسالة',
+    'contact.form.messagePlaceholder': 'أدخل رسالتك هنا',
+    'contact.form.submit': 'إرسال الرسالة',
+    'contact.location.title': 'موقعنا',
+    'contact.hours.monday': 'الاثنين - الجمعة: 9:00 ص - 6:00 م',
+    'contact.hours.saturday': 'السبت: 9:00 ص - 2:00 م',
+    'contact.hours.sunday': 'الأحد: مغلق',
+    'contact.faq.title': 'الأسئلة الشائعة',
+    'contact.faq.subtitle': 'اعثر على إجابات للأسئلة الشائعة حول خدماتنا وعقاراتنا.',
+    'contact.faq.questions': [
+      {
+        question: 'ما أنواع العقارات التي تقدمها البطحاء العقارية؟',
+        answer: 'نقدم محفظة متنوعة تشمل الشقق السكنية والفيلات والمكاتب التجارية والمساحات التجارية والوحدات الصناعية والعقارات السياحية في جميع أنحاء الإمارات.'
+      },
+      {
+        question: 'كيف يمكنني تحديد موعد لمعاينة عقار؟',
+        answer: 'يمكنك تحديد موعد لمعاينة عقار بالاتصال بنا على +971 4 371 1300، أو إرسال بريد إلكتروني إلى info@albatha.ae، أو ملء نموذج الاتصال أعلاه.'
+      },
+      {
+        question: 'ما هي ساعات العمل لديكم؟',
+        answer: 'ساعات العمل لدينا من الاثنين إلى الجمعة من 9:00 ص إلى 6:00 م، والسبت من 9:00 ص إلى 2:00 م، ونحن مغلقون أيام الأحد.'
+      },
+      {
+        question: 'هل تقدمون خدمات إدارة العقارات؟',
+        answer: 'نعم، نقدم خدمات شاملة لإدارة العقارات تشمل الصيانة وعلاقات المستأجرين وجمع الإيجار وإدارة العقارات.'
+      },
+      {
+        question: 'ما فرص الاستثمار المتاحة؟',
+        answer: 'نقدم فرص استثمارية متنوعة تشمل الاستثمار المباشر في العقارات وصناديق الاستثمار العقاري وشراكات التطوير. اتصل بفريق الاستثمار لدينا لمزيد من التفاصيل.'
+      }
+    ],
     
     // Additional Navigation Translations
     'nav.about': 'حول',

@@ -13,10 +13,10 @@ export default function ContactPage() {
     return Array.isArray(options) ? options : [];
   };
   
-  const getFAQQuestions = (): string[] => {
-  const questions = t('contact.faq.questions') as unknown;
-  return Array.isArray(questions) ? (questions as string[]) : [];
-};
+  const getFAQQuestions = (): Array<{question: string, answer: string}> => {
+    const questions = t('contact.faq.questions') as unknown;
+    return Array.isArray(questions) ? (questions as Array<{question: string, answer: string}>) : [];
+  };
 
   return (
     <div className="min-h-screen bg-white" dir={isRTL ? 'rtl' : 'ltr'}>
