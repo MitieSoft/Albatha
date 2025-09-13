@@ -32,7 +32,7 @@ const translations = {
     'nav.callButton': 'Call 800Albatha ',
     
     // Navigation Dropdowns
-    'nav.dropdown.ceoMessage': 'CEO Message',
+    'nav.dropdown.ceoMessage': 'CEO\'s Message',
     'nav.dropdown.albathaRealEstate': 'Mission & Values',
     'nav.dropdown.commercial': 'Commercial',
     'nav.dropdown.residential': 'Residential',
@@ -439,6 +439,119 @@ const translations = {
     'missionValues.mission.title': 'Our Mission',
     'missionValues.mission.description1': 'To create exceptional real estate solutions that enhance the quality of life for our communities while delivering sustainable value to our stakeholders.',
     'missionValues.mission.description2': 'We are committed to innovation, excellence, and integrity in everything we do, building lasting relationships and contributing to the prosperity of the UAE.',
+    
+    // Properties Section
+    'properties.hero.title': 'Our Properties',
+    'properties.hero.subtitle': 'Discover our diverse portfolio of residential, commercial, industrial, and special project properties across the UAE.',
+    'properties.commercial.title': 'Commercial Properties',
+    'properties.commercial.description': 'Modern office spaces, retail centers, and business districts designed for success.',
+    'properties.residential.title': 'Residential Properties',
+    'properties.residential.description': 'Luxury homes and apartments in prime locations with world-class amenities.',
+    'properties.industrial.title': 'Industrial Properties',
+    'properties.industrial.description': 'State-of-the-art warehouses, manufacturing facilities, and logistics centers.',
+    'properties.specialProjects.title': 'Special Projects',
+    'properties.specialProjects.description': 'Unique developments that showcase innovation and architectural excellence.',
+    'properties.learnMore': 'Learn More',
+    
+    // Residential Properties
+    'residential.hero.title': 'Residential Properties',
+    'residential.hero.subtitle': 'Find your perfect home in our carefully curated selection of residential properties.',
+    'residential.search.location': 'Enter location',
+    'residential.search.bedroom': 'Number of bedrooms',
+    'residential.search.size': 'Property size (sq ft)',
+    'residential.search.button': 'Search Properties',
+    'residential.property.startingFrom': 'Starting from',
+    
+    // Residential Property Listings
+    'residential.properties.alArooba.title': 'Al Arooba Villa',
+    'residential.properties.alArooba.bedrooms': '4 Bedrooms',
+    'residential.properties.alArooba.location': 'Sharjah',
+    'residential.properties.alArooba.price': 'AED 1,200,000',
+    
+    'residential.properties.albathaAlKhan.title': 'Albatha Al Khan',
+    'residential.properties.albathaAlKhan.bedrooms': '3 Bedrooms',
+    'residential.properties.albathaAlKhan.location': 'Sharjah',
+    'residential.properties.albathaAlKhan.price': 'AED 850,000',
+    
+    'residential.properties.albathaResidence.title': 'Albatha Residence',
+    'residential.properties.albathaResidence.bedrooms': '2 Bedrooms',
+    'residential.properties.albathaResidence.location': 'Dubai',
+    'residential.properties.albathaResidence.price': 'AED 1,500,000',
+    
+    'residential.properties.alWaha.title': 'Al Waha Villa',
+    'residential.properties.alWaha.bedrooms': '5 Bedrooms',
+    'residential.properties.alWaha.location': 'Abu Dhabi',
+    'residential.properties.alWaha.price': 'AED 2,200,000',
+    
+    'residential.properties.fourVillas.title': 'Four Villas Complex',
+    'residential.properties.fourVillas.bedrooms': '4 Bedrooms',
+    'residential.properties.fourVillas.location': 'Sharjah',
+    'residential.properties.fourVillas.price': 'AED 1,800,000',
+    
+    'residential.properties.sheikhaFatma.title': 'Sheikha Fatma Building',
+    'residential.properties.sheikhaFatma.bedrooms': '1 Bedroom',
+    'residential.properties.sheikhaFatma.location': 'Sharjah',
+    'residential.properties.sheikhaFatma.price': 'AED 450,000',
+    
+    'residential.properties.rollaBuilding.title': 'Rolla Building',
+    'residential.properties.rollaBuilding.bedrooms': '2 Bedrooms',
+    'residential.properties.rollaBuilding.location': 'Sharjah',
+    'residential.properties.rollaBuilding.price': 'AED 650,000',
+    
+    'residential.properties.villa274.title': 'Villa 274',
+    'residential.properties.villa274.bedrooms': '3 Bedrooms',
+    'residential.properties.villa274.location': 'Sharjah',
+    'residential.properties.villa274.price': 'AED 950,000',
+    
+    'residential.properties.threeShargan.title': 'Three Shargan Villas',
+    'residential.properties.threeShargan.bedrooms': '4 Bedrooms',
+    'residential.properties.threeShargan.location': 'Sharjah',
+    'residential.properties.threeShargan.price': 'AED 1,100,000',
+    
+    'residential.properties.villa276.title': 'Villa 276',
+    'residential.properties.villa276.bedrooms': '3 Bedrooms',
+    'residential.properties.villa276.location': 'Sharjah',
+    'residential.properties.villa276.price': 'AED 900,000',
+    
+    // Commercial Properties
+    'commercial.hero.title': 'Commercial Properties',
+    'commercial.hero.subtitle': 'Explore our premium commercial spaces designed for business success.',
+    'commercial.search.location': 'Enter location',
+    'commercial.search.propertyType': 'Property type',
+    'commercial.search.size': 'Property size (sq ft)',
+    'commercial.search.button': 'Search Properties',
+    'commercial.property.startingFrom': 'Starting from',
+    
+    // Commercial Property Listings
+    'commercial.properties.albathaAgmc.title': 'Albatha AGMC',
+    'commercial.properties.albathaAgmc.type': 'Office Building',
+    'commercial.properties.albathaAgmc.location': 'Sharjah',
+    'commercial.properties.albathaAgmc.price': 'AED 2,500,000',
+    
+    'commercial.properties.albathaAkai.title': 'Albatha AKAI',
+    'commercial.properties.albathaAkai.type': 'Retail Space',
+    'commercial.properties.albathaAkai.location': 'Sharjah',
+    'commercial.properties.albathaAkai.price': 'AED 1,800,000',
+    
+    'commercial.properties.albathaTower.title': 'Albatha Tower',
+    'commercial.properties.albathaTower.type': 'Office Tower',
+    'commercial.properties.albathaTower.location': 'Dubai',
+    'commercial.properties.albathaTower.price': 'AED 5,000,000',
+    
+    'commercial.properties.abreIbo.title': 'ABRE IBO',
+    'commercial.properties.abreIbo.type': 'Office Space',
+    'commercial.properties.abreIbo.location': 'Sharjah',
+    'commercial.properties.abreIbo.price': 'AED 1,200,000',
+    
+    'commercial.properties.abreMpcAirport.title': 'ABRE MPC Airport',
+    'commercial.properties.abreMpcAirport.type': 'Office Complex',
+    'commercial.properties.abreMpcAirport.location': 'Sharjah',
+    'commercial.properties.abreMpcAirport.price': 'AED 3,500,000',
+    
+    'commercial.properties.abreMpcHealthcare.title': 'ABRE MPC Healthcare',
+    'commercial.properties.abreMpcHealthcare.type': 'Medical Center',
+    'commercial.properties.abreMpcHealthcare.location': 'Sharjah',
+    'commercial.properties.abreMpcHealthcare.price': 'AED 2,800,000',
     
     
   },
@@ -864,6 +977,119 @@ const translations = {
     'missionValues.mission.title': 'مهمتنا',
     'missionValues.mission.description1': 'إنشاء حلول عقارية استثنائية تعزز جودة الحياة لمجتمعاتنا مع تقديم قيمة مستدامة لأصحاب المصلحة.',
     'missionValues.mission.description2': 'نلتزم بالابتكار والتميز والنزاهة في كل ما نقوم به، وبناء علاقات دائمة والمساهمة في ازدهار دولة الإمارات.',
+    
+    // Properties Section
+    'properties.hero.title': 'عقاراتنا',
+    'properties.hero.subtitle': 'اكتشف محفظتنا المتنوعة من العقارات السكنية والتجارية والصناعية والمشاريع الخاصة في جميع أنحاء الإمارات.',
+    'properties.commercial.title': 'العقارات التجارية',
+    'properties.commercial.description': 'مساحات مكتبية حديثة ومراكز تجارية ومناطق أعمال مصممة للنجاح.',
+    'properties.residential.title': 'العقارات السكنية',
+    'properties.residential.description': 'منازل وشقق فاخرة في مواقع متميزة مع مرافق عالمية المستوى.',
+    'properties.industrial.title': 'العقارات الصناعية',
+    'properties.industrial.description': 'مستودعات ومرافق تصنيع ومراكز لوجستية متطورة.',
+    'properties.specialProjects.title': 'المشاريع الخاصة',
+    'properties.specialProjects.description': 'تطويرات فريدة تعرض الابتكار والتميز المعماري.',
+    'properties.learnMore': 'اعرف المزيد',
+    
+    // Residential Properties
+    'residential.hero.title': 'العقارات السكنية',
+    'residential.hero.subtitle': 'اعثر على منزلك المثالي في مجموعتنا المختارة بعناية من العقارات السكنية.',
+    'residential.search.location': 'أدخل الموقع',
+    'residential.search.bedroom': 'عدد غرف النوم',
+    'residential.search.size': 'مساحة العقار (قدم مربع)',
+    'residential.search.button': 'البحث في العقارات',
+    'residential.property.startingFrom': 'تبدأ من',
+    
+    // Residential Property Listings
+    'residential.properties.alArooba.title': 'فيلا الأروبة',
+    'residential.properties.alArooba.bedrooms': '4 غرف نوم',
+    'residential.properties.alArooba.location': 'الشارقة',
+    'residential.properties.alArooba.price': '1,200,000 درهم',
+    
+    'residential.properties.albathaAlKhan.title': 'البطحاء الخان',
+    'residential.properties.albathaAlKhan.bedrooms': '3 غرف نوم',
+    'residential.properties.albathaAlKhan.location': 'الشارقة',
+    'residential.properties.albathaAlKhan.price': '850,000 درهم',
+    
+    'residential.properties.albathaResidence.title': 'سكن البطحاء',
+    'residential.properties.albathaResidence.bedrooms': '2 غرف نوم',
+    'residential.properties.albathaResidence.location': 'دبي',
+    'residential.properties.albathaResidence.price': '1,500,000 درهم',
+    
+    'residential.properties.alWaha.title': 'فيلا الواحة',
+    'residential.properties.alWaha.bedrooms': '5 غرف نوم',
+    'residential.properties.alWaha.location': 'أبو ظبي',
+    'residential.properties.alWaha.price': '2,200,000 درهم',
+    
+    'residential.properties.fourVillas.title': 'مجمع الفيلات الأربع',
+    'residential.properties.fourVillas.bedrooms': '4 غرف نوم',
+    'residential.properties.fourVillas.location': 'الشارقة',
+    'residential.properties.fourVillas.price': '1,800,000 درهم',
+    
+    'residential.properties.sheikhaFatma.title': 'مبنى الشيخة فاطمة',
+    'residential.properties.sheikhaFatma.bedrooms': '1 غرفة نوم',
+    'residential.properties.sheikhaFatma.location': 'الشارقة',
+    'residential.properties.sheikhaFatma.price': '450,000 درهم',
+    
+    'residential.properties.rollaBuilding.title': 'مبنى الرولة',
+    'residential.properties.rollaBuilding.bedrooms': '2 غرف نوم',
+    'residential.properties.rollaBuilding.location': 'الشارقة',
+    'residential.properties.rollaBuilding.price': '650,000 درهم',
+    
+    'residential.properties.villa274.title': 'فيلا 274',
+    'residential.properties.villa274.bedrooms': '3 غرف نوم',
+    'residential.properties.villa274.location': 'الشارقة',
+    'residential.properties.villa274.price': '950,000 درهم',
+    
+    'residential.properties.threeShargan.title': 'فيلات الشرقان الثلاث',
+    'residential.properties.threeShargan.bedrooms': '4 غرف نوم',
+    'residential.properties.threeShargan.location': 'الشارقة',
+    'residential.properties.threeShargan.price': '1,100,000 درهم',
+    
+    'residential.properties.villa276.title': 'فيلا 276',
+    'residential.properties.villa276.bedrooms': '3 غرف نوم',
+    'residential.properties.villa276.location': 'الشارقة',
+    'residential.properties.villa276.price': '900,000 درهم',
+    
+    // Commercial Properties
+    'commercial.hero.title': 'العقارات التجارية',
+    'commercial.hero.subtitle': 'استكشف مساحاتنا التجارية المميزة المصممة لنجاح الأعمال.',
+    'commercial.search.location': 'أدخل الموقع',
+    'commercial.search.propertyType': 'نوع العقار',
+    'commercial.search.size': 'مساحة العقار (قدم مربع)',
+    'commercial.search.button': 'البحث في العقارات',
+    'commercial.property.startingFrom': 'تبدأ من',
+    
+    // Commercial Property Listings
+    'commercial.properties.albathaAgmc.title': 'البطحاء AGMC',
+    'commercial.properties.albathaAgmc.type': 'مبنى مكتبي',
+    'commercial.properties.albathaAgmc.location': 'الشارقة',
+    'commercial.properties.albathaAgmc.price': '2,500,000 درهم',
+    
+    'commercial.properties.albathaAkai.title': 'البطحاء AKAI',
+    'commercial.properties.albathaAkai.type': 'مساحة تجارية',
+    'commercial.properties.albathaAkai.location': 'الشارقة',
+    'commercial.properties.albathaAkai.price': '1,800,000 درهم',
+    
+    'commercial.properties.albathaTower.title': 'برج البطحاء',
+    'commercial.properties.albathaTower.type': 'برج مكتبي',
+    'commercial.properties.albathaTower.location': 'دبي',
+    'commercial.properties.albathaTower.price': '5,000,000 درهم',
+    
+    'commercial.properties.abreIbo.title': 'ABRE IBO',
+    'commercial.properties.abreIbo.type': 'مساحة مكتبية',
+    'commercial.properties.abreIbo.location': 'الشارقة',
+    'commercial.properties.abreIbo.price': '1,200,000 درهم',
+    
+    'commercial.properties.abreMpcAirport.title': 'ABRE MPC المطار',
+    'commercial.properties.abreMpcAirport.type': 'مجمع مكتبي',
+    'commercial.properties.abreMpcAirport.location': 'الشارقة',
+    'commercial.properties.abreMpcAirport.price': '3,500,000 درهم',
+    
+    'commercial.properties.abreMpcHealthcare.title': 'ABRE MPC الرعاية الصحية',
+    'commercial.properties.abreMpcHealthcare.type': 'مركز طبي',
+    'commercial.properties.abreMpcHealthcare.location': 'الشارقة',
+    'commercial.properties.abreMpcHealthcare.price': '2,800,000 درهم',
   
   },
 };
