@@ -3,10 +3,12 @@ import React, { createContext, useContext, useState, ReactNode, useEffect } from
 
 export type Language = 'en' | 'ar';
 
+type TranslationValue = string | string[] | Array<{question: string, answer: string}>;
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string) => TranslationValue;
   isRTL: boolean;
   fontFamily: string;
 }
@@ -796,11 +798,13 @@ const translations = {
 
 
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('en');
 
-  const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations[typeof language]] || key;
+  const t = (key: string): TranslationValue => {
+    // @ts-ignore - Complex type inference issue with dynamic key access
+    const translation = translations[language][key];
+    return translation || key;
   };
 
   const isRTL = language === 'ar';
