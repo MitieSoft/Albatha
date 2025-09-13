@@ -614,6 +614,21 @@ const translations = {
     'joudTower.elegance.title': 'ELEGANCE.<br/>STYLE.<br/>REFINEMENT.',
     'joudTower.elegance.description': 'Experience the epitome of refined living with elegant finishes, sophisticated design, and timeless style that defines luxury.',
     
+    // Our Company Page
+    'about.hero.title': 'About Albatha Real Estate',
+    'about.hero.subtitle': 'Building Dreams, Creating Communities',
+    
+    'about.story.title': 'Our Story',
+    'about.story.description1': 'Albatha Real Estate has been at the forefront of the UAE real estate market for over two decades, delivering exceptional residential and commercial properties that redefine modern living. Our journey began with a simple yet powerful vision: to create spaces that inspire, communities that thrive, and homes that become the foundation of cherished memories.',
+    'about.story.description2': 'From our humble beginnings to becoming one of the most trusted names in real estate, we have consistently focused on quality, innovation, and customer satisfaction. Every project we undertake reflects our commitment to excellence and our deep understanding of what makes a place truly special.',
+    
+    'about.vision.title': 'Our Vision',
+    'about.vision.description': 'To be the leading real estate developer in the UAE, known for creating sustainable, innovative, and community-focused developments that enhance the quality of life for our residents and contribute positively to the urban landscape.',
+    
+    'about.mission.title': 'Our Mission',
+    'about.mission.description': 'We are committed to delivering exceptional real estate solutions that exceed expectations, foster community connections, and create lasting value for our clients, partners, and the communities we serve. Through innovative design, sustainable practices, and unwavering dedication to quality, we build more than just properties – we build futures.',
+    
+    
     
   },
   ar: {
@@ -1212,6 +1227,21 @@ const translations = {
     
     'joudTower.elegance.title': 'أناقة.<br/>أسلوب.<br/>رقي.',
     'joudTower.elegance.description': 'اختبر ذروة العيش الراقي مع التشطيبات الأنيقة والتصميم المتطور والأسلوب الخالد الذي يعرف الفخامة.',
+    
+    // Our Company Page
+    'about.hero.title': 'حول عقارات البطحاء',
+    'about.hero.subtitle': 'نبني الأحلام، نخلق المجتمعات',
+    
+    'about.story.title': 'قصتنا',
+    'about.story.description1': 'تتمتع عقارات البطحاء بموقع ريادي في سوق العقارات الإماراتي لأكثر من عقدين من الزمان، حيث نقدم عقارات سكنية وتجارية استثنائية تعيد تعريف العيش العصري. بدأت رحلتنا برؤية بسيطة لكنها قوية: خلق مساحات تلهم، ومجتمعات تزدهر، ومنازل تصبح أساس الذكريات العزيزة.',
+    'about.story.description2': 'من بداياتنا المتواضعة إلى أن أصبحنا أحد أكثر الأسماء الموثوقة في مجال العقارات، ركزنا باستمرار على الجودة والابتكار ورضا العملاء. كل مشروع نقوم به يعكس التزامنا بالتميز وفهمنا العميق لما يجعل المكان مميزاً حقاً.',
+    
+    'about.vision.title': 'رؤيتنا',
+    'about.vision.description': 'أن نكون المطور العقاري الرائد في دولة الإمارات العربية المتحدة، معروفين بإنشاء مشاريع مستدامة ومبتكرة ومركزة على المجتمع تعزز جودة الحياة لسكاننا وتساهم إيجابياً في المشهد الحضري.',
+    
+    'about.mission.title': 'مهمتنا',
+    'about.mission.description': 'نحن ملتزمون بتقديم حلول عقارية استثنائية تتجاوز التوقعات، وتعزز الروابط المجتمعية، وتخلق قيمة دائمة لعملائنا وشركائنا والمجتمعات التي نخدمها. من خلال التصميم المبتكر والممارسات المستدامة والتفاني الثابت في الجودة، نبني أكثر من مجرد عقارات – نبني المستقبل.',
+    
   
   },
 };
