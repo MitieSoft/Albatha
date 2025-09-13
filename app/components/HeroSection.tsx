@@ -210,6 +210,7 @@ const HeroSection = () => {
               unicodeBidi: 'bidi-override',
               fontVariantNumeric: 'lining-nums',
               fontFeatureSettings: '"lnum"',
+              fontFamily: 'Poppins, Arial, sans-serif !important'
             }}
             lang="en"
           >
