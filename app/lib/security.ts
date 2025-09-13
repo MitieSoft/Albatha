@@ -170,7 +170,7 @@ export function validateInput<T>(schema: z.ZodSchema<T>, data: unknown): { succe
 }
 
 // Security logging
-export function logSecurityEvent(event: string, details: Record<string, any>, ip?: string) {
+export function logSecurityEvent(event: string, details: Record<string, unknown>, ip?: string) {
   const logEntry = {
     timestamp: new Date().toISOString(),
     event,
