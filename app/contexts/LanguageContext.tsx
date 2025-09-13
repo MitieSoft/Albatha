@@ -1480,32 +1480,51 @@ const translations = {
   },
 };
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
 
-  const t = (key: string): any => {
-    return translations[language][key as keyof typeof translations[typeof language]] || key;
-  };
+type TranslationKeys = keyof typeof translations['en']
 
-  const isRTL = language === 'ar';
-  const fontFamily = isRTL ? 'GE SS Two' : 'Univers';
+interface LanguageContextType {
+  language: Language
+  setLanguage: (lang: Language) => void
+  t: (key: TranslationKeys) => string
+  isRTL: boolean
+  fontFamily: string
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+)
+
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  const [language, setLanguage] = useState<Language>('en')
+
+  const t = (key: TranslationKeys): string => {
+    return translations[language][key] ?? key
+  }
+
+  const isRTL = language === 'ar'
+  const fontFamily = isRTL ? 'GE SS Two' : 'Univers'
 
   useEffect(() => {
-    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
-    document.documentElement.lang = language;
-  }, [isRTL, language]);
+    document.documentElement.dir = isRTL ? 'rtl' : 'ltr'
+    document.documentElement.lang = language
+  }, [isRTL, language])
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL, fontFamily }}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage, t, isRTL, fontFamily }}
+    >
       {children}
     </LanguageContext.Provider>
-  );
-};
+  )
+}
 
 export const useLanguage = (): LanguageContextType => {
-  const context = useContext(LanguageContext);
+  const context = useContext(LanguageContext)
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error('useLanguage must be used within a LanguageProvider')
   }
-  return context;
-};
+  return context
+}
