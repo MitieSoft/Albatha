@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 import { Play, ChevronLeft, ChevronRight, Phone, Plus, X, MousePointer } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import image1 from "../assets/2.jpg";
-import image2 from "../assets/1.jpg";
+import image1 from "../assets/1.jpg";
+import image2 from "../assets/2.jpg";
 import image3 from "../assets/3.jpg";
 import image4 from "../assets/4.jpg";
 import image5 from "../assets/5.jpg";
@@ -259,7 +259,7 @@ const HeroSection = () => {
         </div>
 
         {/* Content Overlay */}
-        <div className="main-hero__content absolute inset-0 flex items-center md:items-center items-start pt-16 md:pt-0">
+        <div className="main-hero__content absolute inset-0 flex items-center md:items-center items-start pt-24 md:pt-0">
           <div 
             key={currentSlideIndex}
             className={`main-hero__left container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24 ${isRTL ? "text-right" : "text-left"} ${isInView ? 'fade-in' : ''}`}

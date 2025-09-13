@@ -5,7 +5,7 @@ import { AccessibilityProvider } from "./contexts/AccessibilityContext";
 import SecurityMonitor from "./components/SecurityMonitor";
 
 export const metadata: Metadata = {
-  title: "Albatha  Real Estate - Premium Properties in Dubai",
+  title: "Albatha  Real Estate - We Build Properties You Want To Call Home",
   description: "Discover premium real estate developments by Albatha  in Dubai. From luxury apartments to commercial spaces, experience world-class living and investment opportunities.",
   icons: {
     icon: '/images/favicon.png',

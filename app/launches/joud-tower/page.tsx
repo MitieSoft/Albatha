@@ -19,9 +19,12 @@ export default function JoudTowerPage() {
             src="/images/5.png"
             alt="Cityscape background"
             fill
-            className="object-cover opacity-70"
+            className="object-cover "
           />
         </div>
+        
+        {/* Black Overlay - Right Half */}
+        <div className="absolute inset-0 bg-black opacity-60 lg:bg-gradient-to-l lg:from-transparent lg:via-black/40 lg:to-black/80"></div>
 
         <div className="container mx-auto px-4 sm:px-12 md:px-16 xl:px-24 relative z-10">
           <div className={`flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
