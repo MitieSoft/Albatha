@@ -104,7 +104,7 @@ export default function TawazunConstructionPage() {
             <div className={`relative transition-all duration-1000 ease-out ${expertiseVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0 translate-y-8'}`}>
               <div className="relative w-full h-80 overflow-hidden rounded-lg hover:scale-105 transition-transform duration-500">
                 <Image
-                  src="/images/18.jfif"
+                  src="/images/18.jpeg"
                   alt="Project 1"
                   fill
                   className="object-cover"
