@@ -28,7 +28,7 @@ export default function AlAbirPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/21.jpeg"
+            src="/images/21.jfif"
             alt="Office background"
             fill
             className="object-cover opacity-30"

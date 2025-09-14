@@ -315,7 +315,19 @@ const HeroSection = () => {
         </Button>
 
         {/* Promotions Button */}
-       
+        <div
+          className={`absolute bottom-16 sm:bottom-20 flex items-center ${
+            isRTL ? "left-4 sm:left-8" : "right-4 sm:right-8"
+          }`}
+        >
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-white hover:bg-white/20 hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border border-white/30 px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium hover:shadow-xl hover:border-white/50"
+          >
+            {t("hero.promotions")}
+          </Button>
+        </div>
       </div>
 
       {/* Phone Popup Menu */}
