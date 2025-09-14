@@ -59,7 +59,7 @@ export default function AlAbirPage() {
                 {t('alAbir.business.description')}
               </p>
             </div>
-            <div className={`relative w-full h-96 sm:h-[500px] md:h-[500px] lg:h-[550px] ${isRTL ? 'lg:col-start-1' : ''} order-2 transition-all duration-1000 ease-out ${businessVisible ? 'animate-fade-in-right animation-delay-200' : 'opacity-0 translate-x-8'}`}>
+            <div className={`relative w-full h-96 sm:h-[500px] md:h-[500px] lg:h-[500px] ${isRTL ? 'lg:col-start-1' : ''} order-2 transition-all duration-1000 ease-out ${businessVisible ? 'animate-fade-in-right animation-delay-200' : 'opacity-0 translate-x-8'}`}>
               {/* Image Collage - Two overlapping images */}
               <div className="relative w-full h-full">
                 {/* Larger Image - Right side, vertical orientation */}
