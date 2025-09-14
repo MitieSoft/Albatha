@@ -18,7 +18,7 @@ import ContactUsSection from "./components/ContactUsSection";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <GlobalAccessibilityButton />
+      {/* <GlobalAccessibilityButton /> */}
       <GlobalChatButton />
       <Navigation />
       <div className="animate-fade-in">

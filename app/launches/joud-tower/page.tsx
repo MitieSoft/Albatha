@@ -3,16 +3,30 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import Image from 'next/image';
+import { useScrollAnimation } from '../../hooks/use-scroll-animation';
 
 export default function JoudTowerPage() {
   const { t, isRTL } = useLanguage();
+  
+  // Scroll animation hooks
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
+  const { ref: lavishRef, isVisible: lavishVisible } = useScrollAnimation();
+  const { ref: specRef, isVisible: specVisible } = useScrollAnimation();
+  const { ref: amenitiesRef, isVisible: amenitiesVisible } = useScrollAnimation();
+  const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation();
+  const { ref: viewsRef, isVisible: viewsVisible } = useScrollAnimation();
+  const { ref: sanctuaryRef, isVisible: sanctuaryVisible } = useScrollAnimation();
+  const { ref: feastRef, isVisible: feastVisible } = useScrollAnimation();
+  const { ref: perspectiveRef, isVisible: perspectiveVisible } = useScrollAnimation();
+  const { ref: aestheticRef, isVisible: aestheticVisible } = useScrollAnimation();
+  const { ref: eleganceRef, isVisible: eleganceVisible } = useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden" dir={isRTL ? 'rtl' : 'ltr'}>
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden min-h-[80vh] flex items-center">
+      <section ref={heroRef as React.RefObject<HTMLElement>} className={`relative pt-20 pb-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden min-h-screen flex items-center transition-all duration-1000 ease-out ${heroVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -28,14 +42,14 @@ export default function JoudTowerPage() {
 
         <div className="container mx-auto px-4 sm:px-12 md:px-16 xl:px-24 relative z-10">
           <div className={`flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
-            <div className={`text-white ${isRTL ? 'text-right' : 'text-right'} max-w-4xl`}>
+            <div className={`text-white ${isRTL ? 'text-right' : 'text-right'} max-w-4xl transition-all duration-1000 ease-out ${heroVisible ? 'animate-fade-in-up animation-delay-200' : 'opacity-0 translate-y-8'}`}>
               <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.hero.title')}
               </h1>
-              <p className={`text-lg sm:text-xl md:text-2xl lg:text-5xl text-white mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+              <p className={`text-lg sm:text-xl md:text-2xl lg:text-5xl text-white mb-8 transition-all duration-1000 ease-out ${heroVisible ? 'animate-fade-in-up animation-delay-400' : 'opacity-0 translate-y-8'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.hero.subtitle')}
               </p>
-              <p className={`text-lg text-white ${isRTL ? 'text-right' : 'text-end'} leading-relaxed ${isRTL ? 'pr-8' : 'pl-8'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+              <p className={`text-lg text-white ${isRTL ? 'text-right' : 'text-end'} leading-relaxed ${isRTL ? 'pr-8' : 'pl-8'} transition-all duration-1000 ease-out ${heroVisible ? 'animate-fade-in-up animation-delay-600' : 'opacity-0 translate-y-8'} ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                 {t('joudTower.hero.description')}
               </p>
             </div>
@@ -44,26 +58,47 @@ export default function JoudTowerPage() {
       </section>
 
       {/* LAVISH.DELUXE.OPULENT Section */}
-      <section className="py-20 bg-white">
+      <section ref={lavishRef as React.RefObject<HTMLElement>} className={`py-20 bg-white transition-all duration-1000 ease-out ${lavishVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
-          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12 ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
-            <div className={`${isRTL ? 'lg:col-start-2' : ''}`}>
-              <h2 className={`text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-[#661244] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.lavish.title') }}>
+          <div className={`grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start mb-12 ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
+            {/* Left side - Text */}
+            <div className={`lg:col-span-3 ${isRTL ? 'lg:col-start-3' : ''}`}>
+              <h2 className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-[#661244] leading-[0.9] ${isRTL ? 'font-arabic text-right' : 'font-english text-left'} transition-all duration-1000 ease-out ${lavishVisible ? 'animate-fade-in-left' : 'opacity-0 translate-x-8'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: t('joudTower.lavish.title') }}>
               </h2>
             </div>
-            <div className={`flex justify-center ${isRTL ? 'lg:justify-start' : 'lg:justify-end'}`}>
-              <div className="relative w-full max-w-3xl h-98">
-                <Image
-                  src="/images/6.png"
-                  alt="Luxury pool area"
-                  fill
-                  className="object-cover shadow-xl"
-                />
+            
+            {/* Right side - Two overlapping images */}
+            <div className={`lg:col-span-2 ${isRTL ? 'lg:col-start-1' : ''} relative`}>
+              <div className="relative w-full h-96 sm:h-[500px] md:h-[500px] lg:h-[500px] transition-all duration-1000 ease-out ${lavishVisible ? 'animate-fade-in-right animation-delay-200' : 'opacity-0 translate-x-8'}">
+                {/* Image Collage - Two overlapping images */}
+                <div className="relative w-full h-full">
+                  {/* Larger Image - Right side, vertical orientation */}
+                  <div className={`absolute top-0 right-0 w-5/6 h-full z-10 transition-all duration-1000 ease-out ${lavishVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0 scale-95'}`}>
+                    <Image
+                      src="/images/6.png"
+                      alt="Joud Tower exterior view"
+                      fill
+                      className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  
+                  {/* Smaller Square Image - Left side, overlapping */}
+                  <div className={`absolute bottom-8 sm:bottom-4 md:bottom-6 lg:bottom-20 -left-4 sm:-left-4 md:-left-6 lg:-left-8 w-2/3 h-2/3 z-20 transition-all duration-1000 ease-out ${lavishVisible ? 'animate-scale-in animation-delay-600' : 'opacity-0 scale-95'}`}>
+                    <Image
+                      src="/images/4.jpg"
+                      alt="Luxury interior kitchen"
+                      fill
+                      className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="text-center">
-            <p className={`text-lg text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+          
+          {/* Bottom description - Centered, full width */}
+          <div className="text-center px-4">
+            <p className={`text-base sm:text-lg text-black leading-relaxed max-w-5xl mx-auto ${isRTL ? 'font-arabic' : 'font-english'} transition-all duration-1000 ease-out ${lavishVisible ? 'animate-fade-in-up animation-delay-800' : 'opacity-0 translate-y-8'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.lavish.description')}
             </p>
           </div>
@@ -71,254 +106,268 @@ export default function JoudTowerPage() {
       </section>
 
       {/* Joud Tower Specification Section */}
-      <section className="py-10 bg-white">
-        <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
-          <div className="text-center mb-16">
-            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
-              {t('joudTower.specification.title')}
-            </h2>
+      <section ref={specRef as React.RefObject<HTMLElement>} className={`bg-[#decfca] transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
+        {/* Main Title - Outside Container */}
+        <div className="text-center py-8 bg-white ">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}" style={{ fontFamily: 'Univers, Arial, sans-serif' }}>
+            Joud Tower Specification
+          </h2>
+        </div>
+        <div className='container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24 pt-8 pb-8'>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#661244] mb-4" style={{ fontFamily: 'Univers, Arial, sans-serif' }}>
+                Total of 55 Storeys
+              </h3>
           </div>
-          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
-            <div className={`${isRTL ? 'lg:col-start-2' : ''}`}>
-              <div className={`space-y-8 text-lg text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
-                <div>
-                  <h3 className={`text-4xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.specification.storeys')}</h3>
-
-                  <p>{t('joudTower.specification.basement')}</p>
-                  <p><strong>{t('joudTower.specification.residential')}</strong></p>
-                </div>
-
-              <div>
-                  <h3 className={`text-3xl font-bold text-[#661244] mb-4 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.specification.apartmentTypes')}</h3>
-                  <div className="space-y-3">
-                    <p>• {t('joudTower.specification.apartments.2bed')}</p>
-                    <p>• {t('joudTower.specification.apartments.3bed')}</p>
-                    <p>• {t('joudTower.specification.apartments.3bedGarden')}</p>
-                    <p>• {t('joudTower.specification.apartments.4bed')}</p>
-                    <p>• {t('joudTower.specification.apartments.4bedGarden')}</p>
-                    <p>• {t('joudTower.specification.apartments.4bedDuplex')}</p>
-
-                    <p>• {t('joudTower.specification.apartments.penthouse')}</p>
-                  </div>
-                </div>
-                  </div>
-                  </div>
-            <div className={`flex justify-center ${isRTL ? 'lg:justify-start' : 'lg:justify-end'}`}>
-              <div className="relative w-full max-w-6xl h-[600px]">
-                <div className="absolute inset-4">
-                  <Image
-                    src="/images/23.png"
-                    alt="Joud Tower exterior"
-                    fill
-                    className="object-cover object-center shadow-xl"
-                  />
-                  </div>
-                </div>
+        {/* 3 Divs Layout - No Gaps */}
+        <div className=" container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24  pb-22" >
+          <div className="grid grid-cols-1 lg:grid-cols-3">
+          
+          
+          {/* Div 1 - Text + Image */}
+          <div className="transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-left' : 'opacity-0 translate-x-8'} flex flex-col justify-between h-full">
+            <div>
+              
+              
+              <div className="space-y-4 text-lg text-black pt-12 pr-8">
+                <p>1 Basement + Ground Floor + 5 Podium Levels for parking and services</p>
+                <p><strong>48 floors residential at its highest point</strong></p>
               </div>
-              </div>
+            </div>
+
+            <div className="relative w-full h-80 mt-auto -right-20 -bottom-20  z-20">
+              <Image
+                src="/images/2.jpg"
+                alt="Joud Tower interior view"
+                fill
+                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+              />
+            </div>
+          </div>
+
+          {/* Div 2 - Big Image Covering Whole Div */}
+          <div className="relative min-h-[400px] transition-all duration-1000 ease-out ${specVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0 scale-95'}">
+            <Image
+              src="/images/3.jpg"
+              alt="Joud Tower full view"
+              fill
+              className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+            />
+          </div>
+
+          {/* Div 3 - Image + Apartment List */}
+          <div className="transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-right animation-delay-600' : 'opacity-0 translate-x-8'}">
+            <div className="relative w-full h-64 mb-8 -left-20 -top-20  z-20">
+              <Image
+                src="/images/5.png"
+                alt="Joud Tower curved exterior"
+                fill
+                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+              />
+            </div>
+
+            <div className="space-y-2 text-lg text-black leading-relaxed pl-8">
+              <p className="m-0">• 2-bedroom</p>
+              <p className="m-0">• 3-bedroom</p>
+              <p className="m-0">• 3-bedroom + private garden at the podium level</p>
+              <p className="m-0">• 4-bedroom</p>
+              <p className="m-0">• 4-bedroom + private garden at the podium level</p>
+              <p className="m-0">• 4-bedroom duplex on the floor from 45 upwards (skyvilla)</p>
+              <p className="m-0">• Penthouse: 5 bedrooms, bespoke with private pool</p>
+            </div>
+          </div>
+        </div>
         </div>
       </section>
 
       {/* Amenities Section */}
-      <section className="py-10 bg-white">
+      <section ref={amenitiesRef as React.RefObject<HTMLElement>} className={`py-16 bg-white transition-all duration-1000 ease-out ${amenitiesVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="text-center mb-16">
             <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.amenities.title')}
             </h2>
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:px-[15%]">
+          
+          {/* 3x4 Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            
             {/* Row 1 */}
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/24.png"
-                    alt="gym"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/1.jpeg"
+                  alt="Functional Gym"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.gym')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.gym')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/25.png"
-                    alt="sauna"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/2.jpeg"
+                  alt="Sauna"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.sauna')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.sauna')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/26.png"
-                    alt="pool"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/3.jpeg"
+                  alt="Swimming Pool"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.pool')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.pool')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/27.png"
-                    alt="padel"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/4.jpeg"
+                  alt="Padel Court"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.padel')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.padel')}
+              </p>
             </div>
 
             {/* Row 2 */}
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/28.png"
-                    alt="running track"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/5.jpeg"
+                  alt="Running Track"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.running')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.running')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/29.png"
-                    alt="bbq"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/6.jpeg"
+                  alt="BBQ Area"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.bbq')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.bbq')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/30.png"
-                    alt="Kids play area"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/7.jpeg"
+                  alt="Kids Play Area"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.kids')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.kids')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/31.png"
-                    alt="multipurpose hall"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/8.jpeg"
+                  alt="Multipurpose Hall"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.hall')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.hall')}
+              </p>
             </div>
 
             {/* Row 3 */}
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/32.png"
-                    alt="Cafe"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/9.jpeg"
+                  alt="Cafe"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.cafe')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.cafe')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/33.png"
-                    alt="prayer room"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/10.jpeg"
+                  alt="Prayer Room"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.prayer')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.prayer')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/34.png"
-                    alt="kindergarten"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/11.jpeg"
+                  alt="Kindergarten"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.kindergarten')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.kindergarten')}
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-30 h-25 bg-white rounded-full flex items-center justify-center mx-auto">
-              <div className="relative w-25 h-25">
-              <div className="absolute inset-4">
-                  <Image
-                    src="/images/35.png"
-                    alt="retail shop"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  </div>
-                  </div>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src="/images/Amenities/12.jpeg"
+                  alt="Retail Shop"
+                  fill
+                  className="object-cover shadow-lg"
+                />
               </div>
-              <p className={`text-sm text-gray-700 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>{t('joudTower.amenities.retail')}</p>
+              <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                {t('joudTower.amenities.retail')}
+              </p>
             </div>
-              </div>
-            </div>
+            
+          </div>
+        </div>
       </section>
 
       {/* Other Features Section */}
-      <section className="py-20 bg-gray-800 relative overflow-hidden">
+      <section ref={featuresRef as React.RefObject<HTMLElement>} className={` py-20 bg-gray-800 relative overflow-hidden transition-all duration-1000 ease-out ${featuresVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -387,7 +436,7 @@ export default function JoudTowerPage() {
       </section>
 
       {/* Enjoy Unparalleled Views Section */}
-      <section className="py-8 lg:py-20 bg-white">
+      <section ref={viewsRef as React.RefObject<HTMLElement>} className={`py-8 lg:py-20 bg-white transition-all duration-1000 ease-out ${viewsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Mobile: Heading first, then text, then images */}
@@ -452,8 +501,8 @@ export default function JoudTowerPage() {
       </section>
 
       {/* Your Sanctuary Section */}
-      <section className=" bg-white">
-        <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
+      <section ref={sanctuaryRef as React.RefObject<HTMLElement>} className={`bg-[#decfca]  transition-all duration-1000 ease-out ${sanctuaryVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
+        <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24 pt-16 pb-8">
           <div className="text-center mb-16">
             <h2 className={`text-5xl md:text-6xl font-bold text-[#661244] mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
               {t('joudTower.sanctuary.title')}
@@ -474,7 +523,7 @@ export default function JoudTowerPage() {
       </section>
 
       {/* A Feast For The Senses Section */}
-      <section className="py-8 lg:py-20 bg-white">
+      <section ref={feastRef as React.RefObject<HTMLElement>} className={`py-8 lg:py-20 bg-white transition-all duration-1000 ease-out ${feastVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Mobile: Heading first, then text, then image */}
@@ -523,7 +572,7 @@ export default function JoudTowerPage() {
       </section>
 
       {/* Priceless Perspective Section */}
-      <section className="py-8 lg:py-20 bg-white">
+      <section ref={perspectiveRef as React.RefObject<HTMLElement>} className={`py-8 lg:py-20 bg-white transition-all duration-1000 ease-out ${perspectiveVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Mobile: Heading first, then text, then image */}
@@ -572,7 +621,7 @@ export default function JoudTowerPage() {
       </section>
 
       {/* AESTHETIC.EXCUISITE.IDYLLIC Section */}
-      <section className="py-8 lg:py-20 bg-white">
+      <section ref={aestheticRef as React.RefObject<HTMLElement>} className={`py-8 lg:py-20 bg-[#decfca] transition-all duration-1000 ease-out ${aestheticVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Mobile: Heading first, then text, then image */}
@@ -621,7 +670,7 @@ export default function JoudTowerPage() {
       </section>
 
       {/* ELEGANCE.STYLE.REFINEMENT Section */}
-      <section className="py-8 lg:py-20 bg-white">
+      <section ref={eleganceRef as React.RefObject<HTMLElement>} className={`py-8 lg:py-20 bg-white transition-all duration-1000 ease-out ${eleganceVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Mobile: Heading first, then text, then image */}

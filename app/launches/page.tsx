@@ -26,10 +26,10 @@ export default function LaunchesPage() {
       description: t('launches.liwan.description'),
       descriptionKey: 'launches.liwan.description',
       image: '/images/workspace-image.jpg',
-      link: null,
-      status: t('launches.status.comingSoon'),
-      statusKey: 'launches.status.comingSoon',
-      hasLink: false
+      link: '/launches/liwan-renders',
+      status: t('launches.status.available'),
+      statusKey: 'launches.status.available',
+      hasLink: true
     },
     {
       title: t('launches.others.title'),

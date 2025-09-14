@@ -101,7 +101,7 @@ export default function CommercialPropertiesPage() {
                   className={`flex-1 px-4 py-3 bg-white border-0 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#661244] ${isRTL ? 'text-right' : 'text-left'} ${isRTL ? 'font-arabic' : 'font-english'}`}
                   style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}
                 />
-                <button className={`w-full sm:w-auto bg-[#661244] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#551133] transition-colors duration-200 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                <button className={`w-full sm:w-auto bg-[#9d552d] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#8a4a26] transition-colors duration-200 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
                   {t('commercial.search.button')}
                 </button>
               </div>

@@ -3,86 +3,112 @@ import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState, useEffect, useRef } from "react";
 import Image from 'next/image';
+import { useScrollAnimation } from '../hooks/use-scroll-animation';
 
 const DynamicJoudTowerSection = () => {
-  const { t, isRTL, fontFamily } = useLanguage();
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const { t, isRTL } = useLanguage();
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation({ triggerOnce: false });
+  const { ref: imageRef, isVisible: imageVisible } = useScrollAnimation({ triggerOnce: false });
+  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation({ triggerOnce: false });
   
   return (
-    <section className="py-10 bg-white" ref={sectionRef}>
-      <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
-        <div className="max-w-6xl mx-auto">
-          
-          {/* Top Heading */}
-          <div className={`text-center mb-16 transition-all duration-1000 ease-out transform ${
-            isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-95'
+    <section className="py-20 bg-white relative overflow-hidden" ref={sectionRef}>
+      <div className=" mx-auto">
+        <div className="mx-auto">
+          {/* Section Header */}
+          <div className={`text-left mb-8 pl-4 sm:pl-8 md:pl-20 lg:pl-24 xl:pl-28 transition-all duration-1000 ease-out transform ${
+            sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}>
-            <h2 className={`text-5xl md:text-6xl lg:text-7xl font-bold text-[#661244] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily }}>
-              {t('joudTower.title')}
-            </h2>
-          </div>
-
-          {/* Main Image Section */}
-          <div className={`mb-16 transition-all duration-1000 ease-out transform ${
-            isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-95'
-          }`} style={{ transitionDelay: '300ms' }}>
-            <div
-              className="relative h-[500px] md:h-[600px] lg:h-[750px] rounded-3xl overflow-hidden shadow-2xl"
-              style={{
-                backgroundImage: "url('/images/AlJoud_Exteriors_Cam005-Fullres_.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat"
-              }}
-            >
-              {/* Overlay for better text readability if needed */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-            </div>
-          </div>
-
-          {/* Bottom Content Section */}
-          <div className={`text-center transition-all duration-1000 ease-out transform ${
-            isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-95'
-          }`} style={{ transitionDelay: '600ms' }}>
+            <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-[#661244] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+              Dynamic Joud Tower
+            </h1>
+             </div>
+          
+          <div className={`grid grid-cols-1  gap-12 items-center ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
             
-            {/* Sub Heading */}
-            <h3 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-8 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily }}>
-              {t('joudTower.subtitle')}
-            </h3>
+            {/* Left Column - Full Section Image with Overlapping Images */}
+            <div 
+              ref={imageRef as React.RefObject<HTMLDivElement>}
+              className={`${isRTL ? 'lg:order-2' : ''} transition-all duration-1000 ease-out transform ${
+                imageVisible 
+                  ? 'animate-fade-in-left' 
+                  : isRTL ? 'translate-x-32 opacity-0 scale-95' : '-translate-x-32 opacity-0 scale-95'
+              }`}
+            >
+              <div className="relative w-full h-[350px] lg:h-[450px]">
+                {/* Main Building Image - Full Section */}
+                <div 
+                  className="absolute inset-0  overflow-hidden shadow-2xl"
+                  style={{
+                    backgroundImage: "url('/images/AlJoud_Exteriors_Cam005-Fullres_.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat"
+                  }}
+                >
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+                </div>
 
-            {/* Description Paragraph */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <p className={`text-lg md:text-xl text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily }}>
-                {t('joudTower.description')}
-              </p>
+                {/* Top Overlapping Image - Bedroom - Hidden on Mobile */}
+                <div className={`hidden md:block absolute -top-24 right-8 w-90 h-58 overflow-hidden shadow-lg hover:scale-105 transition-all duration-1000 ease-out z-10 ${imageVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-16'}`} style={{ animationDelay: '0.6s' }}>
+                  <Image
+                    src="/images/L45_Bedroom_Cam02__v04_0000.png"
+                    alt="Luxury Bedroom"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Bottom Overlapping Image - Lobby - Hidden on Mobile */}
+                <div className={`hidden md:block absolute -bottom-38 left-8 w-90 h-58 overflow-hidden shadow-lg hover:scale-105 transition-all duration-1000 ease-out z-10 ${imageVisible ? 'animate-fade-in-down' : 'opacity-0 -translate-y-16'}`} style={{ animationDelay: '0.8s' }}>
+                  <Image
+                    src="/images/Lobby_Cam01_v05_Alt2_0000.png"
+                    alt="Modern Lobby"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Call to Action Button */}
-            <div className="flex justify-center">
-              <Button 
-                className="bg-[#661244] hover:bg-[#551133] text-white px-12 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-lg shadow-lg"
-                onClick={() => window.location.href = '/launches/joud-tower'}
-              >
-                {t('joudTower.discover')}
-              </Button>
+            {/* Right Column - Content */}
+            <div 
+              ref={contentRef as React.RefObject<HTMLDivElement>}
+              className={`${isRTL ? 'lg:order-1' : ''} transition-all duration-1000 ease-out transform ${
+                contentVisible 
+                  ? 'animate-fade-in-right animation-delay-400' 
+                  : isRTL ? '-translate-x-32 opacity-0 scale-95' : 'translate-x-32 opacity-0 scale-95'
+              }`}
+            >
+              <div className={`container mx-auto space-y-8 ${isRTL ? 'text-right' : 'text-left'} `}>
+                {/* Title */}
+                <div className="animate-fade-in-up animation-delay-200 text-right pr-4 sm:pr-16 md:pr-28 lg:pr-28 xl:pr-32">
+                  <h2 className={`text-4xl lg:text-6xl font-bold  text-[#661244] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                    {t('joudTower.welcomeTo')}
+                  </h2>
+                  <h3 className={`text-4xl lg:text-6xl font-bold text-[#9d552d] leading-tight ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                    {t('joudTower.luxuryRedefined')}
+                  </h3>
+                </div>
+                
+                {/* Description */}
+                <div className="container mx-auto text-center">
+                  <p className={`text-lg text-gray-700 leading-relaxed px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 2xl:px-40 animate-fade-in-up animation-delay-300 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
+                  {t('joudTower.description')}
+                </p>
+               
+                 {/* CTA Button */}
+                 <div className={`text-center mt-8 animate-fade-in-up animation-delay-400`}>
+                   <Button 
+                     className="bg-[#9d552d] hover:bg-[#8a4a26] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                     onClick={() => window.location.href = '/launches/joud-tower'}
+                   >
+                    {t('joudTower.discover')}
+                  </Button>
+                </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

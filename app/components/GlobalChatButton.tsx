@@ -31,7 +31,7 @@ const GlobalChatButton = () => {
 
         {/* Chat Menu */}
         {isChatMenuOpen && (
-          <div className="absolute bottom-full mb-3 right-0 bg-[#661244] border border-white/30 rounded-xl shadow-2xl py-4 min-w-[320px] z-[10000]">
+          <div className="absolute bottom-full mb-3 right-0 bg-[#9d552d] border border-white/30 rounded-xl shadow-2xl py-4 min-w-[320px] z-[10000]">
             <div className="text-center mb-4 px-6">
               <h3 className="text-white font-bold text-lg">
                 Start a Conversation

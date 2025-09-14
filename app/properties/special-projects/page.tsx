@@ -108,7 +108,7 @@ export default function SpecialProjectsPage() {
                   </select>
                 </div>
                 <div className="flex items-end">
-                  <button className={`w-full bg-[#661244] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#551133] transition-colors duration-200 hover-scale ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                  <button className={`w-full bg-[#9d552d] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#8a4a26] transition-colors duration-200 hover-scale ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                     {t('specialProjects.search.button')}
                   </button>
                 </div>

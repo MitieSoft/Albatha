@@ -26,10 +26,13 @@ const Footer = () => {
       { name: t('footer.developments.residential'), href: "/properties/residential" },
       { name: t('footer.developments.commercial'), href: "/properties/commercial" },
       { name: t('footer.developments.industrial'), href: "/properties/industrial" },
+      { name: t('footer.developments.specialProjects'), href: "/properties/special-projects" },
+
     ],
     ourCompanies: [
-      { name: t('footer.ourCompanies.tawazunConstruction'), href: "/companies/tawazun-construction" },
       { name: t('footer.ourCompanies.alAbir'), href: "/companies/al-abir" },
+      { name: t('footer.ourCompanies.tawazunConstruction'), href: "/companies/tawazun-construction" },
+     
       
       
     ],

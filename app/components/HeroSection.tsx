@@ -187,46 +187,14 @@ const HeroSection = () => {
           isRTL ? "left-2 sm:left-4 md:left-6" : "right-2 sm:right-4 md:right-6"
         }`}
       >
-        <Button
-          variant="ghost"
-          size="sm"
-          className="bg-white text-gray-800 hover:bg-gray-100 font-medium transition-all duration-300 rounded-full shadow-lg border border-white/20 text-sm sm:text-base  py-2 "
-          
-        >
-          <Phone className={`h-3 w-3 sm:h-4 sm:w-4 ${isRTL ? "ml-1 sm:ml-1" : "mr-0 sm:mr-1"}`} />
-          <span
-          className="font-mono"
-          lang="en"
-          dir="ltr"
-          style={{
-            fontVariantNumeric: 'lining-nums',
-            direction: 'ltr',
-            unicodeBidi: 'bidi-override',
-            fontFeatureSettings: '"lnum"',
-          }}
-        >
-          <span
-            style={{
-              unicodeBidi: 'bidi-override',
-              fontVariantNumeric: 'lining-nums',
-              fontFeatureSettings: '"lnum"',
-              fontFamily: 'Poppins, Arial, sans-serif !important'
-            }}
-            lang="en"
-          >
-            800 1 8888
-          </span>
-        </span>
-        </Button>
-
-        <Button
+        {/* <Button
           variant="ghost"
           size="sm"
           className="bg-white text-red-500 hover:bg-gray-100 rounded-full hover:scale-105 transition-all duration-300 shadow-lg border border-white/20 w-8 h-8 sm:w-10 sm:h-10 p-0 flex items-center justify-center"
           onClick={() => setShowPopup(true)}
         >
           <Plus className="h-4 w-4 sm:h-5 sm:w-5 text-red-500" />
-        </Button>
+        </Button> */}
       </div>
 
       {/* Main Hero Slider */}
@@ -264,9 +232,6 @@ const HeroSection = () => {
             key={currentSlideIndex}
             className={`main-hero__left container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24 ${isRTL ? "text-right" : "text-left"} ${isInView ? 'fade-in' : ''}`}
           >
-            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2 leading-tight max-w-4xl">
-              {slides[currentSlideIndex].title}
-            </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2 leading-tight">
               {slides[currentSlideIndex].subtitle}
             </h2>
@@ -334,17 +299,24 @@ const HeroSection = () => {
       </div>
 
         {/* Slide Counter */}
-      <div
-          className={`absolute bottom-4 sm:bottom-8 text-white text-xs sm:text-sm font-medium ${
+      <Button
+          variant="ghost"
+          size="sm"
+          className={`absolute bottom-4 sm:bottom-8 text-white text-xs sm:text-sm font-medium hover:bg-white/20 hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border border-white/30 px-2 sm:px-4 py-1.5 sm:py-2 ${
             isRTL ? "right-4 sm:right-8" : "left-4 sm:left-8"
         }`}
-      >
+          onClick={() => {
+            // Cycle through slides when clicked
+            goToNext();
+          }}
+          title="Click to go to next slide"
+        >
           {String(currentSlideIndex + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
-        </div>
+        </Button>
 
         {/* Promotions Button */}
         <div
-          className={`absolute bottom-4 sm:bottom-8 flex items-center ${
+          className={`absolute bottom-16 sm:bottom-20 flex items-center ${
             isRTL ? "left-4 sm:left-8" : "right-4 sm:right-8"
           }`}
         >
@@ -360,7 +332,7 @@ const HeroSection = () => {
 
       {/* Phone Popup Menu */}
       {showPopup && (
-        <div className="fixed inset-0 bg-[#661244]/50 backdrop-blur-sm z-50">
+        <div className="fixed inset-0 bg-[#9d552d]/50 backdrop-blur-sm z-50">
           <div 
             className={`absolute bg-white rounded-2xl p-6 max-w-sm w-80 shadow-2xl ${
               isRTL ? 'left-2 sm:left-4 md:left-6' : 'right-2 sm:right-4 md:right-6'
@@ -378,7 +350,7 @@ const HeroSection = () => {
             <Button
               variant="ghost"
               size="lg"
-                              className="w-full bg-white text-[#661244] hover:bg-gray-50 font-semibold text-lg py-4 px-6 rounded-xl border border-gray-200 shadow-sm mb-4 text-left"
+                              className="w-full bg-white text-[#9d552d] hover:bg-gray-50 font-semibold text-lg py-4 px-6 rounded-xl border border-gray-200 shadow-sm mb-4 text-left"
               dir="ltr"
             >
               Call <span style={{ fontVariantNumeric: 'lining-nums' }}>800 1 888</span>

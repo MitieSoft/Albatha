@@ -167,7 +167,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#661244] border-b border-white/20">
-      <div className="container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24">
+      <div className="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-12">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo - Always on the left */}
           <div className="flex items-center flex-shrink-0">
@@ -245,7 +245,7 @@ const Navigation = () => {
               onMouseEnter={handleExploreMouseEnter}
               onMouseLeave={handleExploreMouseLeave}
             >
-              <Link href="/about" className="text-white hover:text-white transition-all duration-200  text-sm relative flex items-center">
+              <Link href="/about/mission-values" className="text-white hover:text-white transition-all duration-200  text-sm relative flex items-center">
                 {t('nav.aboutUs')}
                 <ChevronDown className={`${isRTL ? 'mr-1' : 'ml-1'} h-3 w-3 transition-transform duration-200 group-hover:rotate-180`} />
                 <div className="absolute -bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
@@ -357,6 +357,13 @@ const Navigation = () => {
                   >
                     {t('nav.dropdown.joudTower')}
                   </Link>
+                  {/* <Link 
+                    href="/launches/liwan-renders" 
+                    className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
+                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
+                  >
+                    {t('nav.dropdown.liwanRenders')}
+                  </Link> */}
               
                 </div>
               )}
@@ -369,7 +376,7 @@ const Navigation = () => {
               onMouseEnter={handleInvestorRelationsMouseEnter}
               onMouseLeave={handleInvestorRelationsMouseLeave}
             >
-              <Link href="/companies" className="text-white hover:text-white transition-all duration-200  text-sm relative flex items-center">
+              <Link href="#" className="text-white hover:text-white transition-all duration-200  text-sm relative flex items-center">
                 {t('nav.ourCompanies')}
                 <ChevronDown className={`${isRTL ? 'mr-1' : 'ml-1'} h-3 w-3 transition-transform duration-200 group-hover:rotate-180`} />
                 <div className="absolute -bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
@@ -579,8 +586,29 @@ const Navigation = () => {
                   </div>
                 )}
               </div>
-                             <Button variant="ghost" size="sm" className="text-white hover:bg-white/20 hover:text-white transition-all duration-200 rounded-md p-2">
-                 <Search className="h-4 w-4" />
+                        
+               
+               {/* Phone Button */}
+               <Button
+                 variant="ghost"
+                 size="sm"
+                 className="bg-white text-gray-800 hover:bg-gray-100 font-medium transition-all duration-300 rounded-full shadow-lg border border-white/20 text-sm px-3 py-2"
+               >
+                 <Phone className="h-3 w-3 mr-1" />
+                 <span
+                   className="font-mono"
+                   lang="en"
+                   dir="ltr"
+                   style={{
+                     fontVariantNumeric: 'lining-nums',
+                     direction: 'ltr',
+                     unicodeBidi: 'bidi-override',
+                     fontFeatureSettings: '"lnum"',
+                     fontFamily: 'Poppins, Arial, sans-serif !important'
+                   }}
+                 >
+                   Call 800 1 8888
+                 </span>
                </Button>
             </div>
           </div>
@@ -664,6 +692,9 @@ const Navigation = () => {
                   <div className="space-y-2 pl-4">
                     <Link href="/launches/joud-tower" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
                       {t('nav.dropdown.joudTower')}
+                    </Link>
+                    <Link href="/launches/liwan-renders" className={`block text-white hover:text-white transition-colors duration-200 text-sm py-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>
+                      {t('nav.dropdown.liwanRenders')}
                     </Link>
                   </div>
                 </div>
