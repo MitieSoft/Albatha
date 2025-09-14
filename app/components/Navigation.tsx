@@ -337,7 +337,7 @@ const Navigation = () => {
               onMouseEnter={handleMediaMouseEnter}
               onMouseLeave={handleMediaMouseLeave}
             >
-              <Link href="/launches" className="text-white hover:text-white transition-all duration-200  text-sm relative flex items-center">
+              <Link href="/launches/joud-tower" className="text-white hover:text-white transition-all duration-200  text-sm relative flex items-center">
                 {t('nav.newLaunches')}
                 <ChevronDown className={`${isRTL ? 'mr-1' : 'ml-1'} h-3 w-3 transition-transform duration-200 group-hover:rotate-180`} />
                 <div className="absolute -bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>

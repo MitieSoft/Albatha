@@ -315,7 +315,7 @@ const HeroSection = () => {
         </Button>
 
         {/* Promotions Button */}
-        <div
+        {/* <div
           className={`absolute bottom-16 sm:bottom-20 flex items-center ${
             isRTL ? "left-4 sm:left-8" : "right-4 sm:right-8"
           }`}
@@ -327,7 +327,7 @@ const HeroSection = () => {
           >
             {t("hero.promotions")}
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Phone Popup Menu */}
