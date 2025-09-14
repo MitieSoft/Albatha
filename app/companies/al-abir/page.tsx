@@ -28,7 +28,7 @@ export default function AlAbirPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/21.jfif"
+            src="/images/21.jpeg"
             alt="Office background"
             fill
             className="object-cover opacity-30"
@@ -65,7 +65,7 @@ export default function AlAbirPage() {
                 {/* Larger Image - Right side, vertical orientation */}
                 <div className={`absolute top-0 right-0 w-4/5 h-full z-10 transition-all duration-1000 ease-out ${businessVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0 scale-95'}`}>
                   <Image
-                    src="/images/22.jfif"
+                    src="/images/22.jpeg"
                     alt="Engineering work"
                     fill
                     className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg hover:scale-105 transition-transform duration-500"
@@ -92,7 +92,7 @@ export default function AlAbirPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/2.jpg"
+            src="/images/2.jpeg"
             alt="Engineering background"
             fill
             className="object-cover opacity-50 blur-xs"
