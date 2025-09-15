@@ -42,7 +42,7 @@ export default function LiwanRendersPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/liwan/4.jpg"
+            src="/images/Liwan/4.jpg"
             alt="Cityscape background"
             fill
             className="object-cover "
@@ -87,7 +87,7 @@ export default function LiwanRendersPage() {
                   {/* Larger Image - Right side, vertical orientation */}
                   <div className={`absolute top-0 right-0 w-5/6 h-full z-10 transition-all duration-1000 ease-out ${lavishVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0 scale-95'}`}>
                     <Image
-                      src="/images/liwan/9.jpg"
+                      src="/images/Liwan/9.jpg"
                       alt="Joud Tower exterior view"
                       fill
                       className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg hover:scale-105 transition-transform duration-500"
@@ -97,7 +97,7 @@ export default function LiwanRendersPage() {
                   {/* Smaller Square Image - Left side, overlapping */}
                   <div className={`absolute bottom-8 sm:bottom-4 md:bottom-6 lg:bottom-20 -left-4 sm:-left-4 md:-left-6 lg:-left-8 w-2/3 h-2/3 z-20 transition-all duration-1000 ease-out ${lavishVisible ? 'animate-scale-in animation-delay-600' : 'opacity-0 scale-95'}`}>
                     <Image
-                      src="/images/liwan/5.jpg"
+                      src="/images/Liwan/5.jpg"
                       alt="Luxury interior kitchen"
                       fill
                       className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg hover:scale-105 transition-transform duration-500"
@@ -148,7 +148,7 @@ export default function LiwanRendersPage() {
 
             <div className="relative w-full h-80 mt-auto -right-20 -bottom-20  z-20">
               <Image
-                src="/images/liwan/10.jpg"
+                src="/images/Liwan/10.jpg"
                 alt="Joud Tower interior view"
                 fill
                 className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
@@ -159,7 +159,7 @@ export default function LiwanRendersPage() {
           {/* Div 2 - Big Image Covering Whole Div */}
           <div className="relative min-h-[400px] transition-all duration-1000 ease-out ${specVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0 scale-95'}">
             <Image
-              src="/images/liwan/4.jpg"
+              src="/images/Liwan/4.jpg"
               alt="Joud Tower full view"
               fill
               className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
@@ -170,7 +170,7 @@ export default function LiwanRendersPage() {
           <div className="transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-right animation-delay-600' : 'opacity-0 translate-x-8'}">
             <div className="relative w-full h-64 mb-8 -left-20 -top-20  z-20">
               <Image
-                src="/images/liwan/11.jpg"
+                src="/images/Liwan/11.jpg"
                 alt="Joud Tower curved exterior"
                 fill
                 className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
@@ -463,7 +463,7 @@ export default function LiwanRendersPage() {
               <div className="space-y-6">
                 <div className="relative w-full max-w-lg h-80 mx-auto">
                   <Image
-                    src="/images/liwan/5.jpg"
+                    src="/images/Liwan/5.jpg"
                     alt="Living space with balcony and pool"
                     fill
                     className="object-cover shadow-xl rounded-lg"
@@ -471,7 +471,7 @@ export default function LiwanRendersPage() {
                 </div>
                 <div className="relative w-full max-w-lg h-80 mx-auto">
                   <Image
-                    src="/images/liwan/6.jpg"
+                    src="/images/Liwan/6.jpg"
                     alt="Bedroom with city view"
                     fill
                     className="object-cover shadow-xl rounded-lg"
@@ -484,7 +484,7 @@ export default function LiwanRendersPage() {
             <div className="hidden lg:block space-y-6">
               <div className="relative w-full max-w-lg h-80">
                 <Image
-                  src="/images/liwan/5.jpg"
+                  src="/images/Liwan/5.jpg"
                   alt="Living space with balcony and pool"
                   fill
                   className="object-cover shadow-xl rounded-lg"
@@ -492,7 +492,7 @@ export default function LiwanRendersPage() {
               </div>
               <div className="relative w-full max-w-lg h-80">
                 <Image
-                  src="/images/liwan/6.jpg"
+                  src="/images/Liwan/6.jpg"
                   alt="Bedroom with city view"
                   fill
                   className="object-cover shadow-xl rounded-lg"
@@ -525,7 +525,7 @@ export default function LiwanRendersPage() {
           </div>
           <div className="relative w-full h-[600px]">
             <Image
-              src="/images/liwan/1.jpg"
+              src="/images/Liwan/1.jpg"
               alt="Luxury bedroom"
               fill
               className="object-cover shadow-xl rounded-lg"
@@ -552,7 +552,7 @@ export default function LiwanRendersPage() {
               <div className="flex justify-center">
                 <div className="relative w-full max-w-2xl h-96">
                   <Image
-                    src="/images/liwan/2.jpg"
+                    src="/images/Liwan/2.jpg"
                     alt="Modern kitchen"
                     fill
                     className="object-cover shadow-xl rounded-lg"
@@ -576,7 +576,7 @@ export default function LiwanRendersPage() {
             <div className="hidden lg:flex justify-center">
               <div className="relative w-full max-w-2xl h-96 ml-8">
                 <Image
-                  src="/images/liwan/2.jpg"
+                  src="/images/Liwan/2.jpg"
                   alt="Modern kitchen"
                   fill
                   className="object-cover shadow-xl rounded-lg"
@@ -603,7 +603,7 @@ export default function LiwanRendersPage() {
               <div className="flex justify-center">
                 <div className="relative w-full max-w-2xl h-96">
                   <Image
-                    src="/images/liwan/7.jpg"
+                    src="/images/Liwan/7.jpg"
                     alt="Modern lobby"
                     fill
                     className="object-cover shadow-xl rounded-lg"
@@ -616,7 +616,7 @@ export default function LiwanRendersPage() {
             <div className="hidden lg:flex justify-start">
               <div className="relative w-full max-w-2xl h-96 mr-8">
                 <Image
-                  src="/images/liwan/7.jpg"
+                  src="/images/Liwan/7.jpg"
                   alt="Modern lobby"
                   fill
                   className="object-cover shadow-xl rounded-lg"
@@ -652,7 +652,7 @@ export default function LiwanRendersPage() {
               <div className="flex justify-center">
                 <div className="relative w-full max-w-2xl h-96">
                   <Image
-                    src="/images/liwan/8.jpg"
+                    src="/images/Liwan/8.jpg"
                     alt="Private terrace"
                     fill
                     className="object-cover shadow-xl rounded-lg"
@@ -674,7 +674,7 @@ export default function LiwanRendersPage() {
             <div className="hidden lg:flex justify-end">
               <div className="relative w-full max-w-2xl h-96 ml-8">
                 <Image
-                  src="/images/liwan/8.jpg"
+                  src="/images/Liwan/8.jpg"
                   alt="Private terrace"
                   fill
                   className="object-cover shadow-xl rounded-lg"
@@ -701,7 +701,7 @@ export default function LiwanRendersPage() {
               <div className="flex justify-center">
                 <div className="relative w-full max-w-2xl h-96">
                   <Image
-                    src="/images/liwan/3.jpg"
+                    src="/images/Liwan/3.jpg"
                     alt="Luxury bathroom"
                     fill
                     className="object-cover shadow-xl rounded-lg"
@@ -714,7 +714,7 @@ export default function LiwanRendersPage() {
             <div className="hidden lg:flex justify-start">
               <div className="relative w-full max-w-2xl h-96 mr-8">
                 <Image
-                  src="/images/liwan/3.jpg"
+                  src="/images/Liwan/3.jpg"
                   alt="Luxury bathroom"
                   fill
                   className="object-cover shadow-xl rounded-lg"
