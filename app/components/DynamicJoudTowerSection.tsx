@@ -44,7 +44,7 @@ const DynamicJoudTowerSection = () => {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat"
-                  }}
+                  }} 
                 >
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
