@@ -42,7 +42,7 @@ export default function LiwanRendersPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/Liwan/4.jpg"
+            src="/images/Liwan/3.jpg"
             alt="Cityscape background"
             fill
             className="object-cover "
