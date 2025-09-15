@@ -120,19 +120,19 @@ export default function LiwanRendersPage() {
       {/* Joud Tower Specification Section */}
       <section ref={specRef.ref as React.RefObject<HTMLElement>} className={`bg-[#decfca] transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
         {/* Main Title - Outside Container */}
-        <div className="text-center py-8 bg-white ">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#661244] transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}" style={{ fontFamily: 'Univers, Arial, sans-serif' }}>
+        <div className="text-center py-8   bg-white ">
+          <h2 className="text-3xl  sm:text-4xl md:text-5xl lg:text-6xl   font-bold text-[#661244] transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}" style={{ fontFamily: 'Univers, Arial, sans-serif' }}>
             Joud Tower Specification
           </h2>
         </div>
         <div className='container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24 pt-8 pb-8'>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#661244] mb-4" style={{ fontFamily: 'Univers, Arial, sans-serif' }}>
+          <h3 className="text-3xl pt-4 sm:text-4xl md:text-5xl font-bold text-[#661244] mb-4" style={{ fontFamily: 'Univers, Arial, sans-serif' }}>
                 Total of 55 Storeys
               </h3>
           </div>
         {/* 3 Divs Layout - No Gaps */}
         <div className=" container mx-auto px-4 sm:px-12 md:px-16 lg:px-20 xl:px-24  pb-30" >
-          <div className="grid grid-cols-1 lg:grid-cols-3">
+          <div className="grid grid-cols-1 lg:grid-cols-3 px-4 sm:px-4 md:px-0 lg:px-0">
           
           
           {/* Div 1 - Text + Image */}
@@ -140,44 +140,46 @@ export default function LiwanRendersPage() {
             <div>
               
               
-              <div className="space-y-4 text-lg text-black pt-12 pr-8">
+              <div className="space-y-4 text-lg text-black pt-4 sm:pt-4 md:pt-6 lg:pt-8 pr-8">
                 <p>1 Basement + Ground Floor + 5 Podium Levels for parking and services</p>
                 <p><strong>48 floors residential at its highest point</strong></p>
               </div>
             </div>
 
-            <div className="relative w-full h-80 mt-auto -right-20 -bottom-20  z-20">
-              <Image
-                src="/images/Liwan/10.jpg"
-                alt="Joud Tower interior view"
-                fill
-                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
-              />
-            </div>
+             <div className="relative w-full h-80 mt-auto -right-20 -bottom-20 z-20 hidden lg:block">
+               <Image
+                 src="/images/Liwan/10.jpg"
+                 alt="Joud Tower interior view"
+                 fill
+                 className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
+               />
+             </div>
           </div>
 
           {/* Div 2 - Big Image Covering Whole Div */}
-          <div className="relative min-h-[400px] transition-all duration-1000 ease-out ${specVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0 scale-95'}">
-            <Image
-              src="/images/Liwan/4.jpg"
-              alt="Joud Tower full view"
-              fill
-              className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
-            />
+          <div 
+      className={`relative min-h-[400px] transition-all duration-1000 ease-out ${specVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0 scale-95'}`}
+      style={{
+        backgroundImage: 'url(/images/arc.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
           </div>
 
           {/* Div 3 - Image + Apartment List */}
-          <div className="transition-all duration-1000 ease-out ${specVisible ? 'animate-fade-in-right animation-delay-600' : 'opacity-0 translate-x-8'}">
-            <div className="relative w-full h-64 mb-8 -left-20 -top-20  z-20">
-              <Image
-                src="/images/Liwan/11.jpg"
-                alt="Joud Tower curved exterior"
-                fill
-                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
-              />
-            </div>
+          <div className="transition-all  duration-1000 ease-out ${specVisible ? 'animate-fade-in-right animation-delay-600' : 'opacity-0 translate-x-8'}">
+             <div className="relative w-full h-64 mb-8 -left-20 -top-20 z-20 hidden lg:block">
+               <Image
+                 src="/images/Liwan/11.jpg"
+                 alt="Joud Tower curved exterior"
+                 fill
+                 className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
+               />
+             </div>
 
-            <div className="space-y-2 text-lg text-black leading-relaxed pl-8">
+            <div className="space-y-2 text-lg text-black leading-relaxed pl-2 sm:pl-2 md:pl-8 lg:pl-8 pt-4 sm:pt-4 md:pt-0 lg:pt-0">
               <p className="m-0">• 2-bedroom</p>
               <p className="m-0">• 3-bedroom</p>
               <p className="m-0">• 3-bedroom + private garden at the podium level</p>
