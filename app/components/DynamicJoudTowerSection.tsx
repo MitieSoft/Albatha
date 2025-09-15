@@ -51,7 +51,7 @@ const DynamicJoudTowerSection = () => {
                 </div>
 
                 {/* Top Overlapping Image - Bedroom - Hidden on Mobile */}
-                <div className={`hidden md:block absolute -top-24 right-12 w-90 h-58 overflow-hidden shadow-lg hover:scale-105 transition-all duration-1000 ease-out z-10 ${imageVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-16'}`} style={{ animationDelay: '0.6s' }}>
+                <div className={`hidden md:block absolute -top-24 right-16 w-90 h-58 overflow-hidden shadow-lg hover:scale-105 transition-all duration-1000 ease-out z-10 ${imageVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-16'}`} style={{ animationDelay: '0.6s' }}>
                   <Image
                     src="/images/L45_Bedroom_Cam02__v04_0000.png"
                     alt="Luxury Bedroom"
@@ -61,7 +61,7 @@ const DynamicJoudTowerSection = () => {
                 </div>
                 
                 {/* Bottom Overlapping Image - Lobby - Hidden on Mobile */}
-                <div className={`hidden md:block absolute -bottom-38 left-12 w-90 h-58 overflow-hidden shadow-lg hover:scale-105 transition-all duration-1000 ease-out z-10 ${imageVisible ? 'animate-fade-in-down' : 'opacity-0 -translate-y-16'}`} style={{ animationDelay: '0.8s' }}>
+                <div className={`hidden md:block absolute -bottom-38 left-16 w-90 h-58 overflow-hidden shadow-lg hover:scale-105 transition-all duration-1000 ease-out z-10 ${imageVisible ? 'animate-fade-in-down' : 'opacity-0 -translate-y-16'}`} style={{ animationDelay: '0.8s' }}>
                   <Image
                     src="/images/Lobby_Cam01_v05_Alt2_0000.png"
                     alt="Modern Lobby"
