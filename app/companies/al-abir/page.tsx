@@ -92,7 +92,7 @@ export default function AlAbirPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/2.jpeg"
+            src="/images/2.jpg"
             alt="Engineering background"
             fill
             className="object-cover opacity-50 blur-xs"
