@@ -139,7 +139,7 @@ export default function JoudTowerPage() {
                 src="/images/2.jpg"
                 alt="Joud Tower interior view"
                 fill
-                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
               />
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function JoudTowerPage() {
               src="/images/3.jpg"
               alt="Joud Tower full view"
               fill
-              className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+              className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
             />
           </div>
 
@@ -161,7 +161,7 @@ export default function JoudTowerPage() {
                 src="/images/5.png"
                 alt="Joud Tower curved exterior"
                 fill
-                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+                className="object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)] rounded-lg"
               />
             </div>
 
@@ -198,7 +198,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/1.jpeg"
                   alt="Functional Gym"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -212,7 +212,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/2.jpeg"
                   alt="Sauna"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -226,7 +226,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/3.jpeg"
                   alt="Swimming Pool"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -240,7 +240,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/4.jpeg"
                   alt="Padel Court"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -255,7 +255,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/5.jpeg"
                   alt="Running Track"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -269,7 +269,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/6.jpeg"
                   alt="BBQ Area"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -283,7 +283,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/7.jpeg"
                   alt="Kids Play Area"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -297,7 +297,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/8.jpeg"
                   alt="Multipurpose Hall"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -312,7 +312,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/9.jpeg"
                   alt="Cafe"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -326,7 +326,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/10.jpeg"
                   alt="Prayer Room"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -340,7 +340,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/11.jpeg"
                   alt="Kindergarten"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -354,7 +354,7 @@ export default function JoudTowerPage() {
                   src="/images/Amenities/12.jpeg"
                   alt="Retail Shop"
                   fill
-                  className="object-cover shadow-lg"
+                  className="object-cover shadow-lg rounded-lg"
                 />
               </div>
               <p className={`text-base font-bold text-[#661244] ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Univers, Arial, sans-serif' }}>
@@ -454,7 +454,7 @@ export default function JoudTowerPage() {
                     src="/images/8.png"
                     alt="Living space with balcony and pool"
                     fill
-                    className="object-cover shadow-xl"
+                    className="object-cover shadow-xl rounded-lg"
                   />
                 </div>
                 <div className="relative w-full max-w-lg h-80 mx-auto">
@@ -462,7 +462,7 @@ export default function JoudTowerPage() {
                     src="/images/9.png"
                     alt="Bedroom with city view"
                     fill
-                    className="object-cover shadow-xl"
+                    className="object-cover shadow-xl rounded-lg"
                   />
                 </div>
               </div>
@@ -475,7 +475,7 @@ export default function JoudTowerPage() {
                   src="/images/8.png"
                   alt="Living space with balcony and pool"
                   fill
-                  className="object-cover shadow-xl"
+                  className="object-cover shadow-xl rounded-lg"
                 />
               </div>
               <div className="relative w-full max-w-lg h-80">
@@ -483,7 +483,7 @@ export default function JoudTowerPage() {
                   src="/images/9.png"
                   alt="Bedroom with city view"
                   fill
-                  className="object-cover shadow-xl"
+                  className="object-cover shadow-xl rounded-lg"
                 />
               </div>
             </div>
@@ -516,7 +516,7 @@ export default function JoudTowerPage() {
               src="/images/11.png"
               alt="Luxury bedroom"
               fill
-              className="object-cover shadow-xl"
+              className="object-cover shadow-xl rounded-lg"
             />
           </div>
                   </div>
@@ -541,7 +541,7 @@ export default function JoudTowerPage() {
                     src="/images/12.png"
                     alt="Modern kitchen"
                     fill
-                    className="object-cover shadow-xl"
+                    className="object-cover shadow-xl rounded-lg"
                   />
                 </div>
               </div>
@@ -563,7 +563,7 @@ export default function JoudTowerPage() {
                   src="/images/12.png"
                   alt="Modern kitchen"
                   fill
-                  className="object-cover shadow-xl"
+                  className="object-cover shadow-xl rounded-lg"
                 />
               </div>
             </div>
@@ -590,7 +590,7 @@ export default function JoudTowerPage() {
                     src="/images/13.png"
                     alt="Modern lobby"
                     fill
-                    className="object-cover shadow-xl"
+                    className="object-cover shadow-xl rounded-lg"
                   />
                 </div>
               </div>
@@ -603,7 +603,7 @@ export default function JoudTowerPage() {
                   src="/images/13.png"
                   alt="Modern lobby"
                   fill
-                  className="object-cover shadow-xl"
+                  className="object-cover shadow-xl rounded-lg"
                 />
               </div>
             </div>
@@ -639,7 +639,7 @@ export default function JoudTowerPage() {
                     src="/images/14.png"
                     alt="Private terrace"
                     fill
-                    className="object-cover shadow-xl"
+                    className="object-cover shadow-xl rounded-lg"
                   />
                 </div>
               </div>
@@ -661,7 +661,7 @@ export default function JoudTowerPage() {
                   src="/images/14.png"
                   alt="Private terrace"
                   fill
-                  className="object-cover shadow-xl"
+                  className="object-cover shadow-xl rounded-lg"
                 />
               </div>
             </div>
@@ -688,7 +688,7 @@ export default function JoudTowerPage() {
                     src="/images/15.png"
                     alt="Luxury bathroom"
                     fill
-                    className="object-cover shadow-xl"
+                    className="object-cover shadow-xl rounded-lg"
                   />
                 </div>
               </div>
@@ -701,7 +701,7 @@ export default function JoudTowerPage() {
                   src="/images/15.png"
                   alt="Luxury bathroom"
                   fill
-                  className="object-cover shadow-xl"
+                  className="object-cover shadow-xl rounded-lg"
                 />
               </div>
             </div>

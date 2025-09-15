@@ -39,7 +39,7 @@ const translations = {
     'nav.dropdown.industrial': 'Industrial',
     'nav.dropdown.specialProjects': 'Special Projects',
     'nav.dropdown.joudTower': 'Joud Tower',
-    'nav.dropdown.liwanRenders': 'Liwan Renders',
+    'nav.dropdown.liwanRenders': 'Liwan',
     'nav.dropdown.tawazunConstruction': 'Tawazun Construction',
     'nav.dropdown.alAbir': 'Al Abir',
     'nav.dropdown.whatLookingToBuy': 'What are you looking to buy?',
@@ -610,12 +610,12 @@ const translations = {
     'joudTower.luxuryRedefined': 'Luxury Redefined',
     
     // Liwan Renders Page
-    'liwanRenders.hero.title': 'Liwan Renders',
+    'liwanRenders.hero.title': 'Liwan',
     'liwanRenders.hero.subtitle': 'LUXURY REDEFINED',
-    'liwanRenders.hero.description': 'Experience the epitome of luxury living with Liwan Renders, where every detail is crafted to perfection and every moment is designed for your comfort and satisfaction.',
+    'liwanRenders.hero.description': 'Experience the epitome of luxury living with Liwan , where every detail is crafted to perfection and every moment is designed for your comfort and satisfaction.',
     'liwanRenders.lavish.title': 'LAVISH.<br />DELUXE.<br />OPULENT.',
-    'liwanRenders.lavish.description': 'Liwan Renders represents the pinnacle of luxury living in the heart of the city. This stunning residential tower offers unparalleled comfort, modern amenities, and breathtaking views of the skyline. Designed with meticulous attention to detail, Liwan Renders combines contemporary architecture with premium finishes to create an exceptional living experience for discerning residents.',
-    'liwanRenders.specification.title': 'Liwan Renders Specification',
+    'liwanRenders.lavish.description': 'Liwan  represents the pinnacle of luxury living in the heart of the city. This stunning residential tower offers unparalleled comfort, modern amenities, and breathtaking views of the skyline. Designed with meticulous attention to detail, Liwan Renders combines contemporary architecture with premium finishes to create an exceptional living experience for discerning residents.',
+    'liwanRenders.specification.title': 'Liwan  Specification',
     'liwanRenders.specification.storeys': 'No. of storeys: 55',
     'liwanRenders.specification.basement': '1 Basement + Ground Floor + 5 Podium Levels for parking and services',
     'liwanRenders.specification.residential': '48 floors residential at its highest point',
@@ -646,7 +646,7 @@ const translations = {
     'liwanRenders.features.access': 'Smart Access Control',
     'liwanRenders.features.booking': 'Facility Booking System',
     'liwanRenders.features.maintenance': 'Maintenance Services',
-    'liwanRenders.features.description': 'Liwan Renders offers a comprehensive range of services and features designed to enhance your living experience. From round-the-clock concierge services to smart home technology, every aspect of your daily life is carefully considered and catered to.',
+    'liwanRenders.features.description': 'Liwan offers a comprehensive range of services and features designed to enhance your living experience. From round-the-clock concierge services to smart home technology, every aspect of your daily life is carefully considered and catered to.',
     'liwanRenders.views.title': 'Enjoy<br />Unparalleled<br />Views',
     'liwanRenders.views.description': 'Wake up to breathtaking panoramic views of the city skyline and beyond. Each apartment is strategically positioned to maximize natural light and provide stunning vistas that change with the time of day and seasons.',
     'liwanRenders.sanctuary.title': 'Your Sanctuary',
@@ -659,7 +659,6 @@ const translations = {
     'liwanRenders.aesthetic.description': 'Discover the perfect harmony of form and function in every corner of your home. From the elegant living spaces to the serene private terraces, each area is designed to inspire and delight.',
     'liwanRenders.elegance.title': 'ELEGANCE.<br />STYLE.<br />REFINEMENT.',
     'liwanRenders.elegance.description': 'Every detail has been carefully considered to create spaces that are both beautiful and functional. From the elegant marble finishes to the sophisticated lighting design, each element contributes to an atmosphere of refined luxury that makes every day feel special.',
-    
     // Our Company Page
     'about.hero.title': 'About Albatha Real Estate',
     'about.hero.subtitle': 'Building Dreams, Creating Communities',
@@ -833,7 +832,7 @@ const translations = {
     'nav.dropdown.industrial': 'صناعي',
     'nav.dropdown.specialProjects': 'مشاريع خاصة',
     'nav.dropdown.joudTower': 'برج جود',
-    'nav.dropdown.liwanRenders': 'ليوان ريندرز',
+    'nav.dropdown.liwanRenders': 'ليوان ',
     'nav.dropdown.tawazunConstruction': 'تاوازن للإنشاءات',
     'nav.dropdown.alAbir': 'الأبر للاستشارات الهندسية',
     'nav.dropdown.whatLookingToBuy': 'ماذا تبحث عن للشراء؟',
@@ -1481,12 +1480,13 @@ const translations = {
     'joudTower.luxuryRedefined': 'الفخامة المُعاد تعريفها',
     
     // Liwan Renders Page
-    'liwanRenders.hero.title': 'ليوان ريندرز',
+    // Liwan Renders Page
+    'liwanRenders.hero.title': 'ليوان ',
     'liwanRenders.hero.subtitle': 'الفخامة المعاد تعريفها',
-    'liwanRenders.hero.description': 'اختبر قمة العيش الفاخر مع ليوان ريندرز، حيث يتم صياغة كل تفصيل إلى الكمال وكل لحظة مصممة لراحتك ورضاك.',
+    'liwanRenders.hero.description': 'اختبر قمة العيش الفاخر مع ليوان ، حيث يتم صياغة كل تفصيل إلى الكمال وكل لحظة مصممة لراحتك ورضاك.',
     'liwanRenders.lavish.title': 'فاخر.<br />مبهر.<br />رائع.',
-    'liwanRenders.lavish.description': 'يمثل ليوان ريندرز قمة العيش الفاخر في قلب المدينة. يقدم هذا البرج السكني المذهل راحة لا مثيل لها ومرافق حديثة وإطلالات خلابة على الأفق. مصمم بعناية فائقة، يجمع ليوان ريندرز بين العمارة المعاصرة واللمسات المميزة لخلق تجربة معيشة استثنائية للسكان المميزين.',
-    'liwanRenders.specification.title': 'مواصفات ليوان ريندرز',
+    'liwanRenders.lavish.description': 'يمثل ليوان  قمة العيش الفاخر في قلب المدينة. يقدم هذا البرج السكني المذهل راحة لا مثيل لها ومرافق حديثة وإطلالات خلابة على الأفق. مصمم بعناية فائقة، يجمع ليوان  بين العمارة المعاصرة واللمسات المميزة لخلق تجربة معيشة استثنائية للسكان المميزين.',
+    'liwanRenders.specification.title': 'مواصفات ليوان ',
     'liwanRenders.specification.storeys': 'عدد الطوابق: 55',
     'liwanRenders.specification.basement': '1 قبو + الطابق الأرضي + 5 مستويات منصة للوقوف والخدمات',
     'liwanRenders.specification.residential': '48 طابق سكني في أعلى نقطة',
@@ -1517,7 +1517,7 @@ const translations = {
     'liwanRenders.features.access': 'تحكم ذكي في الوصول',
     'liwanRenders.features.booking': 'نظام حجز المرافق',
     'liwanRenders.features.maintenance': 'خدمات الصيانة',
-    'liwanRenders.features.description': 'يقدم ليوان ريندرز مجموعة شاملة من الخدمات والميزات المصممة لتعزيز تجربة معيشتك. من خدمات الكونسيرج على مدار الساعة إلى تقنية المنزل الذكي، كل جانب من جوانب حياتك اليومية يتم النظر فيه بعناية والاهتمام به.',
+    'liwanRenders.features.description': 'يقدم ليوان  مجموعة شاملة من الخدمات والميزات المصممة لتعزيز تجربة معيشتك. من خدمات الكونسيرج على مدار الساعة إلى تقنية المنزل الذكي، كل جانب من جوانب حياتك اليومية يتم النظر فيه بعناية والاهتمام به.',
     'liwanRenders.views.title': 'استمتع بإطلالات<br />لا مثيل لها',
     'liwanRenders.views.description': 'استيقظ على إطلالات بانورامية خلابة لأفق المدينة وما وراءها. كل شقة موضوعة استراتيجياً لتعظيم الضوء الطبيعي وتوفير مناظر خلابة تتغير مع الوقت والفصول.',
     'liwanRenders.sanctuary.title': 'ملاذك للسلام والراحة',
@@ -1530,7 +1530,6 @@ const translations = {
     'liwanRenders.aesthetic.description': 'اكتشف الانسجام المثالي بين الشكل والوظيفة في كل ركن من منزلك. من المساحات المعيشية الأنيقة إلى الشرفات الخاصة الهادئة، كل منطقة مصممة للإلهام والإعجاب.',
     'liwanRenders.elegance.title': 'أناقة.<br />أسلوب.<br />رقة.',
     'liwanRenders.elegance.description': 'كل تفصيل تم النظر فيه بعناية لخلق مساحات جميلة وعملية. من اللمسات الرخامية الأنيقة إلى تصميم الإضاءة المتطور، كل عنصر يساهم في جو من الفخامة المكررة التي تجعل كل يوم مميزاً.',
-    
     // Our Company Page
     'about.hero.title': 'حول عقارات البطحاء',
     'about.hero.subtitle': 'نبني الأحلام، نخلق المجتمعات',

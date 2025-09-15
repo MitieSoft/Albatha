@@ -353,17 +353,17 @@ const Navigation = () => {
                   <Link 
                     href="/launches/joud-tower" 
                     className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
-                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
+                    
                   >
                     {t('nav.dropdown.joudTower')}
                   </Link>
-                  {/* <Link 
+                  <Link 
                     href="/launches/liwan-renders" 
                     className={`block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 hover:text-white ${isRTL ? 'font-arabic' : 'font-english'}`}
-                    style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}
+                    
                   >
                     {t('nav.dropdown.liwanRenders')}
-                  </Link> */}
+                  </Link>
               
                 </div>
               )}
