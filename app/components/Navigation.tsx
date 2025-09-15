@@ -167,7 +167,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#661244] border-b border-white/20">
-      <div className="container mx-auto px-4 sm:px-4 md:px-4 lg:px-10 xl:px-12">
+      <div className="container mx-auto px-2 sm:px-4 md:px-2 lg:px-3 xl:px-12">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo - Always on the left */}
           <div className="flex items-center flex-shrink-0">
@@ -237,7 +237,7 @@ const Navigation = () => {
           </div>
 
           {/* Main Navigation - Hidden on Mobile */}
-          <div className={`hidden lg:flex items-center ${isRTL ? 'flex-row-reverse space-x-reverse space-x-6 xl:space-x-reverse xl:space-x-8' : 'space-x-6 xl:space-x-8'}`}>
+          <div className={`hidden lg:flex items-center ${isRTL ? 'flex-row-reverse space-x-reverse space-x-4 xl:space-x-reverse xl:space-x-8' : 'space-x-4 xl:space-x-8'}`}>
             {/* About Us with Dropdown */}
             <div 
               className="relative group nav-item-container"
