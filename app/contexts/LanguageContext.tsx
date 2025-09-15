@@ -112,7 +112,7 @@ const translations = {
     'launches.commercial': 'COMMERCIAL',
     'launches.Albatha RealEstate': 'Albatha  Real Estate',
     'launches.joudTower': 'Joud Tower',
-    'launches.joudTowerDescription': 'by AlBatha Real Estate is more than just a residence — it\'s a place where families can truly thrive.Designed with your loved ones in mind, it brings together everything you need to create lasting memories a prime ocation at the heart of a vibrant community, thoughtfully crafted family-friendly spaces, and world-class amenities that enrich daily life.',
+    'launches.joudTowerDescription': 'Joud Tower by Albatha Real Estate is more than just a residence — it\'s a place where families can truly thrive.Designed with your loved ones in mind, it brings together everything you need to create lasting memories a prime ocation at the heart of a vibrant community, thoughtfully crafted family-friendly spaces, and world-class amenities that enrich daily life.',
     'launches.launchQ2': 'Launch Q2 2025',
     'launches.joudTowerAlt': 'Joud Tower - Natural landscape with organic buildings',
     'launches.residentialProject': 'RESIDENTIAL PROJECT',
