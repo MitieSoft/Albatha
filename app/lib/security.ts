@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import DOMPurify from 'isomorphic-dompurify';
+import { validateCSRFToken as validateSessionCSRFToken } from './session';
 
 // Input validation schemas
 export const contactFormSchema = z.object({
@@ -75,16 +76,49 @@ export function escapeHTML(str: string): string {
     .replace(/\//g, '&#x2F;');
 }
 
-// CSRF token generation
+// CSRF token generation (for backward compatibility)
 export function generateCSRFToken(): string {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
-// Validate CSRF token
+// Get session ID from request cookies
+export function getSessionIdFromRequest(request: Request): string | null {
+  const cookieHeader = request.headers.get('cookie');
+  if (!cookieHeader) return null;
+
+  const cookies = cookieHeader.split(';').map(cookie => cookie.trim());
+  const sessionCookie = cookies.find(cookie => cookie.startsWith('session-id='));
+  
+  if (!sessionCookie) return null;
+  return sessionCookie.split('=')[1];
+}
+
+// Get CSRF token from request body
+export function getCSRFTokenFromBody(body: unknown): string | null {
+  if (body && typeof body === 'object' && 'csrfToken' in body) {
+    return typeof body.csrfToken === 'string' ? body.csrfToken : null;
+  }
+  return null;
+}
+
+// Validate CSRF token with session
+export function validateCSRFTokenWithSession(sessionId: string, token: string): boolean {
+  if (!sessionId || !token) return false;
+  
+  return validateSessionCSRFToken(sessionId, token);
+}
+
+// Legacy function for backward compatibility
 export function validateCSRFToken(token: string, sessionToken: string): boolean {
   if (!token || !sessionToken) return false;
+  
+  // Reject default tokens
+  if (sessionToken === 'default-session-token') {
+    return false;
+  }
+  
   return token === sessionToken;
 }
 
@@ -137,10 +171,10 @@ export function getSecurityHeaders() {
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'X-DNS-Prefetch-Control': 'off',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
     'Content-Security-Policy': [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com",
+      "script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: https: blob:",
       "font-src 'self' https://fonts.gstatic.com",
@@ -169,21 +203,5 @@ export function validateInput<T>(schema: z.ZodSchema<T>, data: unknown): { succe
   }
 }
 
-// Security logging
-export function logSecurityEvent(event: string, details: Record<string, unknown>, ip?: string) {
-  const logEntry = {
-    timestamp: new Date().toISOString(),
-    event,
-    ip: ip || 'unknown',
-    details,
-    userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'server'
-  };
-  
-  console.log(`[SECURITY] ${JSON.stringify(logEntry)}`);
-  
-  // In production, send to security monitoring service
-  if (process.env.NODE_ENV === 'production') {
-    // Send to your security monitoring service
-    // Example: sendToSecurityService(logEntry);
-  }
-}
+// Security logging - now handled by logger.ts
+export { logSecurityEvent } from './logger';

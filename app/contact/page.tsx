@@ -3,8 +3,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Image from 'next/image';
-import { useState } from 'react';
-import { contactFormSchema, sanitizeInput } from '../lib/security';
+import { useState, useEffect } from 'react';
+import { contactFormSchema, sanitizeInput, generateCSRFToken } from '../lib/security';
 
 export default function ContactPage() {
   const { t, isRTL } = useLanguage();
@@ -21,6 +21,7 @@ export default function ContactPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [csrfToken, setCsrfToken] = useState<string>('');
   
   // Helper functions to get data safely
   const getSubjectOptions = (): string[] => {
@@ -32,6 +33,11 @@ export default function ContactPage() {
     const questions = t('contact.faq.questions') as unknown;
     return Array.isArray(questions) ? (questions as Array<{question: string, answer: string}>) : [];
   };
+
+  // Generate CSRF token on component mount
+  useEffect(() => {
+    setCsrfToken(generateCSRFToken());
+  }, []);
 
   // Handle input change with sanitization
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -79,7 +85,10 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          csrfToken: csrfToken
+        }),
       });
 
       const result = await response.json();
@@ -234,6 +243,9 @@ export default function ContactPage() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* CSRF Token */}
+                  <input type="hidden" name="csrfToken" value={csrfToken} />
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : 'font-english'}`} style={{ fontFamily: isRTL ? 'GESSTwo, Arial, sans-serif' : 'Poppins, Arial, sans-serif' }}>

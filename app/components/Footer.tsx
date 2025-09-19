@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 import { ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import Image from "next/image";
-import { useState } from "react";
-import { sanitizeInput } from "../lib/security";
+import { useState, useEffect } from "react";
+import { sanitizeInput, generateCSRFToken } from "../lib/security";
 // Logo paths for public folder
 const logo = "/images/final-logo.png";
 const arabicLogo = "/images/final-logo-arabic.png";
@@ -14,6 +14,7 @@ const Footer = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [csrfToken, setCsrfToken] = useState<string>('');
   
   const footerLinks = {
     company: [
@@ -53,6 +54,11 @@ const Footer = () => {
     { icon: Youtube, href: "#", label: t('footer.social.youtube') }
   ];
 
+  // Generate CSRF token on component mount
+  useEffect(() => {
+    setCsrfToken(generateCSRFToken());
+  }, []);
+
   // Handle newsletter subscription
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,7 +73,10 @@ const Footer = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: sanitizedEmail }),
+        body: JSON.stringify({ 
+          email: sanitizedEmail,
+          csrfToken: csrfToken
+        }),
       });
 
       const result = await response.json();

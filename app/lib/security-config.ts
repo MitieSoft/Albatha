@@ -62,13 +62,13 @@ export const SECURITY_CONFIG = {
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'X-DNS-Prefetch-Control': 'off',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
   },
   
   // CSP (Content Security Policy)
   CSP: {
     'default-src': "'self'",
-    'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com",
+    'script-src': "'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com",
     'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
     'img-src': "'self' data: https: blob:",
     'font-src': "'self' https://fonts.gstatic.com",

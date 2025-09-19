@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { contactFormSchema, sanitizeInput, logSecurityEvent, getSecurityHeaders } from '../../lib/security';
+import { contactFormSchema, sanitizeInput, logSecurityEvent, getSecurityHeaders, getCSRFTokenFromBody } from '../../lib/security';
+import { contactFormRateLimiter } from '../../lib/rate-limiter';
+import { validateCSRFRequest, csrfMiddleware } from '../../lib/csrf-middleware';
 import { headers } from 'next/headers';
-
-// Rate limiter instance
-const rateLimiter = new Map<string, { count: number; resetTime: number }>();
 
 export async function POST(request: NextRequest) {
   const startTime = Date.now();
@@ -12,30 +11,31 @@ export async function POST(request: NextRequest) {
 
   try {
     // Rate limiting
-    const now = Date.now();
-    const windowMs = 15 * 60 * 1000; // 15 minutes
-    const maxRequests = 5; // Max 5 contact form submissions per window
-
-    const current = rateLimiter.get(ip);
-    if (current) {
-      if (now < current.resetTime) {
-        if (current.count >= maxRequests) {
-          logSecurityEvent('RATE_LIMIT_EXCEEDED', { ip, userAgent }, ip);
-          return NextResponse.json(
-            { error: 'Too many requests. Please try again later.' },
-            { status: 429, headers: getSecurityHeaders() }
-          );
-        }
-        current.count++;
-      } else {
-        rateLimiter.set(ip, { count: 1, resetTime: now + windowMs });
-      }
-    } else {
-      rateLimiter.set(ip, { count: 1, resetTime: now + windowMs });
+    const isAllowed = await contactFormRateLimiter.isAllowed(ip);
+    if (!isAllowed) {
+      logSecurityEvent('RATE_LIMIT_EXCEEDED', { ip, userAgent }, ip);
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429, headers: getSecurityHeaders() }
+      );
     }
 
     // Parse and validate request body
     const body = await request.json();
+    
+    // Validate CSRF token using proper session-based validation
+    const csrfValidation = await validateCSRFRequest(request);
+    if (!csrfValidation.valid) {
+      logSecurityEvent('CSRF_TOKEN_INVALID', { 
+        ip, 
+        userAgent, 
+        error: csrfValidation.error
+      }, ip);
+      return NextResponse.json(
+        { error: csrfValidation.error || 'CSRF validation failed' },
+        { status: 403, headers: getSecurityHeaders() }
+      );
+    }
     
     // Sanitize all string inputs
     const sanitizedBody = {

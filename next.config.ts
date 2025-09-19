@@ -2,6 +2,34 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  // Enable source map obfuscation in production
+  productionBrowserSourceMaps: false,
+  
+  // Webpack configuration for code protection
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Obfuscate JavaScript in production
+      config.optimization.minimize = true;
+      config.optimization.minimizer = [
+        ...config.optimization.minimizer,
+        // Add terser plugin for better obfuscation
+        new (require('terser-webpack-plugin'))({
+          terserOptions: {
+            mangle: {
+              reserved: ['logSecurityEvent', 'validateCSRFToken']
+            },
+            compress: {
+              drop_console: true,
+              drop_debugger: true,
+              pure_funcs: ['console.log', 'console.info', 'console.debug']
+            }
+          }
+        })
+      ];
+    }
+    return config;
+  },
+  
   async headers() {
     return [
       {
@@ -29,13 +57,13 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains; preload'
+            value: 'max-age=63072000; includeSubDomains; preload'
           },
           {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com",
+              "script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://fonts.gstatic.com",

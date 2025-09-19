@@ -1,15 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { headers } from 'next/headers';
-
-// Rate limiting store (in production, use Redis or database)
-const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
+import { generalRateLimiter } from './app/lib/rate-limiter';
 
 // Security middleware
-export function middleware(request: NextRequest) {
-  const response = NextResponse.next();
+export async function middleware(request: NextRequest) {
   const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
   const userAgent = request.headers.get('user-agent') || '';
   const pathname = request.nextUrl.pathname;
+
+  // HTTPS Enforcement - Redirect HTTP to HTTPS
+  if (request.nextUrl.protocol === 'http:') {
+    const httpsUrl = new URL(request.url);
+    httpsUrl.protocol = 'https:';
+    return NextResponse.redirect(httpsUrl, 301);
+  }
+
+  const response = NextResponse.next();
 
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
@@ -18,39 +24,15 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-DNS-Prefetch-Control', 'off');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), interest-cohort=()');
 
-  // HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
-  }
+  // HSTS header for HTTPS (2 years as requested)
+  response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
 
   // Rate limiting
   const rateLimitKey = `${ip}-${pathname}`;
-  const now = Date.now();
-  const windowMs = 15 * 60 * 1000; // 15 minutes
-  const maxRequests = 100; // Max requests per window
-
-  const current = rateLimitStore.get(rateLimitKey);
+  const isAllowed = await generalRateLimiter.isAllowed(rateLimitKey);
   
-  if (current) {
-    if (now < current.resetTime) {
-      if (current.count >= maxRequests) {
-        return new NextResponse('Too Many Requests', { status: 429 });
-      }
-      current.count++;
-    } else {
-      rateLimitStore.set(rateLimitKey, { count: 1, resetTime: now + windowMs });
-    }
-  } else {
-    rateLimitStore.set(rateLimitKey, { count: 1, resetTime: now + windowMs });
-  }
-
-  // Clean up old entries periodically
-  if (Math.random() < 0.01) { // 1% chance
-    for (const [key, value] of rateLimitStore.entries()) {
-      if (now > value.resetTime) {
-        rateLimitStore.delete(key);
-      }
-    }
+  if (!isAllowed) {
+    return new NextResponse('Too Many Requests', { status: 429 });
   }
 
   // Block suspicious user agents
@@ -103,11 +85,11 @@ export const config = {
   matcher: [
     /*
      * Match all request paths except for the ones starting with:
-     * - api (API routes)
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
+     * - public files
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!_next/static|_next/image|favicon.ico|images|public).*)',
   ],
 };
